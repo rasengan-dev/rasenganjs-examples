@@ -1,0 +1,23 @@
+{
+  "chatbot": {
+    "gemini": {
+      "key": "chatbot/gemini",
+      "path": "templates/chatbot/gemini",
+      "description": "Gemini chatbot template, a ready to go chatbot app.",
+      "type": "chatbot",
+      "dependencies": [],
+      "language": "typescript"
+    }
+  },
+
+  "portfolio": {
+    "developer": {
+      "key": "portfolio/developer",
+      "path": "templates/portfolio/developer",
+      "description": "Developer portfolio template to showcase your projects to your potential employers.",
+      "type": "portfolio",
+      "dependencies": [],
+      "language": "typescript"
+    }
+  }
+}
