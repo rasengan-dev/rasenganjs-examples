@@ -1,0 +1,65 @@
+/* Load Urbanist and Comfortaa font */
+@font-face {
+  font-family: "Urbanist-Black";
+  src: url("../assets/fonts/urbanist/Urbanist-Black.ttf");
+}
+
+@font-face {
+  font-family: "Urbanist-Bold";
+  src: url("../assets/fonts/urbanist/Urbanist-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Urbanist-ExtraBold";
+  src: url("../assets/fonts/urbanist/Urbanist-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "Urbanist-ExtraLight";
+  src: url("../assets/fonts/urbanist/Urbanist-ExtraLight.ttf");
+}
+
+@font-face {
+  font-family: "Urbanist-Medium";
+  src: url("../assets/fonts/urbanist/Urbanist-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Urbanist-Regular";
+  src: url("../assets/fonts/urbanist/Urbanist-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Urbanist-SemiBold";
+  src: url("../assets/fonts/urbanist/Urbanist-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Urbanist-Thin";
+  src: url("../assets/fonts/urbanist/Urbanist-Thin.ttf");
+}
+
+@font-face {
+  font-family: "Urbanist-Light";
+  src: url("../assets/fonts/urbanist/Urbanist-Light.ttf");
+}
+/**
+ * These directives tell Tailwind to include the base styles for the project,
+ * any components that are used, and any utilities that are used.
+ * So don't remove them!
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+html {
+  background-color: #f5f5f5;
+  font-family: "Urbanist-Regular", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
