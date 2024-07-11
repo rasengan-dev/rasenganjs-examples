@@ -11,10 +11,6 @@
     /* Aliases for intellisence */
     "paths": {
       "@/*": ["src/*"],
-      "@app/*": ["src/app/*"],
-      "@components/*": ["src/components/*"],
-      "@assets/*": ["src/assets/*"],
-      "@styles/*": ["src/styles/*"]
     }
   },
   "include": ["src", "rasengan-env.d.ts"],
