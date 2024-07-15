@@ -8,6 +8,7 @@ We welcome contributions from the community! By contributing to this project, yo
 
 - [Introduction](#introduction)
 - [Code of Conduct](#code-of-conduct)
+- [Code of Conduct](#code-of-conduct)
 - [Using Better Commit](#using-better-commit)
 - [Design Patterns](#design-patterns)
 - [Stack-Specific Guidelines](#stack-specific-guidelines)
