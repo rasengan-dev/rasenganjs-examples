@@ -45,31 +45,36 @@ We currently offer the following templates:
   - **Language**: TypeScript
 
 Additional templates are planned for various other categories, including e-commerce, dashboards, and more.
+Certainly! Here's the revised "Usage" section of the README to accurately reflect the current process for using templates with the Rasengan.js framework:
+
+
 
 ## Usage
 
-To use a template, follow these steps:
+To utilize a template with Rasengan.js, follow these streamlined steps:
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/rasengan-dev/rasenganjs-examples.git
-   cd rasenganjs-examples
-   ```
+1. **Explore Templates**:
+   - Visit [templates.rasengan.dev](https://templates.rasengan.dev) to browse through the available templates.
+   - Identify the template you want to use and copy its `template-key`.
 
-2. Install the Rasengan.js CLI:
-   ```bash
-   npm install -g rasengan@latest
-   ```
+2. **Generate New Project**:
+   - Use the Rasengan CLI to generate a new project based on your chosen template. This can be done without installing the CLI explicitly by using `npx`:
 
-3. Create a new project using a template:
-   ```bash
-   rasengan create <template-key>
-   ```
+     ```bash
+     npx create-rasengan@latest [project-name] --template <template-key>
+     ```
 
-   For example, to create a project using the Gemini chatbot template:
-   ```bash
-   rasengan create chatbot/gemini
-   ```
+   - If you do not specify the `[project-name]`, the CLI will prompt you to enter it during the process.
+
+For example, to create a project using the Gemini chatbot template, you would execute:
+
+```bash
+npx create-rasengan@latest my-chatbot-app --template chatbot/gemini
+```
+
+This method ensures you are always using the latest version of the Rasengan.js CLI and the most updated templates available.
+
+
 
 ## What's Included
 
@@ -82,7 +87,7 @@ The repository is structured as follows:
 
 ## Contributing
 
-We welcome contributions from the community! Please read our [Contribution Guidelines](CONTRIBUTING.md) to get started. Contributions can be in the form of new templates, bug fixes, documentation improvements, and more.
+We welcome contributions from the community! Please read our [Contribution Guidelines](https://github.com/rasengan-dev/rasenganjs-examples/blob/docs/%234-project-documentation/.github/ISSUE_TEMPLATE/CONTRIBUTING.md) to get started. Contributions can be in the form of new templates, bug fixes, documentation improvements, and more.
 
 ## Present Contributors
 
@@ -110,7 +115,7 @@ Stay connected with us through our social media channels:
 
 ## Code of Conduct
 
-Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project, you agree to abide by its terms.
+Please note that this project is released with a [Contributor Code of Conduct](https://github.com/rasengan-dev/rasenganjs-examples/blob/docs/%234-project-documentation/.github/ISSUE_TEMPLATE/CONTRIBUTING.md). By participating in this project, you agree to abide by its terms.
 
 ## License
 

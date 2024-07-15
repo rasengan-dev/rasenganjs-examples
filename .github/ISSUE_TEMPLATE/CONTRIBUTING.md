@@ -23,7 +23,61 @@ Thank you for your interest in contributing to the Rasengan.js Templates project
 
 Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project, you agree to abide by its terms.
 
-## Using Better Commit
+I see, let's refine the "How to Contribute" section to accurately describe the branch naming convention provided by Better Commit CLI. Here's the updated guideline that includes the correct format for branch creation:
+
+---
+
+## How to Contribute
+
+Contributing to this project involves several steps that help maintain the project's code quality and ensure that all changes are effectively tracked and managed. Please follow these detailed guidelines:
+
+### 1. Fork the Repository
+Fork the repository to your own GitHub account to create a personal copy where you can make changes independently of the original project.
+
+### 2. Create an Issue
+Before you make any changes, please create an issue on the GitHub repository detailing what you plan to fix or improve. This step helps avoid duplication of efforts and allows project maintainers to provide feedback before significant work begins.
+
+### 3. Create a New Branch Using Better Commit CLI
+After your issue is approved, you will need to create a new branch for your changes using the Better Commit CLI. This tool will prompt you to enter details to construct the branch name following the specific format:
+
+```plaintext
+<your-name>/<type-of-change>/<issue-tag>/<brief-description>
+```
+
+For example, if your username is `jdoe`, you are working on a new feature related to issue #42, and the feature involves adding a login page, you would enter:
+
+```bash
+better-commit branch "jdoe/feat/42-add-login-page"
+```
+
+This naming convention helps in tracking who made the change, what type of change was made, the specific issue it addresses, and a brief description of the change.
+
+### 4. Commit Your Changes
+Use the Better Commit CLI to commit your changes, which helps standardize commit messages and maintain a clean, understandable project history.
+
+```bash
+better-commit 
+```
+
+### 6. Push Your Branch to Your Fork
+After committing your changes, push your branch to your forked repository:
+
+```bash
+git push origin <branch-name>
+```
+
+### 7. Create a Pull Request
+Once you have tested your changes and are satisfied that they function as intended without introducing new issues, create a pull request from your branch to the `dev` branch of the specific template you are working on. This pull request will be reviewed by other developers who are also contributing to the same template.
+
+### 8. Final Integration
+After collaborative review and any necessary revisions, the changes in the `dev` branch can be merged into the `main` branch. This final integration is typically performed by a project maintainer to ensure all changes align with the project’s standards and goals.
+
+---
+
+By adhering to this structured approach, contributors can ensure their work aligns with the project’s goals and maintains high quality across the repository. Let me know if this version meets your needs or if there are further adjustments to make!
+
+
+## Using Better Commit CLI
 
 We use the Better Commit CLI to standardize commit messages and branch naming conventions. This ensures that our commit history is clean and easy to follow. Please follow these steps to install and use Better Commit:
 
@@ -117,6 +171,13 @@ This structure adheres to the Atomic Design principles, organizing components in
 - Define clear types and interfaces.
 - Use `strict` mode in `tsconfig.json`.
 - Avoid using `any` type.
+
+#### JavaScript
+
+
+- Follow ES6+ conventions.
+- Use `const` or `let` instead of var.
+- Leverage asynchronous programming (e.g., Promises, async/await).
 
 #### Tailwind CSS
 
@@ -226,14 +287,7 @@ Inspired by Sparkbox's awesome article on semantic commit messages. Please use t
 - **style** (formatting, missing semi colons, etc; no code change) -> `git commit -m 'style: commit-message-here'`
 - **test** (adding missing tests, refactoring tests; no production code change) -> `git commit -m 'test: commit-message-here'`
 
-## How to Contribute
 
-1. Fork the repository.
-2. Create a new branch using `better-commit branch`.
-3. Make your changes.
-4. Commit your changes using `better-commit`.
-5. Push to your forked repository.
-6. Create a pull request against the `main` branch of this repository.
 
 Thank you for contributing! Your help is greatly appreciated.
 

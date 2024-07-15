@@ -1,8 +1,7 @@
 Before opening an issue:
 
-- [Search for duplicate or closed issues](https://github.com/coreui/coreui-free-bootstrap-admin-template/issues?utf8=%E2%9C%93&q=is%3Aissue)
-- Prepare a [reduced test case](https://css-tricks.com/reduced-test-cases/) for any bugs
-- Read the [contributing guidelines](https://github.com/coreui/coreui-free-bootstrap-admin-template/blob/main/.github/CONTRIBUTING.md)
+- [Search for duplicate or closed issues](https://github.com/rasengan-dev/rasenganjs-examples/issues)
+- Read the [contributing guidelines](https://github.com/rasengan-dev/rasenganjs-examples/blob/docs/%234-project-documentation/.github/ISSUE_TEMPLATE/CONTRIBUTING.md)
 
 When asking general "how to" questions:
 
