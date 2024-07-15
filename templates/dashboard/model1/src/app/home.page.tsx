@@ -15,8 +15,8 @@ const Home: PageComponent = () => {
       </header>
 
       <div className="flex flex-col items-center mt-4">
-        <h1 className="font-black text-[3rem] md:text-[4rem] text-center font-urbanist">
-          Welcome to <span className="text-primary">Rasengan</span>
+        <h1 className="font-black text-[3rem] md:text-[4rem] text-title text-center font-urbanist">
+          <span className="text-primary">Rasengan</span> Dashboard
         </h1>
         <p className="text-lg mt-4">
           To get started, edit the file{" "}
@@ -28,7 +28,7 @@ const Home: PageComponent = () => {
 
       <div className="mt-8 flex flex-wrap justify-center gap-4">
         <div className="flex flex-col p-4 rounded-md border-[1px] border-[EFEFEF] max-w-[500px] md:w-[300px] lg:w-[400px]">
-          <h2 className="text-xl font-urbanist">Documentation</h2>
+          <h2 className="text-xl text-title font-medium">Documentation</h2>
           <p className="mt-2">
             Find in-depth information about Rasengan features and API.
           </p>
@@ -42,7 +42,7 @@ const Home: PageComponent = () => {
         </div>
 
         <div className="flex flex-col p-4 rounded-md border-[1px] border-[EFEFEF] max-w-[500px] md:w-[300px] lg:w-[400px]">
-          <h2 className="text-xl font-urbanist">Learn</h2>
+          <h2 className="text-xl text-title font-medium">Learn</h2>
           <p className="mt-2">
             Learn about Rasengan in an interactive course with quizzes!
           </p>
@@ -56,7 +56,7 @@ const Home: PageComponent = () => {
         </div>
 
         <div className="flex flex-col p-4 rounded-md border-[1px] border-[EFEFEF] max-w-[500px] md:w-[300px] lg:w-[400px]">
-          <h2 className="text-xl font-urbanist">Examples</h2>
+          <h2 className="text-xl text-title font-medium">Examples</h2>
           <p className="mt-2">
             Discover and deploy boilerplate example Rasengan projects.
           </p>
@@ -70,7 +70,7 @@ const Home: PageComponent = () => {
         </div>
 
         <div className="flex flex-col p-4 rounded-md border-[1px] border-[EFEFEF] max-w-[500px] md:w-[300px] lg:w-[400px]">
-          <h2 className="text-xl font-urbanist">Community</h2>
+          <h2 className="text-xl text-title font-medium">Community</h2>
           <p className="mt-2">
             Join an active community of Rasengan users on GitHub.
           </p>
@@ -85,7 +85,7 @@ const Home: PageComponent = () => {
       </div>
     </section>
   );
-}
+};
 
 Home.path = "/";
 Home.metadata = {
