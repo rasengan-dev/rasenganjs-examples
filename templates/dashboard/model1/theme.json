@@ -1,6 +1,12 @@
 {
   "primary": "#2A7FFF",
+  "primary-100": "#D9EBFF",
   "secondary": "#2A7FFF",
+  "success": "#34B53A",
+  "apple100": "#DFF9E0",
+  "warning": "#FFB200",
+  "mysin": "rgba(255, 248, 197, 1)",
+  "red-100": "#FFDFDF",
   "border": "#EBF0F4",
   "ring": "#C5CFDC",
   "background": "#FAFCFF",
@@ -8,5 +14,7 @@
   "muted": "#858EAD",
   "popover": "#fff",
   "card": "#fff",
-  "title": "#1E2A51"
+  "title": "#1E2A51",
+  "destructive": "#FF2424"
 }
+
