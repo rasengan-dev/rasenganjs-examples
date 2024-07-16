@@ -4,7 +4,7 @@ const Molecules: PageComponent = () => {
 	return <section className=''>Molecules page</section>;
 };
 
-Molecules.path = "/molecules";
+Molecules.path = "/ui/molecules";
 Molecules.metadata = {
 	title: "Molecules | Rasengan.js",
 	description: "Molecules page",

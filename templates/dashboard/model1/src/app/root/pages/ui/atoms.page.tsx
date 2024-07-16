@@ -4,7 +4,7 @@ const Atoms: PageComponent = () => {
 	return <section className=''>Atoms page</section>;
 };
 
-Atoms.path = "/atoms";
+Atoms.path = "/ui/atoms";
 Atoms.metadata = {
 	title: "Atoms | Rasengan.js",
 	description: "Atoms page",
