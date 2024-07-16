@@ -1,14 +1,17 @@
-import Navbar from "./Navbar"
+import Navbar from "./Navbar";
 
 interface MainProps {
-  children: React.ReactNode
+	children: React.ReactNode;
 }
 
 export default function Main({ children }: MainProps) {
-  return (
-    <main className="w-full h-screen bg-[#f5f5f5]">
-      <Navbar />
-      {children}
-    </main>
-  )
+	return (
+		<main className='w-full h-screen bg-[#FAFCFF]'>
+			<Navbar />
+
+			<section className='max-w-[1200px] h-main-page mx-auto overflow-auto p-4'>
+				{children}
+			</section>
+		</main>
+	);
 }
