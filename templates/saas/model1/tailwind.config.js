@@ -45,6 +45,19 @@ export default {
 				"urbanist-semibold": ["Urbanist-SemiBold", "sans-serif"],
 				"urbanist-medium": ["Urbanist-Medium", "sans-serif"],
 			},
+			animation: {
+				"slide-in": "slide-in 0.3s ease-in-out",
+			},
+			keyframes: {
+				"slide-in": {
+					"0%": {
+						transform: "translateY(30%) translateX(-50%)",
+					},
+					"100%": {
+						transform: "translateY(0) translateX(-50%)",
+					},
+				},
+			},
 		},
 	},
 	plugins: [],
