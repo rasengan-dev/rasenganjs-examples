@@ -4,6 +4,7 @@ import { ComponentProps } from "react";
 interface InputProps extends Omit<ComponentProps<"input">, "size"> {
 	children?: React.ReactNode;
 	size?: "small" | "medium" | "large";
+	fullWidth?: boolean;
 }
 
 /**
@@ -11,7 +12,7 @@ interface InputProps extends Omit<ComponentProps<"input">, "size"> {
  *
  * @param children - Optional React node to be rendered as a label inside the input.
  * @param size - Optional size of the input, can be "small", "medium", or "large".
- * @param className - Optional additional CSS classes to apply to the input.
+ * @param fullWidth - Whether the input should span the full width of its container.
  * @param rest - Remaining props to be passed to the underlying `input` element.
  * @returns A React component that renders an input with optional label and size variations.
  */
@@ -19,6 +20,7 @@ export default function Input({
 	children,
 	size = "small",
 	className,
+	fullWidth = false,
 	...rest
 }: InputProps) {
 	return (
@@ -26,10 +28,11 @@ export default function Input({
 			<input
 				{...rest}
 				className={clsx(
-					"w-full px-4 py-4 rounded-md text-sm font-light bg-transparent border-[1px] border-border outline-primary transition-all placeholder-slate-400 placeholder-light",
+					"px-4 py-4 rounded-md text-sm font-light bg-transparent border-[1px] border-border outline-primary transition-all placeholder-slate-400 placeholder-light",
 					children ? "pl-12" : "",
           size === "small" ? "h-10" : size === "medium" ? "h-14" : "h-18",
-					className
+					className,
+					fullWidth ? "w-full" : ""
 				)}
 			/>
 
