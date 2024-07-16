@@ -19,26 +19,26 @@ export default function Navbar() {
 	const themes = [
 		{
 			label: 'light',
-			icon: <Sun03Icon size={24} color={"#000000"} variant={"stroke"} />
+			icon: <Sun03Icon size={18} color={"#000000"} variant={"stroke"} />
 		},
 		{
 			label: 'dark',
-			icon: <Moon02Icon size={24} color={"#000000"} variant={"stroke"} />
+			icon: <Moon02Icon size={18} color={"#000000"} variant={"stroke"} />
 		},
 		{
 			label: 'system',
-			icon: <ComputerIcon size={24} color={"#000000"} variant={"stroke"} />
+			icon: <ComputerIcon size={18} color={"#000000"} variant={"stroke"} />
 		}
 	]
 
 	const getThemeIcon = (theme: string) => {
 		switch (theme) {
 			case 'light':
-				return <Sun03Icon size={24} color={"#000000"} variant={"stroke"} />
+				return <Sun03Icon size={18} color={"#000000"} variant={"stroke"} />
 			case 'dark':
-				return <Moon02Icon size={24} color={"#000000"} variant={"stroke"} />
+				return <Moon02Icon size={18} color={"#000000"} variant={"stroke"} />
 			case 'system':
-				return <ComputerIcon size={24} color={"#000000"} variant={"stroke"} />
+				return <ComputerIcon size={18} color={"#000000"} variant={"stroke"} />
 
 			default:
 				break;
@@ -82,10 +82,10 @@ export default function Navbar() {
 				<div onClick={() => setOpen((prev) => !prev)} className="cursor-pointer">
 					{getThemeIcon(theme)}
 				</div>
-				<div className={`absolute ${!open && 'hidden'} top-8 left-0 bg-gray-300 mt-2 p-2 rounded-lg`}>
+				<div className={`absolute ${!open && 'hidden'} top-8 left-4/5 bg-gray-300 mt-2 p-2 rounded-lg`}>
 					{
 						themes.map((theme, index) => (
-							<div key={index} className="flex my-1 cursor-pointer" onClick={() => handleTheme(theme.label)}>
+							<div key={index} className="flex items-center my-1 cursor-pointer " onClick={() => handleTheme(theme.label)}>
 								{theme.icon}
 								<Typography text={theme.label} className="mx-1" />
 							</div>
