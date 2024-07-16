@@ -1,5 +1,6 @@
 import Button from "@/components/atoms/Button";
 import NavItem from "@/components/atoms/NavItem";
+import ThemeToggler from "@/components/atoms/ThemeToggler";
 import Typography from "@/components/atoms/Typography";
 import { useLocation } from "rasengan";
 
@@ -9,7 +10,9 @@ export default function Navbar() {
 	const isActive = (path: string) => pathname === path;
 
 	return (
-		<header className='w-full max-w-[1500px] mx-auto px-10 lg:px-40 py-8 flex items-center justify-between'>
+		<header
+			className={`w-full max-w-[1500px] mx-auto px-10 lg:px-40 py-8 flex items-center justify-between`}
+		>
 			<div className='flex items-center gap-8'>
 				<Typography text='Rasengan' weight='bold' className='text-3xl' />
 
@@ -33,9 +36,14 @@ export default function Navbar() {
 				</nav>
 			</div>
 
-			<div className='flex items-center gap-2'>
+			<div className='flex items-center gap-1'>
 				<Button text='Log in' className='bg-transparent text-black' />
-				<Button text='Sign up' className="bg-rasengan-light-primary text-white" />
+				<Button
+					text='Sign up'
+					className='bg-rasengan-light-primary text-white'
+				/>
+
+				<ThemeToggler />
 			</div>
 		</header>
 	);
