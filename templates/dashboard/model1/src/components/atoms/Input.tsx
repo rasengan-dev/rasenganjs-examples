@@ -6,6 +6,15 @@ interface InputProps extends Omit<ComponentProps<"input">, "size"> {
 	size?: "small" | "medium" | "large";
 }
 
+/**
+ * Renders an input component with optional label and size variations.
+ *
+ * @param children - Optional React node to be rendered as a label inside the input.
+ * @param size - Optional size of the input, can be "small", "medium", or "large".
+ * @param className - Optional additional CSS classes to apply to the input.
+ * @param rest - Remaining props to be passed to the underlying `input` element.
+ * @returns A React component that renders an input with optional label and size variations.
+ */
 export default function Input({
 	children,
 	size = "small",

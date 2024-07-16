@@ -1,6 +1,11 @@
 import Typography from "@/components/atoms/Typography";
 import Input from "@/components/atoms/Input";
 
+/**
+ * Renders the Navbar component for the application.
+ * The Navbar includes a title and a search input with a search icon.
+ * The Navbar is positioned at the top of the page and spans the full width.
+ */
 export default function Navbar() {
 	return (
 		<header className='w-full h-[80px] border-b-[1px] border-b-border bg-white flex p-4 items-center justify-between'>

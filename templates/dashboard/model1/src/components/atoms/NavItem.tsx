@@ -12,6 +12,18 @@ interface NavItemProps {
 	onClick?: () => void;
 }
 
+/**
+ * A React component that renders a navigation item with an optional link and active state.
+ *
+ * @param {NavItemProps} props - The props for the NavItem component.
+ * @param {React.ReactNode} [props.children] - The content to be displayed inside the navigation item.
+ * @param {string} [props.className] - Additional CSS classes to apply to the navigation item.
+ * @param {string} props.title - The title to be displayed for the navigation item.
+ * @param {boolean} [props.active] - Whether the navigation item is in the active state.
+ * @param {string} [props.href] - The URL to link the navigation item to.
+ * @param {() => void} [props.onClick] - A callback function to be called when the navigation item is clicked.
+ * @returns {React.ReactElement} - The rendered NavItem component.
+ */
 export default function NavItem({
 	children,
 	className,
@@ -19,7 +31,7 @@ export default function NavItem({
 	active = false,
 	href,
 	onClick,
-}: NavItemProps) {
+}: NavItemProps): React.ReactElement {
 	return (
 		<React.Fragment>
 			{href ? (

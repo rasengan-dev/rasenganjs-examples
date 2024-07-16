@@ -4,6 +4,13 @@ interface MainProps {
 	children: React.ReactNode;
 }
 
+/**
+ * Renders the main layout of the application, including the navigation bar and a content section.
+ *
+ * @param {MainProps} props - The props for the Main component.
+ * @param {React.ReactNode} props.children - The content to be rendered inside the main section.
+ * @returns {JSX.Element} The main layout of the application.
+ */
 export default function Main({ children }: MainProps) {
 	return (
 		<main className='w-full h-screen bg-[#FAFCFF]'>

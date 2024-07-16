@@ -19,7 +19,7 @@ export default function Typography({
 	text,
 	isSmall = false,
 	className
-}: TypographyProps) {
+}: TypographyProps): React.ReactElement {
 	return isSmall ? (
 		<small className={`${className}`}>{text}</small>
 	) : (

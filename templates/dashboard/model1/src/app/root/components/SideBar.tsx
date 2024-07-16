@@ -10,6 +10,11 @@ import NavItem from "@/components/atoms/NavItem";
 import { useLocation } from "rasengan";
 import { useCallback } from "react";
 
+/**
+ * The SideBar component renders the sidebar UI for the application.
+ * It includes the logo, navigation items, and user profile information.
+ * The component uses the `useLocation` hook from the `rasengan` library to determine the current URL path and highlight the active navigation item accordingly.
+ */
 export default function SideBar() {
 	const { pathname } = useLocation();
 
