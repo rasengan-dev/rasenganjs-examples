@@ -1,5 +1,6 @@
 import { PageComponent } from "rasengan";
 import { Button } from "../atoms/button";
+import { ButtonState } from "@/lib/enums";
 
 
 const ComponentsShowcase: PageComponent = () => {
@@ -17,7 +18,7 @@ const ComponentsShowcase: PageComponent = () => {
         <Button variant={'primarySecondary'} >primarySecondary</Button>
         <Button variant={'red'} >red</Button>
         <Button variant={'redSecondary'} >redSecondary</Button>
-        <Button variant={'green'} >green</Button>
+        <Button variant={'green'} state={ButtonState.LOADING}>green</Button>
         <Button variant={'greenSecondary'} >greenSecondary</Button>
         <Button variant={'warning'} >warning</Button>
         <Button variant={'warningSecondary'} >warningSecondary</Button>
