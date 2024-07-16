@@ -72,6 +72,9 @@ module.exports = {
         md: `8px`,
         sm: "6px",
       },
+      height: {
+        "main-page": "calc(100vh - 80px)",
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
