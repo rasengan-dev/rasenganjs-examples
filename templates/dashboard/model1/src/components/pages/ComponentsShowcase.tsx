@@ -1,4 +1,5 @@
 import { PageComponent } from "rasengan";
+import { Button } from "../atoms/button";
 
 
 const ComponentsShowcase: PageComponent = () => {
@@ -8,6 +9,13 @@ const ComponentsShowcase: PageComponent = () => {
       
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-4">Atoms</h2>
+        <div className="flex space-x-4" >
+
+        <Button variant={'green'} >Rasengan</Button>
+        <Button variant={'greenSecondary'} >Rasengan</Button>
+        <Button variant={'green'} >Rasengan</Button>
+        <Button variant={'green'} >Rasengan</Button>
+        </div>
       </section>
 
       <section className="mb-8">
