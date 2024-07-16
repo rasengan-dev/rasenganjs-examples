@@ -11,18 +11,26 @@ import { useLocation } from "rasengan";
 import { useCallback } from "react";
 
 export default function SideBar() {
-  const { pathname } = useLocation();
+	const { pathname } = useLocation();
 
-  const isActive = useCallback((path: string) => {
-    return pathname.startsWith(path);
-  }, [pathname]);
+	const isActive = useCallback(
+		(path: string) => {
+			// To handle the case where path = /
+			if (pathname === path) {
+				return true;
+			}
+
+			return pathname.startsWith(path) && path !== "/";
+		},
+		[pathname]
+	);
 
 	return (
 		<aside className='w-[300px] h-screen bg-white border-[1px] border-border flex flex-col justify-between items-start p-4 pt-0'>
 			<div className='w-full'>
 				<div>
 					<div className='h-[80px] flex items-center justify-between'>
-						<Image src={logo} alt='Rasengan.js' width={150} height={"auto"} />
+						<Image src={logo} alt='Rasengan.js' width={170} height={"auto"} />
 
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
@@ -61,13 +69,12 @@ export default function SideBar() {
 
 				<div className='w-full flex flex-col items-center gap-4 pt-4'>
 					<GroupNavItems title='Data managing'>
-						<NavItem title='Dashboard' active={isActive("/dashboard")}>
+						<NavItem title='Dashboard' active={isActive("/")} href='/'>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
 								viewBox='0 0 24 24'
 								width={20}
 								height={20}
-								className='text-primary-500'
 								fill={"none"}
 							>
 								<path
@@ -85,13 +92,16 @@ export default function SideBar() {
 							</svg>
 						</NavItem>
 
-						<NavItem title='Data Visualization' active={isActive("/charts")}>
+						<NavItem
+							title='Data Visualization'
+							active={isActive("/charts")}
+							href='/charts'
+						>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
 								viewBox='0 0 24 24'
 								width={20}
 								height={20}
-								className='text-foreground'
 								fill={"none"}
 							>
 								<path
@@ -117,13 +127,16 @@ export default function SideBar() {
 					</GroupNavItems>
 
 					<GroupNavItems title='UI Elements' className='flex-1'>
-						<NavItem title='Atoms' active={isActive("/ui/atoms")}>
+						<NavItem
+							title='Atoms'
+							active={isActive("/ui/atoms")}
+							href='/ui/atoms'
+						>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
 								viewBox='0 0 24 24'
 								width={20}
 								height={20}
-								className='text-foreground'
 								fill={"none"}
 							>
 								<circle
@@ -152,7 +165,11 @@ export default function SideBar() {
 							</svg>
 						</NavItem>
 
-						<NavItem title='Molecules' active={isActive("/ui/molecules")}>
+						<NavItem
+							title='Molecules'
+							active={isActive("/ui/molecules")}
+							href='/ui/molecules'
+						>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
 								viewBox='0 0 24 24'
@@ -208,7 +225,11 @@ export default function SideBar() {
 					</GroupNavItems>
 
 					<GroupNavItems title='Organisms' className='flex-1'>
-						<NavItem title='Forms' active={isActive("/organisms/forms")}>
+						<NavItem
+							title='Forms'
+							active={isActive("/organisms/forms")}
+							href='/organisms/forms'
+						>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
 								viewBox='0 0 24 24'
@@ -274,7 +295,7 @@ export default function SideBar() {
 				<div className='flex flex-col'>
 					<Typography text='BAHA Ephraim' className='font-bold text-md' />
 					<Typography
-						text='@jeansamist- Admin'
+						text='@jeansamist - Admin'
 						className='font-light'
 						isSmall
 					/>

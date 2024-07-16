@@ -4,7 +4,7 @@ import Input from "@/components/atoms/Input";
 export default function Navbar() {
 	return (
 		<header className='w-full h-[80px] border-b-[1px] border-b-border bg-white flex p-4 items-center justify-between'>
-			<Typography text='Dashboard' className='font-bold text-xl' />
+			<Typography text='Dashboard' className='font-medium text-xl' />
 
 			<Input placeholder='Hello'>
 				<svg

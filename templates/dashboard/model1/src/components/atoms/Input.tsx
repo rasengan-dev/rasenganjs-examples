@@ -17,7 +17,7 @@ export default function Input({
 			<input
 				{...rest}
 				className={clsx(
-					"w-full px-4 py-4 rounded-md bg-transparent border-[1px] border-border outline-primary transition-all",
+					"w-full px-4 py-4 rounded-md text-sm font-light bg-transparent border-[1px] border-border outline-primary transition-all placeholder-slate-400 placeholder-light",
 					children ? "pl-12" : "",
           size === "small" ? "h-10" : size === "medium" ? "h-14" : "h-18",
 					className
