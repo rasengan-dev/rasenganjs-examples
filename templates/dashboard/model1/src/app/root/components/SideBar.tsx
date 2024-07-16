@@ -98,7 +98,7 @@ export default function SideBar() {
 						</NavItem>
 
 						<NavItem
-							title='Data Visualization'
+							title='Charts'
 							active={isActive("/charts")}
 							href='/charts'
 						>
