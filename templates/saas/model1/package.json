@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@rasenganjs/image": "^1.0.0",
+    "@rasenganjs/theme": "^1.0.0",
+    "hugeicons-react": "^0.2.0",
     "rasengan": "^1.0.0-beta.39",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
