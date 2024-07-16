@@ -130,26 +130,28 @@ Recommended project structure for templates following the Atomic Design pattern:
 
 ```
 rasenganjs-examples/
-├── template1/
-│   ├── atoms/
-│   │   ├── Button/
-│   │   ├── Input/
-│   ├── molecules/
-│   │   ├── Header/
-│   │   ├── Sidebar/
-│   ├── organisms/
-│   │   ├── HomePage/
-│   │   ├── AboutPage/
-├── template2/
-│   ├── atoms/
-│   │   ├── Icon/
-│   │   ├── Label/
-│   ├── molecules/
-│   │   ├── Navbar/
-│   │   ├── Footer/
-│   ├── organisms/
-│   │   ├── DashboardPage/
-│   │   ├── ProfilePage/
+├── templates
+│   ├── template1
+│   │   ├── components
+│   │   │   ├── atoms
+│   │   │   │   ├── Button.tsx
+│   │   │   │   ├── Input.tsx
+│   │   │   │   └──...
+│   │   │   ├── molecules
+│   │   │   │   ├── Form.tsx
+│   │   │   │   ├── Card.tsx
+│   │   │   │   └──...
+│   │   │   ├── organisms
+│   │   │   │   ├── Header.tsx
+│   │   │   │   ├── Footer.tsx
+│   │   │   │   └──...
+│   │   │   ├── templates
+│   │   │   │   ├── Layout.tsx
+│   │   │   │   └──...
+│   │   │   └── pages
+│   │   │       ├── Home.tsx
+│   │   │       ├── Login.tsx
+│   │   │       └──...
 ```
 
 This structure adheres to the Atomic Design principles, organizing components into atoms, molecules, and organisms for better scalability and reusability.
@@ -249,8 +251,8 @@ Adhering to the following process is the best way to get your work included in t
 
 2. If you cloned a while ago, get the latest changes from upstream:
     ```bash
-    git checkout master
-    git pull upstream master
+    git checkout main
+    git pull upstream main
     ```
 
 3. Create a new topic branch (off the main project development branch) to contain your feature, change, or fix:
@@ -262,7 +264,7 @@ Adhering to the following process is the best way to get your work included in t
 
 5. Locally merge (or rebase) the upstream development branch into your topic branch:
     ```bash
-    git pull [--rebase] upstream master
+    git pull [--rebase] upstream main
     ```
 
 6. Push your topic branch up to your fork:

@@ -111,7 +111,8 @@ We use the following resources for the development of our templates:
 Stay connected with us through our social media channels:
 - [GitHub](https://github.com/rasengan-dev/rasenganjs/discussions)
 - [Twitter](https://twitter.com/rasenganjs)
-- Contact: [email@example.com](mailto:email@example.com)
+- [Linkedin](https://www.linkedin.com/company/rasenganjs/)
+<!-- - Contact: [email@example.com](mailto:email@example.com) -->
 
 ## Code of Conduct
 
