@@ -15,6 +15,7 @@
   "popover": "#fff",
   "card": "#fff",
   "title": "#1E2A51",
-  "destructive": "#FF2424"
+  "destructive": "#FF2424",
+  "red": "#FF2424"
 }
 

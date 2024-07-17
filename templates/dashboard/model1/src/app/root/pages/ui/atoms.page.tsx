@@ -11,6 +11,7 @@ import {
 import { Button } from "@/components/atoms/Button";
 import { Select } from "@/components/atoms/select";
 import { ComponentVariant } from "@/lib/enums";
+import { Checkbox } from "@/components/atoms/checkbox";
 
 const Atoms: PageComponent = () => {
   return (
@@ -93,6 +94,36 @@ const Atoms: PageComponent = () => {
             <option value="2">Option 2</option>
             <option value="3">Option 3</option>
           </Select>
+        </section>
+      </CardContainer>
+
+      <CardContainer title="Checkbox">
+        <section className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="flex items-center space-x-2">
+            <Checkbox id="terms" />
+            <label
+              htmlFor="terms"
+              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            >
+              Accept terms and conditions
+            </label>
+          </div>
+		  
+          <div className="items-top flex space-x-2">
+            <Checkbox id="terms1" variant={ComponentVariant.RED} />
+            <div className="grid gap-1.5 leading-none">
+              <label
+                htmlFor="terms1"
+                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              >
+                Accept terms and conditions
+              </label>
+              <p className="text-sm text-muted-foreground">
+                You agree to our Terms of Service and Privacy Policy.
+              </p>
+            </div>
+          </div>
+
         </section>
       </CardContainer>
     </section>
