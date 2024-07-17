@@ -1,2 +1,2 @@
-export { ButtonState } from './ButtonState';
-export { ButtonVariant } from './ButtonVariant';
+export { ComponentState } from './ComponentState.ts';
+export { ComponentVariant } from './ComponentVariant.ts';

@@ -3,76 +3,106 @@ import NavItem from "@/components/atoms/NavItem";
 import CardContainer from "@/components/molecules/CardContainer";
 import { PageComponent } from "rasengan";
 import {
-	Home02Icon,
-	Atom01Icon,
-	CallIcon,
-	UserSharingIcon,
+  Home02Icon,
+  Atom01Icon,
+  CallIcon,
+  UserSharingIcon,
 } from "hugeicons-react";
 import { Button } from "@/components/atoms/Button";
+import { Select } from "@/components/atoms/select";
+import { ComponentVariant } from "@/lib/enums";
 
 const Atoms: PageComponent = () => {
-	return (
-		<section className=''>
-			{/* Inputs */}
-			<CardContainer title='Simple Inputs'>
-				<section className='w-full grid grid-cols-1 sm:grid-cols-2 gap-4'>
-					<Input placeholder='Input without label and icon' fullWidth />
-					<Input placeholder='Input with icon' fullWidth>
-						<UserSharingIcon size={20} />
-					</Input>
-					<Input
-						placeholder='Input with icon'
-						className='border-warning-400'
-						fullWidth
-					>
-						<CallIcon size={20} />
-					</Input>
-					<Input
-						placeholder='Input with icon'
-						className='border-success-400'
-						fullWidth
-					>
-						<CallIcon size={20} />
-					</Input>
-				</section>
-			</CardContainer>
+  return (
+    <section className="">
+      {/* Inputs */}
+      <CardContainer title="Simple Inputs">
+        <section className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <Input placeholder="Input without label and icon" fullWidth />
+          <Input placeholder="Input with icon" fullWidth>
+            <UserSharingIcon size={20} />
+          </Input>
+          <Input
+            placeholder="Input with icon"
+            className="border-warning-400"
+            fullWidth
+          >
+            <CallIcon size={20} />
+          </Input>
+          <Input
+            placeholder="Input with icon"
+            className="border-success-400"
+            fullWidth
+          >
+            <CallIcon size={20} />
+          </Input>
+        </section>
+      </CardContainer>
 
-			<CardContainer title='Sidebar buttons'>
-				<section className='w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
-					<NavItem title='Dashboard'>
-						<Home02Icon size={20} />
-					</NavItem>
-					<NavItem title='Atoms'>
-						<Atom01Icon size={20} />
-					</NavItem>
-					<NavItem title='Dashboard' active>
-						<Home02Icon size={20} />
-					</NavItem>
-					<NavItem title='Atoms' active>
-						<Atom01Icon size={20} />
-					</NavItem>
-				</section>
-			</CardContainer>
+      <CardContainer title="Sidebar buttons">
+        <section className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <NavItem title="Dashboard">
+            <Home02Icon size={20} />
+          </NavItem>
+          <NavItem title="Atoms">
+            <Atom01Icon size={20} />
+          </NavItem>
+          <NavItem title="Dashboard" active>
+            <Home02Icon size={20} />
+          </NavItem>
+          <NavItem title="Atoms" active>
+            <Atom01Icon size={20} />
+          </NavItem>
+        </section>
+      </CardContainer>
 
-			<CardContainer title='Buttons'>
-				<section className='w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
-					<Button size={'lg'} >Large Button</Button>
-					<Button size={'lg'} variant={'red'} >Danger Button</Button>
-					<Button size={'lg'} variant={'outline'} >outline Button</Button>
-					<Button size={'lg'} variant={'link'} >Link</Button>
-					
-				</section>
-			</CardContainer>
+      <CardContainer title="Buttons">
+        <section className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <Button size={"lg"}>Large Button</Button>
+          <Button size={"lg"} variant={"red"}>
+            Danger #Button
+          </Button>
+          <Button size={"lg"} variant={"outline"}>
+            outline Button
+          </Button>
+          <Button size={"lg"} variant={"link"}>
+            Link
+          </Button>
+        </section>
+      </CardContainer>
 
-			
-		</section>
-	);
+      <CardContainer title="Select">
+        <section className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <Select
+            variant={ComponentVariant.PRIMARY}
+            label="Default Select"
+            icon={<UserSharingIcon size={20} color="#2A7FFF" />}
+          >
+            <option value="">Select an option</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </Select>
+          <Select
+            variant={ComponentVariant.RED}
+            label="Default Select"
+            icon={<UserSharingIcon size={20} color="#FF2424" />}
+          >
+            <option value="">Select an option</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </Select>
+        </section>
+      </CardContainer>
+    </section>
+  );
 };
 
 Atoms.path = "/ui/atoms";
 Atoms.metadata = {
-	title: "Atoms | Rasengan.js",
-	description: "Atoms page",
+  title: "Atoms | Rasengan.js",
+  description: "Atoms page",
 };
 
 export default Atoms;

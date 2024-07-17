@@ -1,4 +1,4 @@
-export enum ButtonVariant {
+export enum ComponentVariant {
     WHITE = 'white',
     WHITE_BORDER = 'white-border',
     WHITE_MUTED = 'white-muted',
