@@ -1,12 +1,16 @@
 {
   "primary": "#2A7FFF",
   "secondary": "#2A7FFF",
-  "border": "#EBF0F4",
-  "ring": "#C5CFDC",
-  "background": "#FAFCFF",
+  "destructive": "#FF2424",
+  "success": "#34B53A",
+  "warning": "#FFB200",
+
+  "title": "#1E2A51",
   "foreground": "#5B6278",
   "muted": "#858EAD",
-  "popover": "#fff",
-  "card": "#fff",
-  "title": "#1E2A51"
+  
+  "background": "#FAFCFF",
+  
+  "border": "#EBF0F4",
+  "white": "#fff"
 }
