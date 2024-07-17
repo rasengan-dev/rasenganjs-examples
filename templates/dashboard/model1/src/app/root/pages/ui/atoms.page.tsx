@@ -10,12 +10,13 @@ import {
 } from "hugeicons-react";
 import { Button } from "@/components/atoms/Button";
 import { Select } from "@/components/atoms/select";
-import { ComponentVariant } from "@/lib/enums";
+import { ComponentState, ComponentVariant } from "@/lib/enums";
 import { Checkbox } from "@/components/atoms/checkbox";
+import { Switch } from "@/components/atoms/switch";
 
 const Atoms: PageComponent = () => {
   return (
-    <section className="">
+    <section className="pb-24">
       {/* Inputs */}
       <CardContainer title="Simple Inputs">
         <section className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -108,7 +109,7 @@ const Atoms: PageComponent = () => {
               Accept terms and conditions
             </label>
           </div>
-		  
+
           <div className="items-top flex space-x-2">
             <Checkbox id="terms1" variant={ComponentVariant.RED} />
             <div className="grid gap-1.5 leading-none">
@@ -123,7 +124,35 @@ const Atoms: PageComponent = () => {
               </p>
             </div>
           </div>
+        </section>
+      </CardContainer>
 
+      <CardContainer title="Switch">
+        <section className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="flex items-center space-x-2">
+            <Switch
+              id="airplane-mode"
+              variant={ComponentVariant.PRIMARY}
+            
+            />
+            <label htmlFor="airplane-mode">Primary Enable</label>
+          </div>
+          <div className="flex items-center space-x-2">
+            <Switch
+              id="airplane-mode"
+              variant={ComponentVariant.RED}
+            
+            />
+            <label htmlFor="airplane-mode">RED Enable</label>
+          </div>
+          <div className="flex items-center space-x-2">
+            <Switch
+              id="airplane-mode"
+              variant={ComponentVariant.PRIMARY}
+              state={ComponentState.DISABLED}
+            />
+            <label htmlFor="airplane-mode">Disable</label>
+          </div>
         </section>
       </CardContainer>
     </section>
