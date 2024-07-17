@@ -1,17 +1,18 @@
 import Button from "@/components/atoms/Button";
 import Typography from "@/components/atoms/Typography";
 import Image from "@rasenganjs/image";
-import { CirclePasswordIcon, Mail01Icon, UserIcon } from "hugeicons-react";
+import { CirclePasswordIcon, Mail01Icon, UserIcon, ViewOffIcon, ViewIcon } from "hugeicons-react";
 import { Link, PageComponent } from "rasengan";
 
 //import image
 import signup from '@/assets/signup.avif'
-import Container from "@/components/molecules/Container";
+import { useState } from "react";
 
 
 const SignUp: PageComponent = () => {
+	const [showPassword, setShowPassword] = useState(false);
 	return (
-		<Container className="md:flex flex justify-center items-center bg-white text-gray-500 shadow-xl w-full h-screen overflow-hidden mx-4 md:mx-0">
+		<div className="md:flex flex justify-center items-center bg-white text-gray-500 shadow-xl w-full h-screen overflow-hidden">
 			<div className="hidden md:flex w-max h-screen md:w-1/2 py-10 px-10 items-center justify-center">
 				{/* <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 744.84799 747.07702">
 					<path id="fa3b9e12-7275-481e-bee9-64fd9595a50d" data-name="Path 1" d="M299.205,705.80851l-6.56-25.872a335.96693,335.96693,0,0,0-35.643-12.788l-.828,12.024-3.358-13.247c-15.021-4.29394-25.24-6.183-25.24-6.183s13.8,52.489,42.754,92.617l33.734,5.926-26.207,3.779a135.92592,135.92592,0,0,0,11.719,12.422c42.115,39.092,89.024,57.028,104.773,40.06s-5.625-62.412-47.74-101.5c-13.056-12.119-29.457-21.844-45.875-29.5Z" transform="translate(-227.576 -76.46149)" fill="#f2f2f2" />
@@ -54,19 +55,19 @@ const SignUp: PageComponent = () => {
 				<div>
 					<div className="flex flex-wrap -mx-3">
 						<div className="w-full md:w-1/2 px-3 mb-5">
-							<label htmlFor="firstName" className="text-xs font-semibold px-1">First Name</label>
+							<label htmlFor="firstName" className="text-lg font-semibold px-1">First Name</label>
 							<div className="flex">
 								<div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
-									<i className="mdi mdi-account-outline text-gray-400 text-lg"><UserIcon/></i>
+									<i className="text-gray-400 text-lg"><UserIcon/></i>
 								</div>
 								<input id="firstName" type="text" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-rasengan-primary" placeholder="John" />
 							</div>
 						</div>
 						<div className="w-full md:w-1/2 px-3 mb-5">
-							<label htmlFor="lastName" className="text-xs font-semibold px-1">Last Name</label>
+							<label htmlFor="lastName" className="text-lg font-semibold px-1">Last Name</label>
 							<div className="flex">
 								<div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
-									<i className="mdi mdi-account-outline text-gray-400 text-lg"><UserIcon/></i>
+									<i className="text-gray-400 text-lg"><UserIcon/></i>
 								</div>
 								<input id="lastName" type="text" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-rasengan-primary" placeholder="Doe" />
 							</div>
@@ -74,10 +75,10 @@ const SignUp: PageComponent = () => {
 					</div>
 					<div className="flex flex-wrap -mx-3">
 						<div className="w-full px-3 mb-5">
-							<label htmlFor="email" className="text-xs font-semibold px-1">Email</label>
+							<label htmlFor="email" className="text-lg font-semibold px-1">Email</label>
 							<div className="flex">
 								<div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
-									<i className="mdi mdi-email-outline text-gray-400 text-lg"><Mail01Icon/></i>
+									<i className="text-gray-400 text-lg"><Mail01Icon/></i>
 								</div>
 								<input id="email" type="email" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-rasengan-primary" placeholder="john.doe@example.com" />
 							</div>
@@ -85,12 +86,15 @@ const SignUp: PageComponent = () => {
 					</div>
 					<div className="flex flex-wrap -mx-3">
 						<div className="w-full px-3 mb-12">
-							<label htmlFor="password" className="text-xs font-semibold px-1">Password</label>
+							<label htmlFor="password" className="text-lg font-semibold px-1">Password</label>
 							<div className="flex">
 								<div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
-									<i className="mdi mdi-lock-outline text-gray-400 text-lg"><CirclePasswordIcon/></i>
+									<i className="text-gray-400 text-lg"><CirclePasswordIcon/></i>
 								</div>
-								<input id="password" type="password" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-rasengan-primary" placeholder="************" />
+								<input id="password" type={showPassword ? "text" : "password"} className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-rasengan-primary" placeholder="************" />
+								<div className="absolute right-12 pt-3 flex items-center cursor-pointer" onClick={() => setShowPassword(!showPassword)}>
+										{showPassword ? <ViewIcon className="h-6 w-6 text-gray-400" /> : <ViewOffIcon className="h-6 w-6 text-gray-400" />}
+									</div>
 							</div>
 						</div>
 					</div>
@@ -99,13 +103,13 @@ const SignUp: PageComponent = () => {
 							<Button text="Sign Up" className="block w-full max-w-xs mx-auto bg-rasengan-light-primary hover:bg-rasengan-dark-primary focus:bg-rasengan-light-primary text-white rounded-lg px-3 py-3 font-semibold"/>
 						</div>
 					</div>
-					<div className="text-center h-4 items-center justify-center">
-						<Typography text="Already have an account?" />
+					<div className="flex text-center h-4 items-center justify-center">
+						<Typography text="Already have an account?" className="px-1" />
 						<Link to="/auth/sign-in" className="text-[#2a7fff] hover:underline">Sign In</Link>
 					</div>
 				</div>
 			</div>
-		</Container>
+		</div>
 	);
 };
 SignUp.path = "/sign-up";
