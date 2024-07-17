@@ -1,9 +1,18 @@
+/**
+ * Renders a switch component with various styles and states.
+ *
+ * @param variant - Optional style variant of the switch, can be "primary", "secondary", "red".
+ * @param state - Optional state of the switch, can be "DEFAULT", "DISABLED", "LOADING", "ERROR", "SUCCESS", based on the ComponentState enum.
+ * @param className - Additional class names to apply to the switch.
+ * @param rest - Remaining props to be passed to the underlying `SwitchPrimitives.Root` element.
+ * @returns A React component that renders a styled switch with optional states and variant styles.
+ */
+
+
 import * as React from "react"
 import * as SwitchPrimitives from "@radix-ui/react-switch"
 import { cva, type VariantProps } from "class-variance-authority"
-
 import { cn } from "@/lib/utils"
-import { ComponentVariant } from "@/lib/enums/ComponentVariant"
 import { ComponentState } from "@/lib/enums/ComponentState"
 
 const switchVariants = cva(

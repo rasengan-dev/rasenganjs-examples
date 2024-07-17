@@ -1,3 +1,15 @@
+
+/**
+ * Renders a button component with various styles and states.
+ *
+ * @param asChild - If true, will render the button as a child of a custom component provided via Slot from Radix UI.
+ * @param state - Optional state of the button, can be "DEFAULT", "LOADING", etc., based on the ComponentState enum.
+ * @param variant - Optional style variant of the button, can be "default", "primary", "outline", etc.
+ * @param size - Optional size of the button, can be "default", "sm", "md", "lg", or "icon".
+ * @param className - Additional class names to apply to the button.
+ * @param rest - Remaining props to be passed to the underlying `button` element.
+ * @returns A React component that renders a styled button with optional states and variant styles.
+ */
 import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
@@ -40,18 +52,6 @@ const buttonVariants = cva(
     },
   }
 );
-
-/**
- * Renders a button component with various styles and states.
- *
- * @param asChild - If true, will render the button as a child of a custom component provided via Slot from Radix UI.
- * @param state - Optional state of the button, can be "DEFAULT", "LOADING", etc., based on the ComponentState enum.
- * @param variant - Optional style variant of the button, can be "default", "primary", "outline", etc.
- * @param size - Optional size of the button, can be "default", "sm", "md", "lg", or "icon".
- * @param className - Additional class names to apply to the button.
- * @param rest - Remaining props to be passed to the underlying `button` element.
- * @returns A React component that renders a styled button with optional states and variant styles.
- */
 
 
 export interface ButtonProps

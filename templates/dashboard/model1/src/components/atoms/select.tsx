@@ -1,3 +1,17 @@
+/**
+ * Renders a select component with various styles and states.
+ *
+ * @param asChild - If true, will render the select as a child of a custom component provided via Slot from Radix UI.
+ * @param state - Optional state of the select, can be "DEFAULT", "DISABLED", "LOADING", "ERROR", "SUCCESS", based on the ComponentState enum.
+ * @param variant - Optional style variant of the select, can be "default", "primary", "outline", "green", "yellow", "red".
+ * @param label - Optional label for the select component.
+ * @param icon - Optional icon to display inside the select component.
+ * @param className - Additional class names to apply to the select component.
+ * @param rest - Remaining props to be passed to the underlying `select` element.
+ * @returns A React component that renders a styled select with optional states and variant styles.
+ */
+
+
 import * as React from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { ComponentState } from '@/lib/enums/ComponentState';
@@ -29,6 +43,7 @@ const selectVariants = cva(
     },
   }
 );
+
 
 export interface SelectProps
   extends React.SelectHTMLAttributes<HTMLSelectElement>,

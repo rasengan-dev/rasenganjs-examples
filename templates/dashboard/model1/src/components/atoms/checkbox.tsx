@@ -1,3 +1,13 @@
+/**
+ * Renders a checkbox component with various styles and states.
+ *
+ * @param variant - Optional style variant of the checkbox, can be "primary", "secondary", "red".
+ * @param className - Additional class names to apply to the checkbox.
+ * @param rest - Remaining props to be passed to the underlying `CheckboxPrimitive.Root` element.
+ * @returns A React component that renders a styled checkbox with optional variant styles.
+ */
+
+
 import * as React from "react";
 import * as CheckboxPrimitive from "@radix-ui/react-checkbox";
 import { Check } from "lucide-react";
@@ -21,6 +31,8 @@ const checkboxVariants = cva(
     },
   }
 );
+
+
 
 export interface CheckboxProps
   extends React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>,
