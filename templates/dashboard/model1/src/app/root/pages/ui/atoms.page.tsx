@@ -8,6 +8,7 @@ import {
 	CallIcon,
 	UserSharingIcon,
 } from "hugeicons-react";
+import { Button } from "@/components/atoms/Button";
 
 const Atoms: PageComponent = () => {
 	return (
@@ -52,6 +53,18 @@ const Atoms: PageComponent = () => {
 					</NavItem>
 				</section>
 			</CardContainer>
+
+			<CardContainer title='Buttons'>
+				<section className='w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
+					<Button size={'lg'} >Large Button</Button>
+					<Button size={'lg'} variant={'red'} >Danger Button</Button>
+					<Button size={'lg'} variant={'outline'} >outline Button</Button>
+					<Button size={'lg'} variant={'link'} >Link</Button>
+					
+				</section>
+			</CardContainer>
+
+			
 		</section>
 	);
 };

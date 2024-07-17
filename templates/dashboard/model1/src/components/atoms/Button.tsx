@@ -1,10 +1,9 @@
-import * as React from "react"
-import { Slot } from "@radix-ui/react-slot"
-import { cva, type VariantProps } from "class-variance-authority"
+import * as React from "react";
+import { Slot } from "@radix-ui/react-slot";
+import { cva, type VariantProps } from "class-variance-authority";
 
-
-import { cn } from "@/lib/utils"
-import { ButtonState } from "@/lib/enums"
+import { cn } from "@/lib/utils";
+import { ButtonState } from "@/lib/enums";
 
 const buttonVariants = cva(
   "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
@@ -29,8 +28,9 @@ const buttonVariants = cva(
       },
       size: {
         default: "px-[24px] py-[16px]",
-        sm: " rounded-md py-[8px] px-[16px]",
-        lg: "rounded-md px-[24px] py-[16px]",
+        sm: "rounded-md px-[12px] py-[8px]",
+        md: "rounded-md px-[18px] py-[10px]",
+        lg: "rounded-md px-[24px] py-[12px]",
         icon: "h-10 w-10",
       },
     },
@@ -39,27 +39,23 @@ const buttonVariants = cva(
       size: "default",
     },
   }
-)
+);
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
-  asChild?: boolean
-  state?: ButtonState
+  asChild?: boolean;
+  state?: ButtonState;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, state = ButtonState.DEFAULT, asChild = false, ...props }, ref) => {
-    const Comp = asChild ? Slot : "button"
+    const Comp = asChild ? Slot : "button";
 
     // Handle different states
     let stateStyles = "";
     if (state === ButtonState.LOADING) {
       stateStyles = "opacity-50 cursor-not-allowed";
-    } else if (state === ButtonState.SUCCESS) {
-      stateStyles = "bg-green-500 text-white";
-    } else if (state === ButtonState.ERROR) {
-      stateStyles = "bg-red-500 text-white";
     }
 
     return (
@@ -71,9 +67,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       >
         {state === ButtonState.LOADING ? "Loading..." : props.children}
       </Comp>
-    )
+    );
   }
-)
-Button.displayName = "Button"
+);
+Button.displayName = "Button";
 
-export { Button, buttonVariants }
+export { Button, buttonVariants };

@@ -1,7 +1,5 @@
 import { RouterComponent, defineRouter } from "rasengan";
-import Home from "@/app/home.page";
 
-import ComponentsShowcase from "@/components/pages/ComponentsShowcase";
 import AuthRouter from "@/app/auth/auth.router";
 import AppLayout from "@/app/root/layout/app.layout";
 import Dashboard from "@/app/root/pages/dashboard.page";
