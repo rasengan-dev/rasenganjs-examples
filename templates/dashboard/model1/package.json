@@ -10,9 +10,15 @@
     "start": "rasengan start"
   },
   "dependencies": {
+    "@radix-ui/react-checkbox": "^1.1.1",
+    "@radix-ui/react-select": "^2.1.1",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-switch": "^1.1.0",
     "@rasenganjs/image": "^1.0.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "hugeicons-react": "^0.2.0",
+    "lucide-react": "^0.408.0",
     "rasengan": "1.0.0-beta.39",
     "react": "^18.3.0",
     "react-dom": "^18.3.0",
