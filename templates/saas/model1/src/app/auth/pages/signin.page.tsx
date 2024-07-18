@@ -1,13 +1,13 @@
 import { useState } from "react";
 import Button from "@/components/atoms/Button";
 import Typography from "@/components/atoms/Typography";
+import Input from "@/components/atoms/Input";
 import Image from "@rasenganjs/image";
 import { CirclePasswordIcon, Mail01Icon, ViewOffIcon, ViewIcon } from "hugeicons-react";
 import { Link, PageComponent } from "rasengan";
 
 //import image
 import login from '@/assets/login.avif'
-import Input from "@/components/atoms/Input";
 
 const SignIn: PageComponent = () => {
 	const [showPassword, setShowPassword] = useState(false);
