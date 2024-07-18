@@ -9,7 +9,7 @@ import Accordion from "@/components/atoms/Accordion";
 import { useTheme } from "@rasenganjs/theme";
 
 const Pricing: PageComponent = () => {
-	const { theme, isDark } = useTheme();
+	const { isDark } = useTheme();
 
 	return (
 		<section className={`${isDark ? "bg-rasengan-dark-background" : ""}`}>
