@@ -5,8 +5,10 @@ import Image from "@rasenganjs/image";
 import Button from "@/components/atoms/Button";
 import Container from "@/components/molecules/Container";
 import Heading from "@/components/atoms/Heading";
+import Accordion from "@/components/atoms/Accordion";
 
 const Pricing: PageComponent = () => {
+
 	return (
 		<section className=''>
 			<Heading title="Pricing" description="Our pricing is not expensive, but it's not cheap either, it's exatly what should be" />
@@ -105,7 +107,18 @@ const Pricing: PageComponent = () => {
 
 			<section className='mb-[200px]'>
 				<Heading title="FAQ" description="You have a particular question about our product ? Here are the frequently asked questions. " />
-
+				
+				<div className="py-10 flex flex-col	">
+					<Accordion title='Is this template completely customiseable ?'>
+						<Typography text='Of course ! You can apply what ever modification you want to sweet your needs.'/>
+					</Accordion>
+					<Accordion title='Question 2'>
+						<Typography text='Description 2'/>
+					</Accordion>
+					<Accordion title='Question 3'>
+						<Typography text='Description 3'/>
+					</Accordion>
+				</div>
 			</section>
 		</section>
 	);
