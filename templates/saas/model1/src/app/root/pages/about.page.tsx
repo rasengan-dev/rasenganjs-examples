@@ -3,18 +3,16 @@ import Typography from "@/components/atoms/Typography";
 import Container from "@/components/molecules/Container";
 import { PageComponent } from "rasengan";
 import Image from "@rasenganjs/image";
+import Heading from "@/components/atoms/Heading";
 
 const About: PageComponent = () => {
 	return (
 		<section className=''>
-			<div className='flex flex-col items-center mt-10 min-w-[300px] w-full md:w-[600px] mx-auto text-center mb-4'>
-				<Typography text='About us' className='text-[40px]' weight='bold' />
-				<Typography
-					text='We offer revolutionary solutions to your business problems. We are a team of experienced software developers, designers, and marketers who are passionate about building products that solve real-world problems.'
-					className='text-lg'
-					weight='normal'
-				/>
-			</div>
+
+			<Heading
+				title="About us"
+				description='We offer revolutionary solutions to your business problems. We are a team of experienced software developers, designers, and marketers who are passionate about building products that solve real-world problems.'
+			/>
 
 			<Container className='mt-[100px]' variant='double'>
 				<div className='flex flex-col items-center md:items-start w-full md:w-2/5'>

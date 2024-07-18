@@ -11,12 +11,12 @@ const Home: PageComponent = () => {
 				<div className='flex flex-col items-center md:items-start w-full md:w-2/5'>
 					<Typography
 						text='Introducing good solution'
-						className='text-[40px]'
+						className='text-3xl lg:text-[40px] mb-4 text-center md:text-start'
 						weight='bold'
 					/>
 					<Typography
 						text='Join our community and experience the benefits today!'
-						className='text-lg'
+						className='text-lg text-center md:text-start'
 					/>
 
 					<Button
@@ -56,12 +56,12 @@ const Home: PageComponent = () => {
 				<div className='flex flex-col items-center md:items-start w-full md:w-2/5'>
 					<Typography
 						text='All your work is safe with us'
-						className='text-[30px]'
+						className='text-3xl lg:text-[30px] mb-4 text-center md:text-start'
 						weight='bold'
 					/>
 					<Typography
 						text='We take your data security seriously. We never store your data on our servers. All data is encrypted and stored in a database that is only accessible to you.'
-						className='text-md'
+						className='text-md text-center md:text-start'
 					/>
 
 					<Button

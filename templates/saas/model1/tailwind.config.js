@@ -16,7 +16,13 @@ export default {
 							DEFAULT: "#F5F5F5",
 						},
 						text: {
-							DEFAULT: "#000000",
+							DEFAULT: "#111",
+						},
+						border: {
+							DEFAULT: "#eee",
+						},
+						shadow: {
+							DEFAULT: "#dddddd",
 						},
 					},
 
@@ -30,6 +36,12 @@ export default {
 						},
 						text: {
 							DEFAULT: "#F5F5F5",
+						},
+						border: {
+							DEFAULT: "#333333",
+						},
+						shadow: {
+							DEFAULT: "#333333",
 						},
 					},
 				},
