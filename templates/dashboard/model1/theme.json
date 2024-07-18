@@ -2,20 +2,16 @@
   "primary": "#2A7FFF",
   "primary-100": "#D9EBFF",
   "secondary": "#2A7FFF",
+  "destructive": "#FF2424",
   "success": "#34B53A",
-  "apple100": "#DFF9E0",
   "warning": "#FFB200",
-  "mysin": "rgba(255, 248, 197, 1)",
-  "red-100": "#FFDFDF",
-  "border": "#EBF0F4",
-  "ring": "#C5CFDC",
-  "background": "#FAFCFF",
+
+  "title": "#1E2A51",
   "foreground": "#5B6278",
   "muted": "#858EAD",
-  "popover": "#fff",
-  "card": "#fff",
-  "title": "#1E2A51",
-  "destructive": "#FF2424",
-  "red": "#FF2424"
+  
+  "background": "#FAFCFF",
+  
+  "border": "#EBF0F4",
+  "white": "#fff"
 }
-

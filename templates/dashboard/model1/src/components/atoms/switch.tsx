@@ -16,27 +16,29 @@ import { cn } from "@/lib/utils"
 import { ComponentState } from "@/lib/enums/ComponentState"
 
 const switchVariants = cva(
-  "peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50",
-  {
-    variants: {
-      variant: {
-        primary: "data-[state=checked]:bg-primary data-[state=unchecked]:bg-input",
-        secondary: "data-[state=checked]:bg-secondary data-[state=unchecked]:bg-input",
-        red: "data-[state=checked]:bg-red-500 data-[state=unchecked]:bg-input",
-      },
-      state: {
-        default: "",
-        disabled: "opacity-50 cursor-not-allowed",
-        loading:'',
-        success:'',
-        error:'',
-      },
-    },
-    defaultVariants: {
-      variant: "primary",
-      state: "default",
-    },
-  }
+	"peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50",
+	{
+		variants: {
+			variant: {
+				primary:
+					"data-[state=checked]:bg-primary data-[state=unchecked]:bg-gray-200",
+				secondary:
+					"data-[state=checked]:bg-secondary data-[state=unchecked]:bg-gray-200",
+				red: "data-[state=checked]:bg-red-500 data-[state=unchecked]:bg-gray-200",
+			},
+			state: {
+				default: "",
+				disabled: "opacity-50 cursor-not-allowed",
+				loading: "",
+				success: "",
+				error: "",
+			},
+		},
+		defaultVariants: {
+			variant: "primary",
+			state: "default",
+		},
+	}
 );
 
 export interface SwitchProps

@@ -20,15 +20,15 @@ const palette = getPalette([
     name: "secondary",
   },
   {
-    color: theme.success || "#34B53A",
+    color: theme.destructive,
+    name: "destructive",
+  },
+  {
+    color: theme.success,
     name: "success",
   },
   {
-    color: theme.apple100 || "#DFF9E0",
-    name: "apple-100",
-  },
-  {
-    color: theme.warning || "#FFB200",
+    color: theme.warning,
     name: "warning",
   },
   {
@@ -87,39 +87,22 @@ module.exports = {
   darkMode: ["class"],
   content: adaptPath(["./src/**/*.{ts,tsx,js,jsx}"]),
   theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
-    },
     extend: {
       colors: {
-        border: theme.border,
-        input: theme.border,
-        ring: theme.ring,
-        background: theme.background,
-        foreground: theme.foreground,
+        primary: { ...palette.primary, foreground: theme.white },
+        secondary: { ...palette.secondary, foreground: theme.white },
+        destructive: { ...palette.destructive, foreground: theme.white },
+        success: { ...palette.success, foreground: theme.white },
+        warning: { ...palette.warning, foreground: theme.white },
+
         title: theme.title,
-        primary: { ...palette.primary, foreground: "#fff" },
-        secondary: { ...palette.secondary, foreground: "#fff" },
-        destructive: { ...palette.destructive, foreground: "#fff" },
-        success: { ...palette.success, foreground: "#fff" },
-        warning: { ...palette.warning, foreground: "#fff" },
+        foreground: theme.foreground,
         muted: theme.muted,
-        accent: {
-          DEFAULT: palette.primary["50"],
-          foreground: theme.foreground,
-        },
-        popover: {
-          foreground: "#fff",
-          foreground: theme.foreground,
-        },
-        card: {
-          foreground: "#fff",
-          foreground: theme.foreground,
-        },
+
+        background: theme.background,
+
+        border: theme.border,
+        white: theme.white,
       },
       borderRadius: {
         lg: `14px`,
