@@ -42,7 +42,7 @@ export default function ThemeToggler() {
 	};
 
 	return (
-		<div className='relative mx-4 px-4 border-l-2 border-gray-300'>
+		<div className='relative mx-4 px-4 lg:border-l-2 border-gray-300'>
 			<div onClick={() => setOpen((prev) => !prev)} className='cursor-pointer'>
 				{getThemeIcon(theme)}
 			</div>
