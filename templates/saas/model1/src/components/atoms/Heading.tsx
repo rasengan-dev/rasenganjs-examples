@@ -19,13 +19,13 @@ export default function Heading({
 	description,
 }: HeadingProps): JSX.Element {
 	return (
-        <div className='flex flex-col items-center mt-10 min-w-[300px] w-full mx-auto text-center mb-4'>
-            <Typography text={title} className='text-[40px]' weight='bold' />
-            <Typography
-                text={description}
-                className='text-lg'
-                weight='normal'
-            />
-        </div>
+		<div className='flex flex-col items-center mt-10 max-w-[700px] w-full mx-auto text-center mb-4'>
+			<Typography
+				text={title}
+				className='text-3xl lg:text-[40px] mb-4 text-center'
+				weight='bold'
+			/>
+			<Typography text={description} className='text-lg' weight='normal' />
+		</div>
 	);
 }

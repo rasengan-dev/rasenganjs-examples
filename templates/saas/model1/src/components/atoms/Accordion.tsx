@@ -1,11 +1,11 @@
-import {useState} from 'react'
+import { ComponentProps, useState } from "react";
 import { ArrowRight04Icon } from "hugeicons-react";
 import Typography from "./Typography";
 
 interface AccordionProps {
 	children?: React.ReactNode;
 	title: string;
-	className?: ComponentProps<"accordion">["className"];
+	className?: ComponentProps<"div">["className"];
 }
 
 /**
@@ -20,23 +20,30 @@ interface AccordionProps {
 export default function Accordion({
 	title,
 	className,
-    children
+	children,
 }: AccordionProps): JSX.Element {
 	const [open, setOpen] = useState(false);
 
 	return (
-        
-			<div className={`w-full relative ${className}`}>
-                <div className="flex items-center py-2 px-4 w-full bg-gray-100 cursor-pointer" onClick={() => setOpen((prev) => !prev)}>
-                    <ArrowRight04Icon size={18} color={"#000000"} className={`${open && 'rotate-90'}`}/>
-                    <Typography text={title} className="ms-4"/>
-                </div>
-                    <div className={`${
-                !open ? "hidden" : "bg-gray-200 px-5 mb-5 w-full py"
-                // !open ? "hidden" : "animate-slide-in absolute bottom-5/5 left-1/2 -translate-x-1/2 bg-gray-300 px-5 mb-10 w-full"
-            }`}>
-                        {children}
-                    </div>
-            </div>
+		<div className={`w-full relative ${className}`}>
+			<div
+				className='flex items-center py-2 w-full cursor-pointer'
+				onClick={() => setOpen((prev) => !prev)}
+			>
+				<ArrowRight04Icon
+					size={18}
+					color={"#000000"}
+					className={`transition-all duration-300 ${open && "rotate-90"}`}
+				/>
+				<Typography text={title} className='ms-4' weight='medium' />
+			</div>
+			<div
+				className={`overflow-hidden transition-all duration-300 bg-white border-[1px] border-gray-200 rounded-md ${
+					!open ? "h-0 border-b-0" : "h-auto w-full p-2 px-3 mb-5"
+				}`}
+			>
+				{children}
+			</div>
+		</div>
 	);
 }
