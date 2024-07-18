@@ -1,4 +1,6 @@
 import Typography from "./Typography";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 interface HeadingProps {
 	title: string;
@@ -18,6 +20,11 @@ export default function Heading({
 	title,
 	description,
 }: HeadingProps): JSX.Element {
+	useGSAP(() => {
+		gsap.to("#sub-title", { opacity: 1, y: 0, duration: 0.5 });
+		gsap.to("#title", { opacity: 1, duration: 1.5 });
+	}, []);
+
 	return (
 		<div className='flex flex-col items-center mt-10 max-w-[700px] w-full mx-auto text-center mb-4'>
 			<Typography

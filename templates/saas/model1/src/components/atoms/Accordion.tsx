@@ -1,6 +1,7 @@
 import { ComponentProps, useState } from "react";
 import { ArrowRight04Icon } from "hugeicons-react";
 import Typography from "./Typography";
+import { useTheme } from "@rasenganjs/theme";
 
 interface AccordionProps {
 	children?: React.ReactNode;
@@ -23,6 +24,7 @@ export default function Accordion({
 	children,
 }: AccordionProps): JSX.Element {
 	const [open, setOpen] = useState(false);
+	const { isDark } = useTheme();
 
 	return (
 		<div className={`w-full relative ${className}`}>
@@ -32,13 +34,19 @@ export default function Accordion({
 			>
 				<ArrowRight04Icon
 					size={18}
-					color={"#000000"}
+					color={
+						isDark ? "var(--rasengan-dark-text)" : "var(--rasengan-light-text)"
+					}
 					className={`transition-all duration-300 ${open && "rotate-90"}`}
 				/>
 				<Typography text={title} className='ms-4' weight='medium' />
 			</div>
 			<div
-				className={`overflow-hidden transition-all duration-300 bg-white border-[1px] border-gray-200 rounded-md ${
+				className={`${
+					isDark
+						? "border-rasengan-dark-border"
+						: "bg-white border-rasengan-light-border"
+				} overflow-hidden transition-all duration-300 border-[1px] rounded-md ${
 					!open ? "h-0 border-b-0" : "h-auto w-full p-2 px-3 mb-5"
 				}`}
 			>

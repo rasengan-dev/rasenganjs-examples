@@ -6,16 +6,19 @@ import Button from "@/components/atoms/Button";
 import Container from "@/components/molecules/Container";
 import Heading from "@/components/atoms/Heading";
 import Accordion from "@/components/atoms/Accordion";
+import { useTheme } from "@rasenganjs/theme";
 
 const Pricing: PageComponent = () => {
+	const { theme, isDark } = useTheme();
+
 	return (
-		<section className=''>
+		<section className={`${isDark ? "bg-rasengan-dark-background" : ""}`}>
 			<Heading
 				title='Pricing'
 				description="Our pricing is not expensive, but it's not cheap either, it's exatly what should be"
 			/>
 
-			<section className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-10'>
+			<section className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-20'>
 				<div className='block'>
 					<PricingCard
 						title='Free'
@@ -117,7 +120,10 @@ const Pricing: PageComponent = () => {
 					</Accordion>
 					<Accordion title='What is the best way to contact you ?'>
 						<Typography text='You can contact us by email or by phone.' />
-						<Typography text='Email : contact@rasenganjs.com' className="mt-1" />
+						<Typography
+							text='Email : contact@rasenganjs.com'
+							className='mt-1'
+						/>
 						<Typography text='Phone : +237 6 77 77 77 77' />
 					</Accordion>
 
@@ -125,7 +131,7 @@ const Pricing: PageComponent = () => {
 						<Typography text='Yes ! You can use this template for your business.' />
 					</Accordion>
 
-					<Accordion title="How can I get started with Rasengan ? ">
+					<Accordion title='How can I get started with Rasengan ? '>
 						<Typography text='You can get started by visiting the documentation and start following the guide step by step.' />
 						<Typography text="Don't forget to have a practice project to test your code." />
 					</Accordion>

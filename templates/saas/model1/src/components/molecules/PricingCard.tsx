@@ -1,6 +1,7 @@
 import Badge from "../atoms/Badge";
 import Button from "../atoms/Button";
 import Typography from "../atoms/Typography";
+import { useTheme } from "@rasenganjs/theme";
 
 interface PricingCardProps {
 	className?: string;
@@ -19,8 +20,9 @@ export default function PricingCard({
 	description,
 	backgroundColor,
 }: PricingCardProps) {
+	const { isDark } = useTheme();
 	return (
-		<article className='w-full rounded-2xl border-[1px] h-auto border-gray-200 p-4 min-h-[200px] bg-white'>
+		<article className={`${isDark ? 'border-rasengan-dark-border':'border-rasengan-light-border'} w-full rounded-2xl border-[1px] h-auto p-4 min-h-[200px]`}>
 			<div className='flex flex-col items-start'>
 				<Badge
 					text={title}
@@ -47,7 +49,7 @@ export default function PricingCard({
 							viewBox='0 0 24 24'
 							width={24}
 							height={24}
-							color={"#000000"}
+							// color={"#000000"}
 							fill={"none"}
 						>
 							<path
