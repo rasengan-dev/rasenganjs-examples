@@ -15,30 +15,23 @@ import { Link, PageComponent } from "rasengan";
 
 //import image
 import signup from "@/assets/signup.avif";
-import Input from "@/components/atoms/Input";
 
 const SignUp: PageComponent = () => {
 	const [showPassword, setShowPassword] = useState(false);
 	return (
-		<div className='md:flex flex justify-center items-center bg-white text-gray-500 shadow-xl w-full h-screen overflow-hidden'>
+		<div className='md:flex flex justify-center items-center bg-white text-gray-500 shadow-xl w-full h-screen min-h-[700px] overflow-hidden'>
 			<div className='hidden md:flex w-max h-screen md:w-1/2 py-10 px-10 items-center justify-center'>
 				<Image src={signup} alt='signup image' className='h-screen' />
 			</div>
 			<div className='w-max md:w-1/2 py-10 px-5 md:px-10'>
 				<div className='text-right mb-8'>
 					<Link to='/'>
-						<>
-							<Button
-								text='Back to Home'
-								className='bg-transparent text-gray-600 flex items-center w-auto gap-2 ml-auto'
-							>
-							<ArrowLeft04Icon
-								size={18}
-								color={"var(--rasengan-light-text)"}
-							/>
-
-							</Button>
-						</>
+						<Button
+							text='Back to Home'
+							className='bg-transparent text-gray-600 flex items-center w-auto gap-2 ml-auto'
+						>
+							<ArrowLeft04Icon size={18} color={"var(--rasengan-light-text)"} />
+						</Button>
 					</Link>
 				</div>
 
