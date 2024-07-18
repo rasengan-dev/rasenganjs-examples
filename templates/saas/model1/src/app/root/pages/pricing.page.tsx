@@ -4,18 +4,22 @@ import { PageComponent } from "rasengan";
 import Image from "@rasenganjs/image";
 import Button from "@/components/atoms/Button";
 import Container from "@/components/molecules/Container";
+import Heading from "@/components/atoms/Heading";
+import Accordion from "@/components/atoms/Accordion";
 
 const Pricing: PageComponent = () => {
+
 	return (
 		<section className=''>
-			<div className='flex flex-col items-center mt-10 min-w-[300px] w-[400px] mx-auto text-center mb-4'>
+			<Heading title="Pricing" description="Our pricing is not expensive, but it's not cheap either, it's exatly what should be" />
+			{/* <div className='flex flex-col items-center mt-10 min-w-[300px] w-[400px] mx-auto text-center mb-4'>
 				<Typography text='Pricing' className='text-[40px]' weight='bold' />
 				<Typography
 					text="Our pricing is not expensive, but it's not cheap either, it's exatly what should be"
 					className='text-lg'
 					weight='normal'
 				/>
-			</div>
+			</div> */}
 
 			<section className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-10'>
 				<div className="block">
@@ -69,7 +73,7 @@ const Pricing: PageComponent = () => {
 				</div>
 			</section>
 
-			<Container className='mt-[100px] mb-[200px]' variant='double'>
+			<Container className='mt-[100px] mb-[100px]' variant='double'>
 				<div className='flex flex-col items-center text-center md:text-start md:items-start w-full md:w-2/5'>
 					<Typography
 						text='Get started with Rasengan today'
@@ -85,18 +89,37 @@ const Pricing: PageComponent = () => {
 				</div>
 
 				<div className='relative w-full md:w-3/5 h-[300px] mb-20 md:mb-0'>
-					<div className='absolute right-1/2 translate-x-1/2 -top-20 md:top-1/2 md:-translate-y-1/2 md:translate-x-0 md:-right-[60px]'>
-						<Image
+					<div className='absolute right-1/2 translate-x-1/2 -top-20 md:top-1/2 md:-translate-y-1/2 md:translate-x-0 md:-right-[60px] w-full'>
+					
+						<img src="https://assets.api.uizard.io/api/cdn/stream/5c123d9e-4b51-4271-a543-b4ec9665779a.png" alt='Image' className="h-full me-auto" />
+						{/* <Image
 							src={{
 								uri: "https://assets.api.uizard.io/api/cdn/stream/5c123d9e-4b51-4271-a543-b4ec9665779a.png",
 							}}
 							alt='Image'
 							width={500}
 							height={500}
-						/>
+							
+						/> */}
 					</div>
 				</div>
 			</Container>
+
+			<section className='mb-[200px]'>
+				<Heading title="FAQ" description="You have a particular question about our product ? Here are the frequently asked questions. " />
+				
+				<div className="py-10 flex flex-col	">
+					<Accordion title='Is this template completely customiseable ?'>
+						<Typography text='Of course ! You can apply what ever modification you want to sweet your needs.'/>
+					</Accordion>
+					<Accordion title='Question 2'>
+						<Typography text='Description 2'/>
+					</Accordion>
+					<Accordion title='Question 3'>
+						<Typography text='Description 3'/>
+					</Accordion>
+				</div>
+			</section>
 		</section>
 	);
 };

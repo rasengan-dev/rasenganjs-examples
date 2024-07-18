@@ -16,7 +16,7 @@ export default function Container({
 	return (
 		<div className='relative'>
 			<div
-				className={`relative z-10 w-full flex flex-col-reverse md:flex-row items-center justify-between max-w-[1500px] mx-auto p-10 min-h-[350px] rounded-2xl ${
+				className={`relative z-10 w-full max-sm:h-full max-md:h-[800px] flex flex-col-reverse md:flex-row items-center justify-between max-w-[1500px] mx-auto p-10 min-h-[350px] rounded-2xl ${
 					!transparent && "shadow-lg bg-white"
 				} mb-10 ${className}`}
 			>
