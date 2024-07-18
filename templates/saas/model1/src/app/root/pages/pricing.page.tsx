@@ -6,11 +6,14 @@ import Button from "@/components/atoms/Button";
 import Container from "@/components/molecules/Container";
 import Heading from "@/components/atoms/Heading";
 import Accordion from "@/components/atoms/Accordion";
+import { useTheme } from "@rasenganjs/theme";
 
 const Pricing: PageComponent = () => {
+	const { theme, isDark } = useTheme();
+	
 
 	return (
-		<section className=''>
+		<section className={`${isDark ? 'bg-rasengan-dark-background':''}`}>
 			<Heading title="Pricing" description="Our pricing is not expensive, but it's not cheap either, it's exatly what should be" />
 			{/* <div className='flex flex-col items-center mt-10 min-w-[300px] w-[400px] mx-auto text-center mb-4'>
 				<Typography text='Pricing' className='text-[40px]' weight='bold' />
@@ -21,7 +24,7 @@ const Pricing: PageComponent = () => {
 				/>
 			</div> */}
 
-			<section className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-10'>
+			<section className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-20'>
 				<div className="block">
 					<PricingCard 
 						title='Free'

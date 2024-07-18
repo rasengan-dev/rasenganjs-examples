@@ -18,6 +18,12 @@ export default {
 						text: {
 							DEFAULT: "#000000",
 						},
+						border: {
+							DEFAULT: "#dddddd",
+						},
+						shadow: {
+							DEFAULT: "#dddddd",
+						},
 					},
 
 					// Colors for dark mode
@@ -30,6 +36,12 @@ export default {
 						},
 						text: {
 							DEFAULT: "#F5F5F5",
+						},
+						border: {
+							DEFAULT: "#333333",
+						},
+						shadow: {
+							DEFAULT: "#333333",
 						},
 					},
 				},
