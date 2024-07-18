@@ -2,7 +2,7 @@ import Button from "@/components/atoms/Button";
 import NavItem from "@/components/atoms/NavItem";
 import ThemeToggler from "@/components/atoms/ThemeToggler";
 import Typography from "@/components/atoms/Typography";
-import { useLocation } from "rasengan";
+import { Link, useLocation } from "rasengan";
 
 export default function Navbar() {
 	const { pathname } = useLocation();
@@ -37,11 +37,15 @@ export default function Navbar() {
 			</div>
 
 			<div className='flex items-center gap-1'>
-				<Button text='Log in' className='bg-transparent text-black' />
-				<Button
-					text='Sign up'
-					className='bg-rasengan-light-primary text-white'
-				/>
+				<Link to='/auth/sign-in'>
+					<Button text='Log in' className='bg-transparent text-black' />
+				</Link>
+				<Link to='/auth/sign-up'>
+					<Button
+						text='Sign up'
+						className='bg-rasengan-light-primary text-white'
+					/>
+				</Link>
 
 				<ThemeToggler />
 			</div>
