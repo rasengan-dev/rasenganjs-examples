@@ -2,6 +2,7 @@ import { getFont } from "@/utils/font";
 import { ComponentProps } from "react";
 
 interface TypographyProps {
+	id?: ComponentProps<"button">["id"];
 	text: string;
 	className?: ComponentProps<"button">["className"];
 	weight?:
@@ -28,7 +29,8 @@ interface TypographyProps {
 export default function Typography({
 	text,
 	className,
+	id,
 	weight = "light",
 }: TypographyProps) {
-	return <p className={`${getFont(weight)} ${className}`}>{text}</p>;
+	return <p className={`${getFont(weight)} ${className}`} id={id}>{text}</p>;
 }

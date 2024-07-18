@@ -27,7 +27,7 @@ export default function Input({
 }: InputProps): JSX.Element {
     return (
         <div className={`w-full px-3 mb-5 ${containerClassName}`}>
-            {label && <label className="text-lg font-semibold px-1">{label}</label>}
+            {label && <label className="text-md font-semibold px-1">{label}</label>}
             <div className="relative flex items-center">
                 {icon && (
                     <div className="absolute left-0 w-10 pl-1 text-center pointer-events-none flex items-center justify-center">
@@ -36,7 +36,7 @@ export default function Input({
                 )}
                 <input
                     {...props}
-                    className={`w-full ${icon ? 'pl-10' : 'pl-3'} ${rightIcon ? 'pr-10' : 'pr-3'} py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-rasengan-primary ${className}`}
+                    className={`w-full ${icon ? 'pl-10' : 'pl-3'} ${rightIcon ? 'pr-10' : 'pr-3'} py-2 rounded-lg border-[1px] border-rasengan-light-border outline-none focus:border-rasengan-primary ${className}`}
                 />
                 {rightIcon && (
                     <div className="absolute right-0 w-10 pr-1 flex items-center justify-center cursor-pointer">
