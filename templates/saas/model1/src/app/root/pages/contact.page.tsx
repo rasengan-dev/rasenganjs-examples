@@ -12,12 +12,12 @@ const Contact: PageComponent = () => {
 	return (
 		<section className=''>
 			<Heading title="Contact" description="Fill the form below to send us an email." />
-			<div className="md:flex flex justify-between items-center text-gray-500 w-full h-screen overflow-hidden">
+			<div className="md:flex pt-20 flex justify-between items-center text-gray-500 w-full overflow-hidden">
 
-				<div className='hidden md:flex w-max h-screen md:w-2/5 py-10 px-10 items-center justify-center'>
+				<div className='hidden md:flex w-max md:w-2/5 py-10 px-10 items-center justify-center'>
 					<img src={contact} alt='signup image' className='h-full w-full object-contain' />
 				</div>
-				<div className="flex flex-col w-1/2">
+				<div className="flex flex-col w-1/2 max-md:w-full">
 					<div className='flex flex-wrap w-full'>
 						<Input
 							label='First Name'
