@@ -6,15 +6,15 @@ import Typography from "./Typography";
 const themes: { label: ThemesType; icon: JSX.Element }[] = [
 	{
 		label: "light",
-		icon: <Sun03Icon size={18} color={"#000000"} />,
+		icon: <Sun03Icon size={18} color={"#555"} />,
 	},
 	{
 		label: "dark",
-		icon: <Moon02Icon size={18} color={"#000000"} />,
+		icon: <Moon02Icon size={18} color={"#555"} />,
 	},
 	{
 		label: "system",
-		icon: <ComputerIcon size={18} color={"#000000"} />,
+		icon: <ComputerIcon size={18} color={"#555"} />,
 	},
 ];
 
@@ -30,11 +30,11 @@ export default function ThemeToggler() {
 	const getThemeIcon = (theme: ThemesType) => {
 		switch (theme) {
 			case "light":
-				return <Sun03Icon size={18} color={"#333"} />;
+				return <Sun03Icon size={18} color={"#555"} />;
 			case "dark":
-				return <Moon02Icon size={18} color={"#333"} />;
+				return <Moon02Icon size={18} color={"#555"} />;
 			case "system":
-				return <ComputerIcon size={18} color={"#333"} />;
+				return <ComputerIcon size={18} color={"#555"} />;
 
 			default:
 				break;
