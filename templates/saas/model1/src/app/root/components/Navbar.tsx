@@ -96,7 +96,10 @@ export default function Navbar() {
 
       <div className=" hidden lg:flex items-center gap-1">
         <Link to="/auth/sign-in">
-          <Button text="Log in" className={`bg-transparent   w-[6rem]  `} />
+          <Button
+            text="Log in"
+            className={`bg-transparent w-[6rem] ${isDark ? 'text-rasengan-dark-text' : 'text-rasengan-light-text'} `}
+          />
         </Link>
         <Link to="/auth/sign-up">
           <Button
