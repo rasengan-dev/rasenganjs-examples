@@ -1,8 +1,7 @@
 import Button from "@/components/atoms/Button";
 import Input from "@/components/atoms/Input";
-import Typography from "@/components/atoms/Typography";
 import { Mail01Icon, UserIcon } from "hugeicons-react";
-import { Link, PageComponent } from "rasengan";
+import { PageComponent } from "rasengan";
 
 //import image
 import contact from "@/assets/contact.png";
@@ -10,14 +9,14 @@ import Heading from "@/components/atoms/Heading";
 
 const Contact: PageComponent = () => {
 	return (
-		<section className=''>
+		<section className='w-full'>
 			<Heading title="Contact" description="Fill the form below to send us an email." />
 			<div className="md:flex pt-20 flex justify-between items-center text-gray-500 w-full overflow-hidden">
 
 				<div className='hidden md:flex w-max md:w-2/5 py-10 px-10 items-center justify-center'>
 					<img src={contact} alt='signup image' className='h-full w-full object-contain' />
 				</div>
-				<div className="flex flex-col w-1/2 max-md:w-full">
+				<div className="flex flex-col md:w-1/2 w-full">
 					<div className='flex flex-wrap w-full'>
 						<Input
 							label='First Name'
