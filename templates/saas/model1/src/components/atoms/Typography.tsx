@@ -31,6 +31,6 @@ export default function Typography({
 	className,
 	id,
 	weight = "light",
-}: TypographyProps) {
+}: TypographyProps): React.ReactElement {
 	return <p className={`${getFont(weight)} ${className}`} id={id}>{text}</p>;
 }

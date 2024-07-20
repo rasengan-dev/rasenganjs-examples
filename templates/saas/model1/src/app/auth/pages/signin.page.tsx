@@ -7,26 +7,38 @@ import { CirclePasswordIcon, Mail01Icon, ViewOffIcon, ViewIcon, ArrowLeft04Icon 
 import { Link, PageComponent } from "rasengan";
 
 //import image
-import login from '@/assets/login.avif'
+import login from '@/assets/login.png'
+import { useTheme } from "@rasenganjs/theme";
 
 const SignIn: PageComponent = () => {
+	const { isDark } = useTheme();
 	const [showPassword, setShowPassword] = useState(false);
 
 	return (
-		<div className='md:flex flex justify-center items-center bg-white text-gray-500 shadow-xl w-full h-screen min-h-[600px] overflow-hidden'>
+		<div
+			className={`md:flex flex justify-center items-center shadow-xl w-full h-screen min-h-[600px] overflow-hidden ${
+				isDark
+					? "bg-rasengan-dark-background text-rasengan-dark-text"
+					: "bg-rasengan-light-background text-rasengan-light-text"
+			}`}
+		>
 			<div className='w-max md:w-1/2 py-10 px-5 md:px-10'>
 				<div className='text-right mb-4'>
 					<Link to='/'>
 						<Button
 							text='Back to Home'
-							className='bg-transparent text-gray-600 flex items-center w-auto gap-2'
+							className={`bg-transparent flex items-center w-auto gap-2 ${
+								isDark ? "text-rasengan-dark-text" : "text-gray-600"
+							}`}
 						>
 							<ArrowLeft04Icon size={18} color={"var(--rasengan-light-text)"} />
 						</Button>
 					</Link>
 				</div>
 				<div className='text-center mb-10'>
-					<h1 className='font-bold text-3xl text-gray-900'>Sign In</h1>
+					<h1 className={`font-bold text-3xl ${
+						isDark ? 'text-rasengan-dark-text/100' : 'text-rasengan-light-text'
+					}`}>Sign In</h1>
 					<p>Enter your information to sign in</p>
 				</div>
 				<div>
@@ -82,7 +94,7 @@ const SignIn: PageComponent = () => {
 				</div>
 			</div>
 			<div className='hidden md:flex w-max h-screen md:w-1/2 py-10 px-10 items-center justify-center'>
-				<Image src={login} alt='signup image' className='h-screen' />
+				<Image src={login} alt='signup image' className='h-screen' width={"100%"} />
 			</div>
 		</div>
 	);
