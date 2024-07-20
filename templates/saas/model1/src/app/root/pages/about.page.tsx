@@ -1,9 +1,9 @@
-import Button from "@/components/atoms/Button";
-import Typography from "@/components/atoms/Typography";
-import Container from "@/components/molecules/Container";
-import { PageComponent } from "rasengan";
-import Image from "@rasenganjs/image";
-import Heading from "@/components/atoms/Heading";
+import Button from '@/components/atoms/Button';
+import Typography from '@/components/atoms/Typography';
+import Container from '@/components/molecules/Container';
+import { PageComponent } from 'rasengan';
+import Image from '@rasenganjs/image';
+import Heading from '@/components/atoms/Heading';
 
 const About: PageComponent = () => {
   return (
@@ -32,7 +32,7 @@ const About: PageComponent = () => {
           <div className="absolute right-1/2 translate-x-1/2 -top-20 md:top-1/2 md:-translate-y-1/2 md:translate-x-0 md:-right-[60px]">
             <Image
               src={{
-                uri: "https://assets.api.uizard.io/api/cdn/stream/5c123d9e-4b51-4271-a543-b4ec9665779a.png",
+                uri: 'https://assets.api.uizard.io/api/cdn/stream/5c123d9e-4b51-4271-a543-b4ec9665779a.png',
               }}
               alt="Image"
               width={500}
@@ -45,10 +45,10 @@ const About: PageComponent = () => {
   );
 };
 
-About.path = "/about-us";
+About.path = '/about-us';
 About.metadata = {
-  title: "About Us",
-  description: "Discover more about us",
+  title: 'About Us',
+  description: 'Discover more about us',
 };
 
 export default About;

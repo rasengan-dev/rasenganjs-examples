@@ -1,17 +1,17 @@
-import { ComponentProps } from "react";
-import { useTheme } from "@rasenganjs/theme";
+import { ComponentProps } from 'react';
+import { useTheme } from '@rasenganjs/theme';
 
 interface ContainerProps {
   children?: React.ReactNode;
-  className?: ComponentProps<"div">["className"];
-  variant?: "default" | "double";
+  className?: ComponentProps<'div'>['className'];
+  variant?: 'default' | 'double';
   transparent?: boolean;
 }
 
 export default function Container({
   children,
   className,
-  variant = "default",
+  variant = 'default',
   transparent = false,
 }: ContainerProps): JSX.Element {
   const { isDark } = useTheme();
@@ -22,25 +22,25 @@ export default function Container({
         className={`relative z-10 w-full max-sm:h-full max-md:h-[800px] flex flex-col-reverse md:flex-row items-center justify-between max-w-[1500px] mx-auto p-4 lg:p-10 min-h-[350px] rounded-2xl   ${
           isDark
             ? `bg-rasengan-dark-background text-rasengan-dark-text shadow-rasengan-dark-shadow ${
-                !transparent && "border-[1px] border-rasengan-dark-border"
+                !transparent && 'border-[1px] border-rasengan-dark-border'
               }`
             : `bg-rasengan-light-background text-rasengan-light-text shadow-rasengan-light-shadow ${
-                !transparent && "shadow-lg"
+                !transparent && 'shadow-lg'
               }`
         } mb-10 ${className}`}
       >
         {children}
       </div>
 
-      {variant === "double" && (
+      {variant === 'double' && (
         <div
           className={`z-0 absolute -bottom-5 scale-95 left-0 w-full h-[100px] rounded-2xl ${
             isDark
               ? `bg-rasengan-dark-background shadow-rasengan-dark-shadow ${
-                  !transparent && "border-[1px] border-rasengan-dark-border"
+                  !transparent && 'border-[1px] border-rasengan-dark-border'
                 }`
               : `bg-rasengan-light-background shadow-rasengan-light-shadow ${
-                  !transparent && "shadow-lg"
+                  !transparent && 'shadow-lg'
                 }`
           }`}
         ></div>

@@ -1,9 +1,9 @@
-import { ComponentProps } from "react";
+import { ComponentProps } from 'react';
 
 interface ButtonProps {
   children?: React.ReactNode;
   text: string;
-  className?: ComponentProps<"button">["className"];
+  className?: ComponentProps<'button'>['className'];
 }
 
 /**

@@ -1,18 +1,18 @@
-import { Link } from "rasengan";
-import { ComponentProps } from "react";
+import { Link } from 'rasengan';
+import { ComponentProps } from 'react';
 
 interface NavItemProps {
   children?: React.ReactNode;
   text: string;
   href?: string;
-  className?: ComponentProps<"button">["className"];
+  className?: ComponentProps<'button'>['className'];
   isActive?: boolean;
 }
 
 export default function NavItem({
   children,
   text,
-  href = "#",
+  href = '#',
   className,
   isActive,
 }: NavItemProps) {
@@ -21,7 +21,7 @@ export default function NavItem({
       <div>{children}</div>
       <p
         className={`font-urbanist font-normal ${className} ${
-          isActive && "text-rasengan-light-primary"
+          isActive && 'text-rasengan-light-primary'
         }`}
       >
         {text}

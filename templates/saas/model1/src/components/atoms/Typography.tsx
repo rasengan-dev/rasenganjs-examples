@@ -1,20 +1,20 @@
-import { getFont } from "@/utils/font";
-import { ComponentProps } from "react";
+import { getFont } from '@/utils/font';
+import { ComponentProps } from 'react';
 
 interface TypographyProps {
-  id?: ComponentProps<"button">["id"];
+  id?: ComponentProps<'button'>['id'];
   text: string;
-  className?: ComponentProps<"button">["className"];
+  className?: ComponentProps<'button'>['className'];
   weight?:
-    | "normal"
-    | "bold"
-    | "light"
-    | "medium"
-    | "semibold"
-    | "extrabold"
-    | "black"
-    | "extralight"
-    | "thin";
+    | 'normal'
+    | 'bold'
+    | 'light'
+    | 'medium'
+    | 'semibold'
+    | 'extrabold'
+    | 'black'
+    | 'extralight'
+    | 'thin';
 }
 
 /**
@@ -30,8 +30,8 @@ export default function Typography({
   text,
   className,
   id,
-  weight = "light",
-}: TypographyProps) {
+  weight = 'light',
+}: TypographyProps): React.ReactElement {
   return (
     <p className={`${getFont(weight)} ${className}`} id={id}>
       {text}

@@ -1,18 +1,17 @@
-import Typography from "@/components/atoms/Typography";
-import PricingCard from "@/components/molecules/PricingCard";
-import { PageComponent } from "rasengan";
-import Image from "@rasenganjs/image";
-import Button from "@/components/atoms/Button";
-import Container from "@/components/molecules/Container";
-import Heading from "@/components/atoms/Heading";
-import Accordion from "@/components/atoms/Accordion";
-import { useTheme } from "@rasenganjs/theme";
+import Typography from '@/components/atoms/Typography';
+import PricingCard from '@/components/molecules/PricingCard';
+import { PageComponent } from 'rasengan';
+import Button from '@/components/atoms/Button';
+import Container from '@/components/molecules/Container';
+import Heading from '@/components/atoms/Heading';
+import Accordion from '@/components/atoms/Accordion';
+import { useTheme } from '@rasenganjs/theme';
 
 const Pricing: PageComponent = () => {
-  const { theme, isDark } = useTheme();
+  const { isDark } = useTheme();
 
   return (
-    <section className={`${isDark ? "bg-rasengan-dark-background" : ""}`}>
+    <section className={`${isDark ? 'bg-rasengan-dark-background' : ''}`}>
       <Heading
         title="Pricing"
         description="Our pricing is not expensive, but it's not cheap either, it's exatly what should be"
@@ -25,10 +24,10 @@ const Pricing: PageComponent = () => {
             description="Ideal for those who want to try out our services"
             price="0"
             features={[
-              "Up to 10 free projects",
-              "500MB storage",
-              "10000 requests/month",
-              "Email support",
+              'Up to 10 free projects',
+              '500MB storage',
+              '10000 requests/month',
+              'Email support',
             ]}
           />
         </div>
@@ -39,12 +38,12 @@ const Pricing: PageComponent = () => {
             description="Ideal for those who want to start a small business and don't need the full features"
             price="19"
             features={[
-              "Up to 100 free projects",
-              "1GB storage",
-              "100000 requests/month",
-              "Email support",
-              "Unlimited bandwidth",
-              "Custom domain",
+              'Up to 100 free projects',
+              '1GB storage',
+              '100000 requests/month',
+              'Email support',
+              'Unlimited bandwidth',
+              'Custom domain',
             ]}
           />
         </div>
@@ -55,16 +54,16 @@ const Pricing: PageComponent = () => {
             description="Ideal for enterprises that need the full features"
             price="49"
             features={[
-              "Up to 1000 free projects",
-              "10GB storage",
-              "1000000 requests/month",
-              "Email support",
-              "Unlimited bandwidth",
-              "Custom domain",
-              "SSL certificate",
-              "Custom API",
-              "Custom dashboard",
-              "Custom email",
+              'Up to 1000 free projects',
+              '10GB storage',
+              '1000000 requests/month',
+              'Email support',
+              'Unlimited bandwidth',
+              'Custom domain',
+              'SSL certificate',
+              'Custom API',
+              'Custom dashboard',
+              'Custom email',
             ]}
           />
         </div>
@@ -141,10 +140,10 @@ const Pricing: PageComponent = () => {
   );
 };
 
-Pricing.path = "/pricing";
+Pricing.path = '/pricing';
 Pricing.metadata = {
-  title: "Pricing",
-  description: "Discover our pricing",
+  title: 'Pricing',
+  description: 'Discover our pricing',
 };
 
 export default Pricing;

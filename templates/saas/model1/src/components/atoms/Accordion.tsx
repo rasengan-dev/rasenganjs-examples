@@ -1,12 +1,12 @@
-import { ComponentProps, useState } from "react";
-import { ArrowRight04Icon } from "hugeicons-react";
-import Typography from "./Typography";
-import { useTheme } from "@rasenganjs/theme";
+import { ComponentProps, useState } from 'react';
+import { ArrowRight04Icon } from 'hugeicons-react';
+import Typography from './Typography';
+import { useTheme } from '@rasenganjs/theme';
 
 interface AccordionProps {
   children?: React.ReactNode;
   title: string;
-  className?: ComponentProps<"div">["className"];
+  className?: ComponentProps<'div'>['className'];
 }
 
 /**
@@ -35,19 +35,19 @@ export default function Accordion({
         <ArrowRight04Icon
           size={18}
           color={
-            isDark ? "var(--rasengan-dark-text)" : "var(--rasengan-light-text)"
+            isDark ? 'var(--rasengan-dark-text)' : 'var(--rasengan-light-text)'
           }
-          className={`transition-all duration-300 ${open && "rotate-90"}`}
+          className={`transition-all duration-300 ${open && 'rotate-90'}`}
         />
         <Typography text={title} className="ms-4" weight="medium" />
       </div>
       <div
         className={`${
           isDark
-            ? "border-rasengan-dark-border"
-            : "bg-white border-rasengan-light-border"
+            ? 'border-rasengan-dark-border'
+            : 'bg-white border-rasengan-light-border'
         } overflow-hidden transition-all duration-300 border-[1px] rounded-md ${
-          !open ? "h-0 border-b-0" : "h-auto w-full p-2 px-3 mb-5"
+          !open ? 'h-0 border-b-0' : 'h-auto w-full p-2 px-3 mb-5'
         }`}
       >
         {children}

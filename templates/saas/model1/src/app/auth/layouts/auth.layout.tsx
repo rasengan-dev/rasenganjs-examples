@@ -1,5 +1,5 @@
-import React from "react";
-import { Outlet, LayoutComponent } from "rasengan";
+import React from 'react';
+import { Outlet, LayoutComponent } from 'rasengan';
 
 const AuthLayout: LayoutComponent = () => {
   return (
@@ -9,6 +9,6 @@ const AuthLayout: LayoutComponent = () => {
   );
 };
 
-AuthLayout.path = "/auth";
+AuthLayout.path = '/auth';
 
 export default AuthLayout;

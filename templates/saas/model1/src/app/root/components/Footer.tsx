@@ -1,8 +1,13 @@
-import Typography from "@/components/atoms/Typography";
+import Typography from '@/components/atoms/Typography';
+import { useTheme } from '@rasenganjs/theme';
 
 export default function Footer() {
+  const { isDark } = useTheme();
+
   return (
-    <footer className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 border-t-[1px] border-gray-200 w-full max-w-[1500px] mx-auto px-10 lg:px-40 py-10">
+    <footer
+      className={`${isDark ? 'border-rasengan-dark-border bg-rasengan-dark-background text-rasengan-dark-text' : 'border-rasengan-light-border bg-rasengan-light-background text-rasengan-light-text'} grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 border-t-[1px] w-full max-w-[1500px] mx-auto px-10 lg:px-40 py-10`}
+    >
       <div className="flex flex-col gap-5">
         <div className="flex flex-col gap-2">
           <Typography text="Rasengan" weight="bold" className="text-2xl" />

@@ -1,8 +1,8 @@
-import { ComponentProps } from "react";
+import { ComponentProps } from 'react';
 
 interface BadgeProps {
   text: string;
-  className?: ComponentProps<"span">["className"];
+  className?: ComponentProps<'span'>['className'];
   color?: string;
 }
 

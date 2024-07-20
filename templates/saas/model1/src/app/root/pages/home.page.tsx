@@ -1,8 +1,8 @@
-import Button from "@/components/atoms/Button";
-import Typography from "@/components/atoms/Typography";
-import Container from "@/components/molecules/Container";
-import { PageComponent } from "rasengan";
-import Image from "@rasenganjs/image";
+import Button from '@/components/atoms/Button';
+import Typography from '@/components/atoms/Typography';
+import Container from '@/components/molecules/Container';
+import { PageComponent } from 'rasengan';
+import Image from '@rasenganjs/image';
 
 const Home: PageComponent = () => {
   return (
@@ -29,7 +29,7 @@ const Home: PageComponent = () => {
           <div className="absolute right-1/2 translate-x-1/2 -top-20 md:top-1/2 md:-translate-y-1/2 md:translate-x-0 md:-right-[140px]">
             <Image
               src={{
-                uri: "https://assets.api.uizard.io/api/cdn/stream/b1248553-6fb6-4670-8bef-7a02781703b7.png",
+                uri: 'https://assets.api.uizard.io/api/cdn/stream/b1248553-6fb6-4670-8bef-7a02781703b7.png',
               }}
               alt="Image"
               width={600}
@@ -44,7 +44,7 @@ const Home: PageComponent = () => {
           <div className="absolute right-1/2 translate-x-1/2 -top-20 md:top-1/2 md:-translate-y-1/2 md:translate-x-0 md:-left-[140px]">
             <Image
               src={{
-                uri: "https://assets.api.uizard.io/api/cdn/stream/5c123d9e-4b51-4271-a543-b4ec9665779a.png",
+                uri: 'https://assets.api.uizard.io/api/cdn/stream/5c123d9e-4b51-4271-a543-b4ec9665779a.png',
               }}
               alt="Image"
               width={500}
@@ -74,10 +74,10 @@ const Home: PageComponent = () => {
   );
 };
 
-Home.path = "/";
+Home.path = '/';
 Home.metadata = {
-  title: "Home",
-  description: "Home page",
+  title: 'Home',
+  description: 'Home page',
 };
 
 export default Home;
