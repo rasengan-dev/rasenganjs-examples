@@ -27,4 +27,4 @@ export const getFont = (weight: string) => {
     default:
       return "font-urbanist-normal";
   }
-}
+};

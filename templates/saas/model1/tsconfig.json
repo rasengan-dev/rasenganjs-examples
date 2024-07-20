@@ -10,7 +10,7 @@
 
     /* Aliases for intellisence */
     "paths": {
-      "@/*": ["src/*"],
+      "@/*": ["src/*"]
     }
   },
   "include": ["src", "rasengan-env.d.ts"],

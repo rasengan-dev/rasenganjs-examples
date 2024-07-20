@@ -6,6 +6,6 @@ import SignUp from "./pages/signup.page";
 class AuthRouter extends RouterComponent {}
 
 export default defineRouter({
-	layout: AuthLayout,
-	pages: [SignIn, SignUp],
+  layout: AuthLayout,
+  pages: [SignIn, SignUp],
 })(AuthRouter);

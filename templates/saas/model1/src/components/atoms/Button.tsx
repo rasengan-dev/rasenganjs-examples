@@ -1,9 +1,9 @@
 import { ComponentProps } from "react";
 
 interface ButtonProps {
-	children?: React.ReactNode;
-	text: string;
-	className?: ComponentProps<"button">["className"];
+  children?: React.ReactNode;
+  text: string;
+  className?: ComponentProps<"button">["className"];
 }
 
 /**
@@ -15,16 +15,14 @@ interface ButtonProps {
  * @returns {JSX.Element} - The rendered button component.
  */
 export default function Button({
-	children,
-	text,
-	className,
+  children,
+  text,
+  className,
 }: ButtonProps): JSX.Element {
-	return (
-		<button
-			className={`${className} rounded-lg px-4 py-2`}
-		>
-			<div>{children}</div>
-			<p className='font-urbanist-medium'>{text}</p>
-		</button>
-	);
+  return (
+    <button className={`${className} rounded-lg px-4 py-2`}>
+      <div>{children}</div>
+      <p className="font-urbanist-medium">{text}</p>
+    </button>
+  );
 }

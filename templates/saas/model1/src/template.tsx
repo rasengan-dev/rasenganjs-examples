@@ -4,7 +4,7 @@ export default function Template({
   children,
   Head,
   Body,
-  Script
+  Script,
 }: TemplateProps) {
   return (
     <html lang="en">
