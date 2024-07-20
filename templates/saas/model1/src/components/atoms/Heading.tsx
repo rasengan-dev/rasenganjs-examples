@@ -1,10 +1,10 @@
-import Typography from "./Typography";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
+import Typography from './Typography';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 interface HeadingProps {
-	title: string;
-	description: string;
+  title: string;
+  description: string;
 }
 
 /**
@@ -17,23 +17,28 @@ interface HeadingProps {
  */
 
 export default function Heading({
-	title,
-	description,
+  title,
+  description,
 }: HeadingProps): JSX.Element {
-	useGSAP(() => {
-		gsap.to("#sub-title", { opacity: 1, y: 0, duration: 0.5 });
-		gsap.to("#title", { opacity: 1, duration: 1.5 });
-	}, []);
+  useGSAP(() => {
+    gsap.to('#sub-title', { opacity: 1, y: 0, duration: 0.5 });
+    gsap.to('#title', { opacity: 1, duration: 1.5 });
+  }, []);
 
-	return (
-		<div className='flex flex-col items-center mt-10 max-w-[700px] w-full mx-auto text-center mb-4'>
-			<Typography
-				text={title}
-				className='text-3xl lg:text-[40px] mb-4 text-center opacity-0'
-				weight='bold'
-				id="title"
-			/>
-			<Typography text={description} className='text-lg opacity-0 -translate-y-5' weight='normal' id="sub-title" />
-		</div>
-	);
+  return (
+    <div className="flex flex-col items-center mt-10 max-w-[700px] w-full mx-auto text-center mb-4">
+      <Typography
+        text={title}
+        className="text-3xl lg:text-[40px] mb-4 text-center opacity-0"
+        weight="bold"
+        id="title"
+      />
+      <Typography
+        text={description}
+        className="text-lg opacity-0 -translate-y-5"
+        weight="normal"
+        id="sub-title"
+      />
+    </div>
+  );
 }
