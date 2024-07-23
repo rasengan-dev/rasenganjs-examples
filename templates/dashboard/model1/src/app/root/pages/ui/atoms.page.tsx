@@ -9,10 +9,10 @@ import {
   UserSharingIcon,
 } from "hugeicons-react";
 import { Button } from "@/components/atoms/Button";
-import { Select } from "@/components/atoms/Select";
+import { Select } from "@/components/atoms/select";
 import { ComponentState, ComponentVariant } from "@/lib/enums";
-import { Checkbox } from "@/components/atoms/Checkbox";
-import { Switch } from "@/components/atoms/Switch";
+import { Checkbox } from "@/components/atoms/checkbox";
+import { Switch } from "@/components/atoms/switch";
 
 const Atoms: PageComponent = () => {
   return (
