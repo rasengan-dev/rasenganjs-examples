@@ -2,6 +2,7 @@ import React from "react";
 import { Outlet, LayoutComponent } from "rasengan";
 import SideBar from "../components/SideBar";
 import Main from "../components/Main";
+import { Toaster } from "@/components/molecules/toast/toaster";
 
 const AppLayout: LayoutComponent = () => {
 	return (
@@ -10,6 +11,7 @@ const AppLayout: LayoutComponent = () => {
 			<Main>
 				<Outlet />
 			</Main>
+			<Toaster />
 		</section>
 	);
 };
