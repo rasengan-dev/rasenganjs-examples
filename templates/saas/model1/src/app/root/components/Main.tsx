@@ -13,7 +13,7 @@ export default function Main({ children }: MainProps) {
         isDark
           ? "bg-rasengan-dark-background text-rasengan-dark-text"
           : "bg-rasengan-light-background text-rasengan-light-text"
-      } w-full max-w-[1500px] mx-auto px-10 lg:px-40 py-2 min-h-[800px]`}
+      } w-full max-w-[1500px] mx-auto px-5 md:px-10 lg:px-40 py-2 min-h-[800px]`}
     >
       {children}
     </main>
