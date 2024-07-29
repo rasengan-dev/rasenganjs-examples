@@ -5,6 +5,8 @@ import { PageComponent } from 'rasengan';
 import Image from '@rasenganjs/image';
 import Heading from '@/components/atoms/Heading';
 
+import image3 from '@/assets/rasengan-3.png';
+
 const About: PageComponent = () => {
   return (
     <section className="">
@@ -25,19 +27,12 @@ const About: PageComponent = () => {
             className="text-lg"
           />
 
-          <Button text="Sign up now" className="mt-4 text-white" />
+          <Button text="Sign up now" className="mt-4 text-white bg-rasengan-light-primary" />
         </div>
 
         <div className="relative w-full md:w-3/5 h-[300px] mb-20 md:mb-0">
-          <div className="absolute right-1/2 translate-x-1/2 -top-20 md:top-1/2 md:-translate-y-1/2 md:translate-x-0 md:-right-[60px]">
-            <Image
-              src={{
-                uri: 'https://assets.api.uizard.io/api/cdn/stream/5c123d9e-4b51-4271-a543-b4ec9665779a.png',
-              }}
-              alt="Image"
-              width={500}
-              height={500}
-            />
+          <div className="absolute right-1/2 translate-x-1/2 -top-20 md:top-1/2 md:-translate-y-1/2 md:translate-x-0 md:-right-[40px]">
+            <Image src={image3} alt="Image" width={400} height={"auto"} />
           </div>
         </div>
       </Container>

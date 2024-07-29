@@ -4,8 +4,10 @@ import { Mail01Icon, UserIcon } from 'hugeicons-react';
 import { PageComponent } from 'rasengan';
 
 //import image
-import contact from '@/assets/contact.png';
 import Heading from '@/components/atoms/Heading';
+
+import image1 from '@/assets/rasengan-1.png';
+import Image from '@rasenganjs/image';
 
 const Contact: PageComponent = () => {
   return (
@@ -16,10 +18,12 @@ const Contact: PageComponent = () => {
       />
       <div className="md:flex pt-20 flex justify-between items-center text-gray-500 w-full overflow-hidden">
         <div className="hidden md:flex w-max md:w-2/5 py-10 px-10 items-center justify-center">
-          <img
-            src={contact}
+          <Image
+            src={image1}
             alt="signup image"
             className="h-full w-full object-contain"
+            width={500}
+            height={"auto"}
           />
         </div>
         <div className="flex flex-col md:w-1/2 w-full">

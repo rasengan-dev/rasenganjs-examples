@@ -19,7 +19,7 @@ const themes: { label: ThemesType; icon: JSX.Element }[] = [
 ];
 
 export default function ThemeToggler() {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, isDark } = useTheme();
   const [open, setOpen] = useState(false);
 
   const handleTheme = (theme: ThemesType) => {
@@ -49,12 +49,18 @@ export default function ThemeToggler() {
       <div
         className={`absolute ${
           !open ? 'hidden' : 'animate-slide-in'
-        } top-8 left-1/2 -translate-x-1/2 bg-white mt-2 py-2 px-0 rounded-lg border-[1px] border-gray-200 transition-all`}
+        } top-8 left-1/2 -translate-x-1/2 mt-2 py-2 px-0 rounded-lg border-[1px] transition-all ${
+          isDark
+            ? 'text-rasengan-dark-text bg-rasenngan-dark-background border-rasengan-dark-border'
+            : 'text-rasengan-light-text bg-rasenngan-light-background border-rasengan-light-border shadow-md'
+        }`}
       >
         {themes.map((theme, index) => (
           <div
             key={index}
-            className="flex items-center my-1 cursor-pointer gap-3 hover:bg-gray-200 px-4 transition-all duration-300"
+            className={`flex items-center my-1 cursor-pointer gap-3 px-4 transition-all duration-300 ${
+              isDark ? 'hover:bg-[#222]' : 'hover:bg-gray-200'
+            }`}
             onClick={() => handleTheme(theme.label)}
           >
             {theme.icon}

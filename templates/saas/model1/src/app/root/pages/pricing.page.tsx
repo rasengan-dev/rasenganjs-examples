@@ -6,6 +6,9 @@ import Container from '@/components/molecules/Container';
 import Heading from '@/components/atoms/Heading';
 import Accordion from '@/components/atoms/Accordion';
 import { useTheme } from '@rasenganjs/theme';
+import Image from '@rasenganjs/image';
+
+import image2 from '@/assets/rasengan-2.png';
 
 const Pricing: PageComponent = () => {
   const { isDark } = useTheme();
@@ -21,7 +24,7 @@ const Pricing: PageComponent = () => {
         <div className="block">
           <PricingCard
             title="Free"
-            description="Ideal for those who want to try out our services"
+            description="Ideal for those who want to try out our services, without needing too much resources"
             price="0"
             features={[
               'Up to 10 free projects',
@@ -51,7 +54,7 @@ const Pricing: PageComponent = () => {
         <div>
           <PricingCard
             title="Pro"
-            description="Ideal for enterprises that need the full features"
+            description="Ideal for enterprises that need the full features and the most resources"
             price="49"
             features={[
               'Up to 1000 free projects',
@@ -88,21 +91,20 @@ const Pricing: PageComponent = () => {
         </div>
 
         <div className="relative w-full md:w-3/5 h-[300px] mb-20 md:mb-0">
-          <div className="absolute right-1/2 translate-x-1/2 -top-20 md:top-1/2 md:-translate-y-1/2 md:translate-x-0 md:-right-[60px] w-full">
-            <img
-              src="https://assets.api.uizard.io/api/cdn/stream/5c123d9e-4b51-4271-a543-b4ec9665779a.png"
+          <div className="absolute right-1/2 translate-x-1/2 -top-20 md:top-1/2 md:-translate-y-1/2 md:translate-x-0 md:-right-[0px] w-full">
+            {/* <img
+              src={image2}
               alt="Image"
               className="h-full me-auto"
-            />
-            {/* <Image
-							src={{
-								uri: "https://assets.api.uizard.io/api/cdn/stream/5c123d9e-4b51-4271-a543-b4ec9665779a.png",
-							}}
+              width={400}
+            /> */}
+            <Image
+							src={image2}
 							alt='Image'
-							width={500}
-							height={500}
-							
-						/> */}
+							width={400}
+							height={"auto"}
+              className='ml-auto'
+						/>
           </div>
         </div>
       </Container>

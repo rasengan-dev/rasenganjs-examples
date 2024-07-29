@@ -1,3 +1,4 @@
+import AppLogo from '@/components/atoms/AppLogo';
 import Typography from '@/components/atoms/Typography';
 import { useTheme } from '@rasenganjs/theme';
 
@@ -10,7 +11,8 @@ export default function Footer() {
     >
       <div className="flex flex-col gap-5">
         <div className="flex flex-col gap-2">
-          <Typography text="Rasengan" weight="bold" className="text-2xl" />
+          {/* <Typography text="Rasengan" weight="bold" className="text-2xl" /> */}
+          <AppLogo size='small' />
           <Typography text="2024 @ Rasengan" />
           <Typography text="All rights reserved" />
         </div>
