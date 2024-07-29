@@ -17,13 +17,15 @@ import { Link, PageComponent } from 'rasengan';
 import signup from '@/assets/signup.png';
 import { useTheme } from '@rasenganjs/theme';
 
+import image3 from '@/assets/rasengan-3.png';
+
 const SignUp: PageComponent = () => {
   const { isDark } = useTheme();
   const [showPassword, setShowPassword] = useState(false);
 
   return (
     <div
-      className={`md:flex flex justify-center items-center shadow-xl w-full h-screen min-h-[700px] overflow-hidden ${
+      className={`md:flex flex justify-center items-center w-full h-screen min-h-[700px] overflow-hidden ${
         isDark
           ? 'bg-rasengan-dark-background text-rasengan-dark-text'
           : 'bg-rasengan-light-background text-rasengan-light-text'
@@ -31,10 +33,11 @@ const SignUp: PageComponent = () => {
     >
       <div className="hidden md:flex w-max h-screen md:w-1/2 py-10 px-10 items-center justify-center">
         <Image
-          src={signup}
+          src={image3}
           alt="signup image"
           className="h-screen"
-          width={'100%'}
+          width={500}
+          height={'auto'}
         />
       </div>
       <div className="w-max md:w-1/2 py-10 px-5 md:px-10">
@@ -53,7 +56,7 @@ const SignUp: PageComponent = () => {
 
         <div className="text-center mb-10">
           <h1
-            className={`font-bold text-3xl text-gray-900 ${
+            className={`font-urbanist-black text-3xl md:text-[50px] mb-4 text-gray-900 ${
               isDark
                 ? 'text-rasengan-dark-text/100'
                 : 'text-rasengan-light-text'

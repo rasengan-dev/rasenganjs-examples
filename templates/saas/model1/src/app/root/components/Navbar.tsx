@@ -7,6 +7,7 @@ import { useState } from 'react';
 import { Cancel01Icon, Menu11Icon } from 'hugeicons-react';
 import { Link } from 'rasengan';
 import { useTheme } from '@rasenganjs/theme';
+import AppLogo from '@/components/atoms/AppLogo';
 
 export default function Navbar() {
   const { pathname } = useLocation();
@@ -25,11 +26,13 @@ export default function Navbar() {
       <div
         className={`flex  items-center gap-8 ${isDark ? 'text-rasengan-dark-text' : 'text-rasengan-light-text'}`}
       >
-        <Typography
+        {/* <Typography
           text="Rasengan"
           weight="bold"
           className="text-2xl lg:text-3xl"
-        />
+        /> */}
+
+        <AppLogo />
 
         <nav className={`hidden lg:flex items-center gap-8 ml-10 `}>
           <NavItem text="Home" href="/" isActive={isActive('/')} />

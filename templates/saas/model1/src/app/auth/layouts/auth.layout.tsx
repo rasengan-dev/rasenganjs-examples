@@ -1,10 +1,13 @@
 import React from 'react';
 import { Outlet, LayoutComponent } from 'rasengan';
+import Main from '../components/Main';
 
 const AuthLayout: LayoutComponent = () => {
   return (
     <React.Fragment>
-      <Outlet />
+      <Main>
+        <Outlet />
+      </Main>
     </React.Fragment>
   );
 };
