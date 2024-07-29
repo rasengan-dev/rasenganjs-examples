@@ -72,39 +72,34 @@ const Pricing: PageComponent = () => {
         </div>
       </section>
 
-      <Container className="mt-[100px] mb-[100px]" variant="double">
-        <div className="flex flex-col items-center text-center md:text-start md:items-start w-full md:w-2/5">
+      <Container
+        className="mt-[100px] mb-20 md:mb:30 lg:mb-40 !flex-col-reverse md:!flex-row"
+        variant="double"
+      >
+        <div className="flex flex-col items-center md:items-start w-full md:w-2/5">
           <Typography
-            text="Get started with Rasengan today"
-            className="text-3xl lg:text-[40px] mb-4"
+            text="Get started with Rasengan.js today"
+            className="text-3xl lg:text-[40px] lg:leading-[50px] mb-4 text-center md:text-start"
             weight="bold"
           />
           <Typography
-            text="Start optimizing your business today with our free trial"
-            className="text-lg"
+            text="Start optimizing your processes today!"
+            className="text-lg text-center md:text-start"
           />
 
           <Button
             text="Sign up now"
-            className="mt-4 text-white bg-rasengan-light-primary"
+            className="mt-4 bg-rasengan-light-primary text-white"
           />
         </div>
 
-        <div className="relative w-full md:w-3/5 h-[300px] mb-20 md:mb-0">
-          <div className="absolute right-1/2 translate-x-1/2 -top-20 md:top-1/2 md:-translate-y-1/2 md:translate-x-0 md:-right-[0px] w-full">
-            {/* <img
+        <div className="relative w-full md:w-3/5 h-[300px]  ">
+          <div className="absolute right-1/2 md:-right-8 translate-x-1/2 md:translate-x-0 -top-14 md:-top-16 lg:-top-20   ">
+            <Image
               src={image2}
               alt="Image"
-              className="h-full me-auto"
-              width={400}
-            /> */}
-            <Image
-							src={image2}
-							alt='Image'
-							width={400}
-							height={"auto"}
-              className='ml-auto'
-						/>
+              className=" !size-[320px]  md:!size-[380px] lg:!size-[430px] "
+            />
           </div>
         </div>
       </Container>
