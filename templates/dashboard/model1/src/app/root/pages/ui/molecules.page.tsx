@@ -1,5 +1,11 @@
 import { Button } from "@/components/atoms/Button";
 import Typography from "@/components/atoms/Typography";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/molecules/accordion";
 import CardContainer from "@/components/molecules/CardContainer";
 import { DataCard } from "@/components/molecules/DataCard";
 import { ToastAction } from "@/components/molecules/toast/toast";
@@ -46,43 +52,65 @@ const Molecules: PageComponent = () => {
           ></DataCard>
         </section>
       </CardContainer>
+      <CardContainer title="Accordion">
+        <section className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <Accordion type="single" collapsible>
+            <AccordionItem value="item-1">
+              <AccordionTrigger>Is it accessible?</AccordionTrigger>
+              <AccordionContent>
+                Yes. It adheres to the WAI-ARIA design pattern.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+          <Accordion type="single" collapsible>
+            <AccordionItem value="item-1">
+              <AccordionTrigger>Is it accessible?</AccordionTrigger>
+              <AccordionContent>
+                Yes. It adheres to the WAI-ARIA design pattern.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-2">
+              <AccordionTrigger>Is it accessible?</AccordionTrigger>
+              <AccordionContent>
+                Yes. It adheres to the WAI-ARIA design pattern.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </section>
+      </CardContainer>
       <CardContainer title="Toast">
         <section className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           <div className="grid grid-cols-1 gap-3">
-
-          <Typography text={"Toast with title"}></Typography>
-          <Button
-            variant="primary"
-            onClick={() => {
-              toast({
-                title: "Calendar",
-                description: "Friday, February 10, 2023 at 5:57 PM",
-
-              });
-            }}
-          >
-            Show calendar plan
-          </Button>
+            <Typography text={"Toast with title"}></Typography>
+            <Button
+              variant="primary"
+              onClick={() => {
+                toast({
+                  title: "Calendar",
+                  description: "Friday, February 10, 2023 at 5:57 PM",
+                });
+              }}
+            >
+              Show calendar plan
+            </Button>
           </div>
 
           <div className="grid grid-cols-1 gap-3">
-
-          <Typography text={"Danger Toast"}></Typography>
-          <Button
-            variant="red"
-            onClick={() => {
-              toast({
-                title: "Alert",
-                variant: "danger",
-                varient:'danger',
-                description: "Friday, February 10, 2023 at 5:57 PM",
-                icon:<Alert01Icon size={20} />
-                
-              });
-            }}
-          >
-            Danger 
-          </Button>
+            <Typography text={"Danger Toast"}></Typography>
+            <Button
+              variant="red"
+              onClick={() => {
+                toast({
+                  title: "Alert",
+                  variant: "danger",
+                  varient: "danger",
+                  description: "Friday, February 10, 2023 at 5:57 PM",
+                  icon: <Alert01Icon size={20} />,
+                });
+              }}
+            >
+              Danger
+            </Button>
           </div>
           {/* <div className="grid grid-cols-1 gap-3">
 
@@ -103,9 +131,6 @@ const Molecules: PageComponent = () => {
             Action Toast
           </Button>
           </div> */}
-          
-      
-          
         </section>
       </CardContainer>
     </section>
