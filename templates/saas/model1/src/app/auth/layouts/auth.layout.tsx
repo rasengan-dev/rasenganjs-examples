@@ -1,14 +1,17 @@
-import React from "react";
-import { Outlet, LayoutComponent } from "rasengan";
+import React from 'react';
+import { Outlet, LayoutComponent } from 'rasengan';
+import Main from '../components/Main';
 
 const AuthLayout: LayoutComponent = () => {
-	return (
-		<React.Fragment>
-			<Outlet />
-		</React.Fragment>
-	);
+  return (
+    <React.Fragment>
+      <Main>
+        <Outlet />
+      </Main>
+    </React.Fragment>
+  );
 };
 
-AuthLayout.path = "/auth";
+AuthLayout.path = '/auth';
 
 export default AuthLayout;

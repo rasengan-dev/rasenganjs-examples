@@ -1,8 +1,8 @@
-import React from "react";
-import { Outlet, LayoutComponent } from "rasengan";
-import Navbar from "../components/Navbar";
-import Main from "../components/Main";
-import Footer from "../components/Footer";
+import React from 'react';
+import { Outlet, LayoutComponent } from 'rasengan';
+import Navbar from '../components/Navbar';
+import Main from '../components/Main';
+import Footer from '../components/Footer';
 
 const AppLayout: LayoutComponent = () => {
   return (
@@ -18,6 +18,6 @@ const AppLayout: LayoutComponent = () => {
   );
 };
 
-AppLayout.path = "/";
+AppLayout.path = '/';
 
 export default AppLayout;
