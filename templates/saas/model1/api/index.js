@@ -69,8 +69,7 @@ export default function handler(req, res) {
                         // Get the app path
                         appPath = join(appPath, config_1.rootDirectory);
                     }
-                    console.log({ env: appPath });
-                    configPath = path.resolve(join(process.cwd() + "./../../", "rasengan.config.js"));
+                    configPath = path.resolve(join(appPath, "rasengan.config.js"));
                     return [4 /*yield*/, import(configPath)];
                 case 1:
                     config = (_b.sent()).default;
