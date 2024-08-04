@@ -50,10 +50,11 @@ import { createStaticHandler, createStaticRouter, } from "react-router-dom/serve
 // @ts-ignore
 import { createFetchRequest } from "rasengan";
 import { fileTypeFromBuffer } from "file-type";
+var RASENGAN_VERCEL_CONFIG = process.env.RASENGAN_VERCEL_CONFIG;
 // Create server for production only
 export default function handler(req, res) {
     return __awaiter(this, void 0, void 0, function () {
-        var url, host, appPath, configPath, config, filePath, file, err_1, segments, segmentsWithoutOrigin, _i, segments_1, segment, filePath, file, otherFile, result, mimeType, file, templateHtml, serverFilePath, bootstrapDirPath, entry, bootstrap, styles, render, staticRoutes, loadTemplateHtml, handler_1, fetchRequest, context, status_1, redirect, helmetContext, router, rendered, html, e_1;
+        var url, host, appPath, config_1, configPath, config, filePath, file, err_1, segments, segmentsWithoutOrigin, _i, segments_1, segment, filePath, file, otherFile, result, mimeType, file, templateHtml, serverFilePath, bootstrapDirPath, entry, bootstrap, styles, render, staticRoutes, loadTemplateHtml, handler_1, fetchRequest, context, status_1, redirect, helmetContext, router, rendered, html, e_1;
         var _a;
         return __generator(this, function (_b) {
             switch (_b.label) {
@@ -62,7 +63,13 @@ export default function handler(req, res) {
                     url = req.url;
                     host = req.headers.host;
                     appPath = process.cwd();
-                    console.log({ env: process.cwd() });
+                    // Check if RASENGAN_VERCEL_CONFIG is set
+                    if (RASENGAN_VERCEL_CONFIG) {
+                        config_1 = JSON.parse(RASENGAN_VERCEL_CONFIG);
+                        // Get the app path
+                        appPath = join(appPath, config_1.rootDirectory);
+                    }
+                    console.log({ env: appPath });
                     configPath = path.resolve(join(process.cwd() + "./../../", "rasengan.config.js"));
                     return [4 /*yield*/, import(configPath)];
                 case 1:
