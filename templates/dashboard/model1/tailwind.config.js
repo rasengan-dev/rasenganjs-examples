@@ -12,72 +12,20 @@ const palette = getPalette([
     name: "primary",
   },
   {
-    color: theme.primary100 || "#D9EBFF",
-    name: "primary-100",
-  },
-  {
     color: theme.secondary || "#264653",
     name: "secondary",
   },
   {
-    color: theme.destructive,
-    name: "destructive",
+    color: theme.green,
+    name: "green",
   },
   {
-    color: theme.success,
-    name: "success",
+    color: theme.yellow,
+    name: "yellow",
   },
   {
-    color: theme.warning,
-    name: "warning",
-  },
-  {
-    color: theme.mysin || "#FFF8C5",
-    name: "mysin",
-  },
-  {
-    color: theme.red100 || "#FFDFDF",
-    name: "red-100",
-  },
-  {
-    color: theme.border || "#EBF0F4",
-    name: "border",
-  },
-  {
-    color: theme.ring || "#C5CFDC",
-    name: "ring",
-  },
-  {
-    color: theme.background || "#FAFCFF",
-    name: "background",
-  },
-  {
-    color: theme.foreground || "#5B6278",
-    name: "foreground",
-  },
-  {
-    color: theme.muted || "#858EAD",
-    name: "muted",
-  },
-  {
-    color: theme.popover || "#ffffff",
-    name: "popover",
-  },
-  {
-    color: theme.card || "#ffffff",
-    name: "card",
-  },
-  {
-    color: theme.title || "#1E2A51",
-    name: "title",
-  },
-  {
-    color: theme.danger || "#FF2424",
-    name: "danger",
-  },
-  {
-    color: theme.destructive || "#FF2424",
-    name: "destructive",
+    color: theme.red || "#FF2424",
+    name: "red",
   },
 ]);
 
@@ -89,12 +37,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: { ...palette.primary, foreground: theme.white },
-        secondary: { ...palette.secondary, foreground: theme.white },
-        destructive: { ...palette.destructive, foreground: theme.white },
-        success: { ...palette.success, foreground: theme.white },
-        warning: { ...palette.warning, foreground: theme.white },
-
+        ...palette,
         title: theme.title,
         foreground: theme.foreground,
         muted: theme.muted,
