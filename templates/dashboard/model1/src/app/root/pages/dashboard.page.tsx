@@ -1,26 +1,12 @@
-import { Button } from "@/components/atoms/button";
-import { ComponentVariant } from "@/lib/enums";
 import { PageComponent } from "rasengan";
 
 const Dashboard: PageComponent = () => {
   return (
     <section className="">
-      {Object.entries(ComponentVariant).map(([key, value]) => {
-        const val = value as any;
-        return (
-          <Button variant={val} key={key}>
-            Label
-          </Button>
-        );
-      })}
-      {Object.entries(ComponentVariant).map(([key, value]) => {
-        const val = value as any;
-        return (
-          <Button variant={val} size={"small"} key={key}>
-            Label
-          </Button>
-        );
-      })}
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse inventore
+      debitis quo temporibus autem quia exercitationem distinctio repellendus,
+      adipisci suscipit aliquid reiciendis eveniet culpa repellat fugiat
+      accusamus veniam similique officiis?
     </section>
   );
 };

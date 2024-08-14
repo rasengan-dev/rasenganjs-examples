@@ -51,6 +51,7 @@ module.exports = {
         lg: `14px`,
         md: `8px`,
         sm: "6px",
+        xs: "4px",
       },
       height: {
         "main-page": "calc(100vh - 80px)",
