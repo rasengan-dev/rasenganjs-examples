@@ -1,10 +1,10 @@
-import { type TemplateProps } from "rasengan";
+import { type TemplateProps } from 'rasengan';
 
 export default function Template({
   children,
   Head,
   Body,
-  Script
+  Script,
 }: TemplateProps) {
   return (
     <html lang="en">

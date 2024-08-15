@@ -1,9 +1,9 @@
-import { adaptPath } from "rasengan";
+import { adaptPath } from 'rasengan';
 
 export default {
   plugins: {
     tailwindcss: {
-      config: adaptPath("./tailwind.config"),
+      config: adaptPath('./tailwind.config'),
     },
     autoprefixer: {},
   },
