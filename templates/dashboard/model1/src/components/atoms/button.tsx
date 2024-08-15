@@ -23,8 +23,8 @@ const buttonVariants = cva(
         "white-muted": "bg-white text-muted",
       },
       size: {
-        default: "h-12 px-6 py-3",
-        small: "text-xs h-9 px-3 py-2",
+        big: "h-12 px-6 py-3",
+        default: "text-xs h-9 px-3 py-2",
         icone: "w-12 h-12",
       },
     },

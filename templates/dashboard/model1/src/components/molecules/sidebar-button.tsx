@@ -2,14 +2,15 @@ import { buttonVariants } from "@/components/atoms/button";
 import { cn } from "@/lib/utils";
 import {
   Alert01Icon,
-  HugeiconsIcon,
+  HugeiconsProps,
   Notification02Icon,
 } from "hugeicons-react";
 import { FunctionComponent } from "react";
+import { Link } from "rasengan";
 export type SidebarButtonProps = {
   type?: "alert" | "notification";
   label: string;
-  icon: HugeiconsIcon;
+  icon: FunctionComponent<HugeiconsProps>;
   href: string;
   isActive?: boolean;
 };
@@ -21,10 +22,10 @@ export const SidebarButton: FunctionComponent<SidebarButtonProps> = ({
   isActive,
 }) => {
   return (
-    <a
-      href={href}
+    <Link
+      to={href}
       className={cn(
-        "min-w-64 hover:bg-primary-100 transition-colors group",
+        "min-w-48 hover:bg-primary-100 transition-colors group",
         buttonVariants({
           variant: isActive ? "primary-secondary" : "white-muted",
         }),
@@ -33,14 +34,14 @@ export const SidebarButton: FunctionComponent<SidebarButtonProps> = ({
         "justify-between"
       )}
     >
-      <div className="flex items-center gap-4">
-        <Icon className="group-hover:text-primary" />
+      <div className="flex items-center gap-2">
+        <Icon size={18} className="group-hover:text-primary" />
         <span>{label}</span>
       </div>
-      {(type === "alert" && <Alert01Icon className="text-red" />) ||
+      {(type === "alert" && <Alert01Icon size={18} className="text-red" />) ||
         (type === "notification" && (
-          <Notification02Icon className="text-primary" />
+          <Notification02Icon size={18} className="text-primary" />
         ))}
-    </a>
+    </Link>
   );
 };
