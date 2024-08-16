@@ -34,13 +34,13 @@ export const SidebarButton: FunctionComponent<SidebarButtonProps> = ({
         "justify-between"
       )}
     >
-      <div className="flex items-center gap-2">
-        <Icon size={18} className="group-hover:text-primary" />
+      <div className="flex items-center gap-4">
+        <Icon className="group-hover:text-primary" />
         <span>{label}</span>
       </div>
-      {(type === "alert" && <Alert01Icon size={18} className="text-red" />) ||
+      {(type === "alert" && <Alert01Icon className="text-red" />) ||
         (type === "notification" && (
-          <Notification02Icon size={18} className="text-primary" />
+          <Notification02Icon className="text-primary" />
         ))}
     </Link>
   );

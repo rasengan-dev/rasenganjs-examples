@@ -19,7 +19,7 @@ const Atoms: PageComponent = () => {
       {Object.entries(ComponentVariant).map(([key, value]) => {
         const val = value as any;
         return (
-          <Button variant={val} size={"big"} key={key}>
+          <Button variant={val} size={"small"} key={key}>
             Label
           </Button>
         );
