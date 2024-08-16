@@ -29,7 +29,7 @@ export const SidebarButton: FunctionComponent<SidebarButtonProps> = ({
         buttonVariants({
           variant: isActive ? "primary-secondary" : "white-muted",
         }),
-        !isActive && "hover:text-title",
+        !isActive && "hover:text-title shadow-none",
         isActive && "hover:bg-primary-100",
         "justify-between"
       )}

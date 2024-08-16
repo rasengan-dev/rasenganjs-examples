@@ -1,4 +1,4 @@
-import { Atom01Icon } from "hugeicons-react";
+import { Atom01Icon, Search01Icon } from "hugeicons-react";
 import { FunctionComponent } from "react";
 import { Input } from "../atoms/input";
 
@@ -15,7 +15,11 @@ export const Topbar: FunctionComponent<TopbarProps> = () => {
         <Atom01Icon className="text-primary" />
         <span className="font-semibold text-2xl text-title">Atoms</span>
       </div>
-      <Input type="text" placeholder="Search some thing" />
+      <Input
+        lefticon={Search01Icon}
+        type="text"
+        placeholder="Search some thing"
+      />
     </nav>
   );
 };

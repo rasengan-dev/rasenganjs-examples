@@ -1,4 +1,4 @@
-import { FunctionComponent, useState } from "react";
+import React, { FunctionComponent, useState } from "react";
 import { SidebarButton, SidebarButtonProps } from "../molecules/sidebar-button";
 import {
   ChartBarLineIcon,
@@ -79,24 +79,21 @@ export const Sidebar: FunctionComponent<SidebarProps> = (props) => {
         <div className="pt-4 flex flex-col gap-4">
           {links.map((category, key) => {
             return (
-              <>
+              <React.Fragment key={key}>
                 <span className="text-foreground text-sm" key={key}>
                   {category.name}
                 </span>
-                {category.links.map((link, key) => (
-                  <SidebarButton {...link} key={key} />
+                {category.links.map((link, key_) => (
+                  <SidebarButton {...link} key={key_} />
                 ))}
-              </>
+              </React.Fragment>
             );
           })}
         </div>
       </div>
       <div className="bg-background flex items-center gap-4 p-4 rounded-md">
         <Avatar className="w-12 h-12 p-0.5 border-2 border-primary">
-          <AvatarImage
-            className="w-10 h-10 rounded-full"
-            src="https://xsgames.co/randomusers/avatar.php?g=male"
-          />
+          <AvatarImage className="w-10 h-10 rounded-full" />
         </Avatar>
         <div className="flex flex-col">
           <h4 className="font-semibold text-title">John Doe</h4>

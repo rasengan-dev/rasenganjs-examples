@@ -8,7 +8,7 @@ const AppLayout: LayoutComponent = () => {
       <Sidebar />
       <main className="w-[calc(100%-300px)]">
         <Topbar />
-        <div className="p-6">
+        <div className="p-6 h-[calc(100vh-100px)] overflow-auto">
           <Outlet />
         </div>
       </main>

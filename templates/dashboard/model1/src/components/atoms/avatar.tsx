@@ -12,24 +12,48 @@ const Avatar = React.forwardRef<
   <AvatarPrimitive.Root
     ref={ref}
     className={cn(
-      "relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full",
+      "relative flex h-10 w-10 shrink-0 rounded-full bg-background",
       className
     )}
     {...props}
-  />
+  >
+    <div className="w-full h-full rounded-full overflow-hidden">
+      {props.children}
+    </div>
+  </AvatarPrimitive.Root>
 ));
 Avatar.displayName = AvatarPrimitive.Root.displayName;
 
 const AvatarImage = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Image>,
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image>
->(({ className, ...props }, ref) => (
-  <AvatarPrimitive.Image
-    ref={ref}
-    className={cn("aspect-square h-full w-full", className)}
-    {...props}
-  />
-));
+>(({ src, className, ...props }, ref) => {
+  const [avatar, setavatar] = React.useState<string>("");
+  React.useEffect(() => {
+    const importImage = async () => {
+      ["png", "jpg", "svg", "jpeg"].forEach((ext) => {
+        import(`@/assets/images/avatar.${ext}`)
+          .then((image) => {
+            setavatar(image.default);
+          })
+          .catch(() => {});
+      });
+    };
+    if (src) {
+      setavatar(src);
+    } else {
+      importImage();
+    }
+  }, []);
+  return (
+    <AvatarPrimitive.Image
+      ref={ref}
+      className={cn("aspect-square h-full w-full", className)}
+      {...props}
+      src={avatar}
+    />
+  );
+});
 AvatarImage.displayName = AvatarPrimitive.Image.displayName;
 
 const AvatarFallback = React.forwardRef<
