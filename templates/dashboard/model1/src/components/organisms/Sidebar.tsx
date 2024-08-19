@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState } from "react";
+import React, { FunctionComponent, useCallback, useState } from "react";
 import { SidebarButton, SidebarButtonProps } from "../molecules/sidebar-button";
 import {
   ChartBarLineIcon,
@@ -11,12 +11,13 @@ import {
 import Image from "@rasenganjs/image";
 import logo from "@/assets/logo.svg";
 import { Avatar, AvatarImage } from "@/components/atoms/avatar";
+import { useLocation } from "rasengan";
 
 type SidebarCategory = { name: string; links: SidebarButtonProps[] };
 export type SidebarProps = { links?: SidebarCategory[] };
 
 export const Sidebar: FunctionComponent<SidebarProps> = (props) => {
-  const [links, setlinks] = useState<SidebarCategory[]>(
+  const [links] = useState<SidebarCategory[]>(
     props.links || [
       {
         name: "Data managing",
@@ -25,10 +26,10 @@ export const Sidebar: FunctionComponent<SidebarProps> = (props) => {
             href: "/",
             icon: Home02Icon,
             label: "Dashboard",
-            isActive: true,
+            isActive: false,
           },
           {
-            href: "/",
+            href: "/charts",
             icon: ChartBarLineIcon,
             label: "Data visualisation",
             isActive: false,
@@ -39,13 +40,13 @@ export const Sidebar: FunctionComponent<SidebarProps> = (props) => {
         name: "UI elements",
         links: [
           {
-            href: "/",
+            href: "/ui/atoms",
             icon: Atom01Icon,
             label: "Atoms",
             isActive: false,
           },
           {
-            href: "/",
+            href: "/ui/molecules",
             icon: MoleculesIcon,
             label: "Molecules",
             isActive: false,
@@ -56,7 +57,7 @@ export const Sidebar: FunctionComponent<SidebarProps> = (props) => {
         name: "Organisms",
         links: [
           {
-            href: "/",
+            href: "/organisms",
             icon: CircleIcon,
             label: "Forms",
             isActive: false,
@@ -65,6 +66,21 @@ export const Sidebar: FunctionComponent<SidebarProps> = (props) => {
       },
     ]
   );
+
+  const { pathname } = useLocation();
+
+  const isActive = useCallback(
+    (path: string) => {
+      // To handle the case where path = /
+      if (pathname === path) {
+        return true;
+      }
+
+      return pathname.startsWith(path) && path !== "/";
+    },
+    [pathname]
+  );
+
   return (
     <aside
       className={
@@ -84,7 +100,11 @@ export const Sidebar: FunctionComponent<SidebarProps> = (props) => {
                   {category.name}
                 </span>
                 {category.links.map((link, key_) => (
-                  <SidebarButton {...link} key={key_} />
+                  <SidebarButton
+                    {...link}
+                    key={key_}
+                    isActive={isActive(link.href)}
+                  />
                 ))}
               </React.Fragment>
             );

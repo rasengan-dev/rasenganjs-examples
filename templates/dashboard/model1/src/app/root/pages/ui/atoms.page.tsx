@@ -20,7 +20,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/molecules/card";
-import { SidebarButton } from "@/components/molecules/sidebar-button";
 import { ComponentVariant } from "@/lib/enums";
 import { Home01Icon } from "hugeicons-react";
 import { PageComponent } from "rasengan";
