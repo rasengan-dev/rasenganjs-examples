@@ -84,11 +84,11 @@ export const Sidebar: FunctionComponent<SidebarProps> = (props) => {
   return (
     <aside
       className={
-        "w-[300px] p-6 bg-white border-r border-border flex flex-col gap-4 overflow-y-auto justify-between"
+        "w-[300px] p-6 pt-2 bg-white border-r border-border flex flex-col gap-4 overflow-y-auto justify-between"
       }
     >
       <div className="flex flex-col gap-4">
-        <div className="pt-6 border-b border-border pb-4 flex items-center justify-between">
+        <div className="py-6 border-b border-border flex items-center justify-between">
           <Image src={logo} alt="logo" width={174} height={"auto"} />
           <Menu10Icon className="text-muted" />
         </div>

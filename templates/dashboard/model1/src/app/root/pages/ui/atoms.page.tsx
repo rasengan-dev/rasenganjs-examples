@@ -230,7 +230,7 @@ const Atoms: PageComponent = () => {
             <CardTitle>Logo</CardTitle>
           </CardHeader>
           <CardContent>
-            <Logo />
+            <Logo className="max-w-[600px]" width={"100%"} height={"auto"} />
           </CardContent>
         </Card>
         <Card className="w-1/2">
