@@ -2,9 +2,9 @@
   "primary": "#2A7FFF",
   "primary-100": "#D9EBFF",
   "secondary": "#2A7FFF",
-  "destructive": "#FF2424",
-  "success": "#34B53A",
-  "warning": "#FFB200",
+  "red": "#FF2424",
+  "green": "#34B53A",
+  "yellow": "#FFB200",
 
   "title": "#1E2A51",
   "foreground": "#5B6278",
