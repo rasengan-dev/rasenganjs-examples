@@ -18,9 +18,9 @@ export default function Navbar() {
 
 	return (
 		<header
-			className={`fixed top-0 left-0 right-0 w-full h-[80px] flex items-center z-50 px-7 lg:px-32 border-b-[1px] border-border bg-background/90 backdrop-blur-3xl backdrop-sepia-0`}
+			className={`fixed top-0 left-0 right-0 w-full h-[80px] flex items-center z-50 border-b-[1px] border-border bg-background/90 backdrop-blur-3xl backdrop-sepia-0`}
 		>
-			<div className='w-full max-w-[1500px] mx-auto flex items-center justify-between '>
+			<div className='w-full max-w-[1500px] mx-auto flex items-center justify-between px-7 lg:px-32'>
 				<Link to='/'>
 					<AppLogo />
 				</Link>

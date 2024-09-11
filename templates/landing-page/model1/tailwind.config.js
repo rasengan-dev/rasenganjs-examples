@@ -33,6 +33,10 @@ module.exports = {
 					DEFAULT: "hsl(var(--destructive))",
 					foreground: "hsl(var(--destructive-foreground))",
 				},
+				footer: {
+					DEFAULT: "hsl(var(--footer))",
+					foreground: "hsl(var(--footer-foreground))",
+				},
 				muted: {
 					DEFAULT: "hsl(var(--muted))",
 					foreground: "hsl(var(--muted-foreground))",
