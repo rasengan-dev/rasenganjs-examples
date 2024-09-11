@@ -6,13 +6,13 @@ import Main from "../components/Main";
 
 const AppLayout: LayoutComponent = () => {
   return (
-    <React.Fragment>
+    <section className="bg-background">
       <Navbar />
       <Main>
         <Outlet />
       </Main>
       <Footer />
-    </React.Fragment>
+    </section>
   );
 };
 
