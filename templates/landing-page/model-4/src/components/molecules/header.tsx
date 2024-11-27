@@ -7,7 +7,7 @@ export function Header() {
   const toggleMenu = () => setMenuIsOpened(!menuIsOpened)
 
   return (
-    <header className="flex px-3 md:px-32 h-16 items-center justify-between">
+    <header className="flex px-3 lg:px-32 h-16 items-center justify-between">
       <Link className="flex items-center gap-2" to="" target="_blank">
         <Image src="/public/logo.png" alt="logo" width={40} height={40} />
         <span className="font-bold">Enver</span>
