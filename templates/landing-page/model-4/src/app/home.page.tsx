@@ -1,6 +1,7 @@
 import { About } from "@/components/molecules/about";
 import { Header } from "@/components/molecules/header";
-import { Hero } from "@/components/molecules/hero";
+// import { Hero } from "@/components/molecules/hero";
+import { Services } from "@/components/molecules/services";
 import { PageComponent } from "rasengan";
 
 const Home: PageComponent = () => {
@@ -10,6 +11,7 @@ const Home: PageComponent = () => {
       <Header />
       {/* <Hero /> */}
       <About />
+      <Services />
     </>
   );
 }
