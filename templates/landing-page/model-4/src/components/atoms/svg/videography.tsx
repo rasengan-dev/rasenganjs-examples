@@ -1,12 +1,12 @@
 import { SVGProps } from "react";
 
 interface Props extends SVGProps<SVGSVGElement> {
-
+  size: number
 }
 
 export function VideographySVG(props: Props) {
   return (
-    <svg {...props} viewBox="0 0 32 32" fill="none" >
+    <svg {...props} height={props.size} width={props.size} viewBox="0 0 32 32" fill="none" >
       <path d="M29.3333 20V12C29.3333 5.33332 26.6667 2.66666 20 2.66666H12C5.33332 2.66666 2.66666 5.33332 2.66666 12V20C2.66666 26.6667 5.33332 29.3333 12 29.3333H20C26.6667 29.3333 29.3333 26.6667 29.3333 20Z" stroke="inherit" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M3.35999 9.47998H28.64" stroke="inherit" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M11.36 2.81332V9.29332" stroke="inherit" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
