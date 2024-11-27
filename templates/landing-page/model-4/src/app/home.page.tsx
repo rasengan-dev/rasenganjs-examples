@@ -1,10 +1,12 @@
+import { Header } from "@/components/molecules/header";
 import { PageComponent } from "rasengan";
 
 const Home: PageComponent = () => {
 
   return (
-    <section>
-    </section>
+    <>
+      <Header />
+    </>
   );
 }
 
