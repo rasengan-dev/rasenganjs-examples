@@ -1,5 +1,4 @@
-/* Load Urbanist and Comfortaa font */
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500&family=Urbanist:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
 /**
  * These directives tell Tailwind to include the base styles for the project,
@@ -10,16 +9,52 @@
 @tailwind components;
 @tailwind utilities;
 
-body,
-html {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  width: 100vw;
-  min-height: 100vh;
-  overflow-x: hidden;
+}
+
+body {
   font-family: "Nunito Sans", sans-serif;
   font-optical-sizing: auto;
   background-color: #19191B ;
   color: white;
 }
+
+.fade-in {
+  animation: fadeIn 200ms ease-out both;
+}
+
+.fade-out {
+  animation: fadeOut 150ms ease-out both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }  
+  to { opacity: 1; }  
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }  
+  to { opacity: 0; }  
+}
+
+.move-in {
+  animation: moveIn 200ms ease-out both;
+}
+
+.move-out {
+  animation: moveOut 150ms ease-out both;
+}
+
+@keyframes moveIn {
+  from { transform: translateX(100%); }  
+  to { transform: translateX(0); }  
+}
+
+@keyframes moveOut {
+  from { transform: translateX(0); }  
+  to { transform: translateX(100%); }  
+}
+
