@@ -10,10 +10,10 @@ export function HeaderLg() {
       </Link>
     <nav className="w-[75%] flex justify-between items-center">
       <ul className="flex flex-row gap-12 text-lg">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Our projects</a></li>
-        <li><a href="#">About us</a></li>
+        <li><Link className="hover:opacity-85 duration-150" to="#">Home</Link></li>
+        <li><Link className="hover:opacity-85 duration-150" to="#services">Services</Link></li>
+        <li><Link className="hover:opacity-85 duration-150" to="#portofolio">Our projects</Link></li>
+        <li><Link className="hover:opacity-85 duration-150" to="#about">About us</Link></li>
       </ul>
       <button className="relative text-lg h-11 group overflow-hidden w-40 flex items-center justify-center border-[1px] border-white rounded-md">
         <span

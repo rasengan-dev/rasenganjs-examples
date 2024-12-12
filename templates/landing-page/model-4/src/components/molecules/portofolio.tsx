@@ -6,15 +6,17 @@ import { Vector4 } from "../atoms/svg/vector-4";
 export function Portfolio() {
 
   return (
-    <section className="relative">
+    <section id="portofolio" className="relative">
       <section className="px-3 lg:px-32">
         <h1 className="text-3xl lg:text-5xl font-bold">Our Awesome Portofolio</h1>
       </section>
+      {/* small screen  */}
       <div className="lg:hidden">
         <PortofolioSm />
-        <Vector1 size={30} className=" absolute right-5 top-4" />
+        <Vector1 size={30} className=" absolute right-5 top-8" />
         <Vector4 size={15} className=" absolute left-5 -bottom-0" />
       </div>
+      {/* big screen  */}
       <div className=" hidden lg:block">
         <PortofolioLg />
         <Vector1 size={50} className="absolute right-32 top-10" />

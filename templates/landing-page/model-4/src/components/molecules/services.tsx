@@ -13,7 +13,7 @@ export function Services() {
       title: 'Development',
       description: 'Create a platform with the best and coolest quality from us.',
       icon: <DevelopmentSVG size={32} stroke="#5454D4" />,
-      bgColor: 'bg-[#5454D4]',
+      bgColor: 'bg-primary',
     },
     {
       title: 'UI/UX Designer',
@@ -37,7 +37,7 @@ export function Services() {
       title: 'Photography',
       description: 'We provide Photography services, and of course with the best quality',
       icon: <PhotographySVG size={32} stroke="#5454D4" />,
-      bgColor: 'bg-[#5454D4]',
+      bgColor: 'bg-primary',
     },
     {
       title: 'Videography',
@@ -49,7 +49,7 @@ export function Services() {
 
   return (
     <>
-      <section className="px-3 lg:px-32">
+      <section id="services" className="px-3 lg:px-32">
         <div className="relative">
           <Vector2 size={70} className="absolute left-0 lg:-top-6 -top-16" />
           <Vector3 size={16} className="absolute right-0 bottom-0 rotate-[32deg]" />

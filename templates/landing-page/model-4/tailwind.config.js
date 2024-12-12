@@ -6,11 +6,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#2A7FFF",
-      },
-      fontFamily: {
-        urbanist: ['Urbanist', 'sans-serif'],
-        comfortaa: ['Comfortaa', 'sans-serif'],
+        primary: "#5454D4",
       },
     },
   },

@@ -56,13 +56,13 @@ export function PortofolioSm() {
       </section>
       <div className="flex justify-center gap-4 my-10 items-center">
         <span
-          className="bg-[#1E1E20] hover:bg-[#5454D4] cursor-pointer w-14 h-14 flex justify-center items-center rounded-full" 
+          className="bg-[#1E1E20] hover:bg-primary cursor-pointer w-14 h-14 flex justify-center items-center rounded-full" 
           onClick={handlePrev}
         >
           <ChevronLeft />
         </span>
         <span
-          className="bg-[#1E1E20] hover:bg-[#5454D4] cursor-pointer w-14 h-14 flex justify-center items-center rounded-full" 
+          className="bg-[#1E1E20] hover:bg-primary cursor-pointer w-14 h-14 flex justify-center items-center rounded-full" 
           onClick={handleNext}
         >
           <ChevronRight />

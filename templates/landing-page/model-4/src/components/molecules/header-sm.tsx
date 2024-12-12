@@ -1,6 +1,6 @@
 import Image from "@rasenganjs/image";
 import { Link } from "rasengan";
-import { AnimationEvent, useState } from "react";
+import { AnimationEvent, MouseEvent, useState } from "react";
 import { Close } from "../atoms/svg/close";
 
 export function HeaderSm() {
@@ -11,6 +11,14 @@ export function HeaderSm() {
     if(e.animationName == 'moveIn') return ;
 
     setDisplayInDom(false)
+  }
+
+  function handleNavClick(e: MouseEvent<HTMLUListElement>) {
+    const target = e.target as HTMLElement ;
+
+    if(!target.closest('li')) return 
+
+    setShowNav(false)
   }
 
   return (
@@ -40,6 +48,7 @@ export function HeaderSm() {
               className={`fixed inset-0 z-50 bg-black/80 ${showNav ? 'fade-in' : 'fade-out'}`} 
             />
             <nav
+              onClick={handleNavClick}
               onAnimationEnd={handleAnimationEnd} 
               className={`
                 fixed z-50 top-0 bottom-0 right-0 w-3/5 bg-white p-10 flex flex-col gap-6
@@ -47,10 +56,10 @@ export function HeaderSm() {
               `}
             >
               <ul className="flex flex-col gap-6 text-lg text-black">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Our projects</a></li>
-                <li><a href="#">About us</a></li>
+                <li><Link to="#">Home</Link></li>
+                <li><Link to="#services">Services</Link></li>
+                <li><Link to="#portofolio">Our projects</Link></li>
+                <li><Link to="#about">About us</Link></li>
               </ul>
               <button className="text-lg text-black h-11 w-40 flex items-center justify-center border-[1px] border-black rounded-md">
                 Contact Us
