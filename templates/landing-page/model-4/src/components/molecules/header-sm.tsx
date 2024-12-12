@@ -35,6 +35,7 @@ export function HeaderSm() {
         displayInDom && (
           <>
             <div
+              onClick={() => setShowNav(false)}
               className={`fixed inset-0 z-50 bg-black/30 ${showNav ? 'fade-in' : 'fade-out'}`} 
             />
             <nav

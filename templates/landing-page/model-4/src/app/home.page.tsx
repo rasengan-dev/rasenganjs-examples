@@ -1,4 +1,6 @@
 import { About } from "@/components/molecules/about";
+import { Contact } from "@/components/molecules/contact";
+import { Footer } from "@/components/molecules/footer";
 import { Header } from "@/components/molecules/header";
 import { Portfolio } from "@/components/molecules/portofolio";
 // import { Hero } from "@/components/molecules/hero";
@@ -16,6 +18,8 @@ const Home: PageComponent = () => {
       <Services />
       <div className="my-20" />
       <Portfolio />
+      <Contact />
+      <Footer />
     </>
   );
 }
