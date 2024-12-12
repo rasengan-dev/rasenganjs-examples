@@ -4,7 +4,7 @@ import { Vector3 } from "../atoms/svg/vector-3";
 
 export function Contact() {
   return (
-    <section className="bg-[#1E1E2080] relative px-5 lg:px-32 h-80 flex justify-between items-center">
+    <section className="bg-[#1E1E2080] relative px-3 lg:px-32 h-80 flex justify-between items-center">
       <h2 className="text-3xl lg:text-5xl font-bold text-balance">
         Contact us for the service you want to use
       </h2>

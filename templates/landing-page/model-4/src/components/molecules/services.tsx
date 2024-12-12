@@ -49,7 +49,6 @@ export function Services() {
 
   return (
     <>
-      {/* <section className="mb-16 lg:mb-8" /> */}
       <section className="px-3 lg:px-32">
         <div className="relative">
           <Vector2 size={70} className="absolute left-0 lg:-top-6 -top-16" />
@@ -59,10 +58,10 @@ export function Services() {
         <section className="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-12">
           {
             items.map((item, index) => (
-              <div className="flex flex-col gap-4" key={index}>
+              <div key={index} className="flex flex-col gap-4">
                 <div className="flex justify-center">
                   <div
-                    className={`p-3 rounded-full ${item.bgColor} bg-opacity-30`}
+                    className={`p-3 rounded-full bg-opacity-30 hover:bg-opacity-50 ${item.bgColor}`}
                   >
                     {item.icon}
                   </div>
