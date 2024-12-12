@@ -3,7 +3,7 @@ import { Contact } from "@/components/molecules/contact";
 import { Footer } from "@/components/molecules/footer";
 import { Header } from "@/components/molecules/header";
 import { Portfolio } from "@/components/molecules/portofolio";
-// import { Hero } from "@/components/molecules/hero";
+import { Hero } from "@/components/molecules/hero";
 import { Services } from "@/components/molecules/services";
 import { PageComponent } from "rasengan";
 
@@ -12,7 +12,7 @@ const Home: PageComponent = () => {
   return (
     <>
       <Header />
-      {/* <Hero /> */}
+      <Hero />
       <About />
       <div className="my-20" />
       <Services />

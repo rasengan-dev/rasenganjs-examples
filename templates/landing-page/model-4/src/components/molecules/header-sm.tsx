@@ -1,6 +1,7 @@
 import Image from "@rasenganjs/image";
 import { Link } from "rasengan";
 import { AnimationEvent, useState } from "react";
+import { Close } from "../atoms/svg/close";
 
 export function HeaderSm() {
   const [showNav, setShowNav] = useState(false);
@@ -36,7 +37,7 @@ export function HeaderSm() {
           <>
             <div
               onClick={() => setShowNav(false)}
-              className={`fixed inset-0 z-50 bg-black/30 ${showNav ? 'fade-in' : 'fade-out'}`} 
+              className={`fixed inset-0 z-50 bg-black/80 ${showNav ? 'fade-in' : 'fade-out'}`} 
             />
             <nav
               onAnimationEnd={handleAnimationEnd} 
@@ -56,10 +57,9 @@ export function HeaderSm() {
               </button>
               <div 
                 onClick={() => setShowNav(false)}
-                className="md:hidden absolute right-5 cursor-pointer top-10 flex flex-col gap-2"
+                className="absolute right-5 cursor-pointer top-10 flex flex-col gap-2"
               >
-                <div className="w-6 h-[2px] absolute right-0 rounded-3xl rotate-45 bg-black"></div>
-                <div className="w-6 h-[2px] absolute right-0 rounded-3xl -rotate-45 bg-black"></div>
+                <Close size={28}  />
               </div>
             </nav>
           </>
