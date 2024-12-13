@@ -10,9 +10,9 @@ export function Footer() {
       </Link>
       <nav>
         <ul className="flex flex-col lg:flex-row items-center gap-5 font-light">
-          <li><Link to="">Support</Link></li>
-          <li><Link to="">Privacy Policy</Link></li>
-          <li><Link to="">Terms and Conditions</Link></li>
+          <li><Link className="hover:opacity-80 duration-150" to="">Support</Link></li>
+          <li><Link className="hover:opacity-80 duration-150" to="">Privacy Policy</Link></li>
+          <li><Link className="hover:opacity-80 duration-150" to="">Terms and Conditions</Link></li>
         </ul>
       </nav>
       <span>© 2020 Enver, All Rights Reserved</span>

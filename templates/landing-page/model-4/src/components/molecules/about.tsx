@@ -10,6 +10,7 @@ export function About() {
       </section>
       <section className="h-[450px] flex justify-center items-center mt-8 relative">
         <div className="h-full w-full">
+          {/* remove this image and uncomment <video> line  */}
           <Image
             alt="About"
             src={'/about-bg.png'}
@@ -17,11 +18,12 @@ export function About() {
             height={'100%'}
             objectfit="cover"
           />
+          {/* <video src="" controls /> */}
         </div>
+        {/* remove this component  */}
         <span className="absolute w-20 h-20 rounded-full flex items-center justify-center bg-opacity-90 hover:bg-opacity-100 duration-150 bg-primary">
           <PlaySVG />
         </span>
-        {/* <video src="" /> */}
       </section>
     </section>
   )

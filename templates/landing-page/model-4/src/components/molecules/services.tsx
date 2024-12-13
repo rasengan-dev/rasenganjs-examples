@@ -59,9 +59,9 @@ export function Services() {
           {
             items.map((item, index) => (
               <div key={index} className="flex flex-col gap-4">
-                <div className="flex justify-center">
+                <div className="flex justify-center group">
                   <div
-                    className={`p-3 rounded-full bg-opacity-30 hover:bg-opacity-50 ${item.bgColor}`}
+                    className={`p-3 rounded-full bg-opacity-30 duration-150 group-hover:bg-opacity-20 ${item.bgColor}`}
                   >
                     {item.icon}
                   </div>
