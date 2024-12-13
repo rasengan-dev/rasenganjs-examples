@@ -23,7 +23,7 @@ export function Hero() {
         </Button>
       </section>
       <section className="h-full w-full justify-center lg:justify-start flex items-center px-3 lg:px-0 lg:pr-32 relative">
-        <div className="flex justify-center lg:w-96 h-96 relative">
+        <div className="flex justify-center lg:w-96 h-96 lg:h-[500px] relative">
           {/* small screen  */}
           <div className="lg:hidden">
             <Vector1 size={40} className=" absolute right-0 top-0" />

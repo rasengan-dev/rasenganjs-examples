@@ -11,7 +11,7 @@ export function VideographySVG(props: Props) {
       <path d="M3.35999 9.47998H28.64" stroke="inherit" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M11.36 2.81332V9.29332" stroke="inherit" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M20.64 2.81332V8.69332" stroke="inherit" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-      <path d="M13 19.2667V17.6667C13 15.6133 14.4533 14.7733 16.2267 15.8L17.6133 16.6L19 17.4C20.7733 18.4267 20.7733 20.1067 19 21.1333L17.6133 21.9333L16.2267 22.7333C14.4533 23.76 13 22.92 13 20.8667V19.2667V19.2667Z" stroke="inherit" strokeWidth="2" stroke-miterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M13 19.2667V17.6667C13 15.6133 14.4533 14.7733 16.2267 15.8L17.6133 16.6L19 17.4C20.7733 18.4267 20.7733 20.1067 19 21.1333L17.6133 21.9333L16.2267 22.7333C14.4533 23.76 13 22.92 13 20.8667V19.2667V19.2667Z" stroke="inherit" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   )
 }
