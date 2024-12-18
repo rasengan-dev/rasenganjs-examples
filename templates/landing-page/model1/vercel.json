@@ -6,7 +6,7 @@
 		},
 		{
 			"src": "/assets/(.*)",
-			"dest": "/assets/$1"
+			"dest": "/client/assets/$1"
 		},
 		{
 			"src": "/(.*)",
