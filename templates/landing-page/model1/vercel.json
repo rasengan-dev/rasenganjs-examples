@@ -1,9 +1,9 @@
 {
   "routes": [
-		{
-			"src": "/favicon.ico",
-			"dest": "/favicon.ico"
-		},
+    {
+      "src": "/(.+\\.(png|ico|svg|jpg|jpeg|gif|webp))",
+      "dest": "/$1"
+    },
 		{
 			"src": "/assets/(.*)",
 			"dest": "/client/assets/$1"
@@ -12,5 +12,5 @@
 			"src": "/(.*)",
 			"dest": "api/index.js"
 		}
-	]
+  ]
 }
