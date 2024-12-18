@@ -15,7 +15,7 @@ export function Footer() {
           <li><Link className="hover:opacity-80 duration-150" to="">Terms and Conditions</Link></li>
         </ul>
       </nav>
-      <span>© 2020 Enver, All Rights Reserved</span>
+      <span>© 2024 Rasengan Labs, All Rights Reserved</span>
     </footer>
   )
 }

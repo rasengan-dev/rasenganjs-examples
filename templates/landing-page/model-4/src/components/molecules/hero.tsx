@@ -8,7 +8,7 @@ import { Vector4 } from "../atoms/svg/vector-4";
 
 export function Hero() {
   return (
-    <section className="lg:min-h-[600px] lg:h-[calc(100dvh-64px)] py-14 lg:py-0 flex flex-col gap-y-20 lg:flex-row gap-2">
+    <section className="lg:min-h-[600px] lg:h-[calc(100dvh-64px)] max-h-[1000px] py-14 lg:py-0 flex flex-col gap-y-20 lg:flex-row gap-2">
       <section className="h-full flex px-3 lg:px-32 flex-col gap-4 justify-center">
         <h1 className="font-bold text-5xl lg:text-6xl">
           <span>Build Your</span> <br />
