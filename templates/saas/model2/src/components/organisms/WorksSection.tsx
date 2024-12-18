@@ -26,7 +26,7 @@ const images: string[][] = [
 
 const WorksSection = () => {
   return (
-    <section id="works" className="pt-20 space-y-10">
+    <section id="works" className="pt-20 space-y-10 max-w-[1500px] mx-auto">
       <Reveal variant="to-bottom" className="flex flex-col items-center">
         <h2 className="font-bold text-5xl mb-4 max-w-[550px] px-4 text-center">
           Our Beautiful Works

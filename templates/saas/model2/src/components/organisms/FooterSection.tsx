@@ -65,7 +65,7 @@ const FooterSection = () => {
             <FooterNav />
           </div>
           <div>
-            <span>© 2024 Fenyep Wangue - All Right Reserved</span>
+            <span>© 2024 Rasengan Labs - All Right Reserved</span>
           </div>
         </div>
       </div>
