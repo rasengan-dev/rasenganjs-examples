@@ -18,7 +18,7 @@
     "clsx": "^2.1.1",
     "framer-motion": "^11.14.1",
     "lucide-react": "^0.468.0",
-    "rasengan": "1.0.0-beta.39",
+    "rasengan": "^1.0.0-beta.50",
     "react": "^18.3.0",
     "react-dom": "^18.3.0",
     "tailwind-merge": "^2.5.5",
