@@ -1,6 +1,7 @@
 import { PageComponent, Link } from "rasengan";
 import logo from "@/assets/logo.svg";
 import Image from "@rasenganjs/image";
+import { Button } from "@/components/atoms/btn";
 
 const Home: PageComponent = () => {
   return (
@@ -25,6 +26,8 @@ const Home: PageComponent = () => {
           </code>
         </p>
       </div>
+      <Button variant="outline">Button</Button>
+
 
       <div className="mt-8 flex flex-wrap justify-center gap-4">
         <div className="flex flex-col p-4 rounded-md border-[1px] border-[EFEFEF] max-w-[500px] md:w-[300px] lg:w-[400px]">

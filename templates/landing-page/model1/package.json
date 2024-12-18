@@ -11,10 +11,16 @@
   },
   "dependencies": {
     "@fontsource-variable/outfit": "^5.0.13",
+    "@radix-ui/react-slot": "^1.1.0",
     "@rasenganjs/image": "^1.0.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.428.0",
     "rasengan": "1.0.0-beta.39",
     "react": "^18.3.0",
-    "react-dom": "^18.3.0"
+    "react-dom": "^18.3.0",
+    "tailwind-merge": "^2.5.2",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
