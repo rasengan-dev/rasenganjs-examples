@@ -2,7 +2,7 @@
   "routes": [
     {
       "src": "/(.+\\.(png|ico|svg|jpg|jpeg|gif|webp))",
-      "dest": "/$1"
+      "dest": "/client/$1"
     },
 		{
 			"src": "/assets/(.*)",
