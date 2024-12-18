@@ -1,56 +1,33 @@
-/**
- * Renders a checkbox component with various styles and states.
- *
- * @param variant - Optional style variant of the checkbox, can be "primary", "secondary", "red".
- * @param className - Additional class names to apply to the checkbox.
- * @param rest - Remaining props to be passed to the underlying `CheckboxPrimitive.Root` element.
- * @returns A React component that renders a styled checkbox with optional variant styles.
- */
-
+"use client";
 
 import * as React from "react";
 import * as CheckboxPrimitive from "@radix-ui/react-checkbox";
-import { Check } from "lucide-react";
-import { cva, type VariantProps } from "class-variance-authority";
+import { Tick02Icon } from "hugeicons-react";
 
 import { cn } from "@/lib/utils";
 
-
-const checkboxVariants = cva(
-  "peer h-4 w-4 shrink-0 rounded-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
-  {
-    variants: {
-      variant: {
-        primary: "border border-primary data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground",
-        secondary: "border border-secondary data-[state=checked]:bg-secondary data-[state=checked]:text-secondary-foreground",
-        red: "border text-danger border-red-500 data-[state=checked]:bg-red-500 data-[state=checked]:text-red-foreground",
-      },
-    },
-    defaultVariants: {
-      variant: "primary",
-    },
-  }
-);
-
-
-
-export interface CheckboxProps
-  extends React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>,
-    VariantProps<typeof checkboxVariants> {}
-
 const Checkbox = React.forwardRef<
   React.ElementRef<typeof CheckboxPrimitive.Root>,
-  CheckboxProps
->(({ className, variant, ...props }, ref) => (
+  React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
+>(({ className, ...props }, ref) => (
   <CheckboxPrimitive.Root
     ref={ref}
-    className={cn(checkboxVariants({ variant }), className)}
+    className={cn(
+      "relative h-5 w-5 rounded-xs border border-border ring-offset-background shadow overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:border-primary",
+      className
+    )}
     {...props}
   >
+    <div className="absolute z-10 top-0 left-0 w-full h-full bg-foreground flex items-center justify-center">
+      <Tick02Icon size={8} color="#fff" strokeWidth={3} />
+    </div>
+
     <CheckboxPrimitive.Indicator
-      className={cn("flex items-center justify-center text-current")}
+      className={cn(
+        "absolute z-20 top-0 left-0 w-full h-full flex items-center justify-center bg-primary"
+      )}
     >
-      <Check className="h-4 w-4" />
+      <Tick02Icon size={8} color="#fff" strokeWidth={3} />
     </CheckboxPrimitive.Indicator>
   </CheckboxPrimitive.Root>
 ));

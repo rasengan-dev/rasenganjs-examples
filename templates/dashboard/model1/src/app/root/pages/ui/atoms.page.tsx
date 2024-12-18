@@ -1,160 +1,289 @@
-import Input from "@/components/atoms/Input";
-import NavItem from "@/components/atoms/NavItem";
-import CardContainer from "@/components/molecules/CardContainer";
-import { PageComponent } from "rasengan";
-import {
-  Home02Icon,
-  Atom01Icon,
-  CallIcon,
-  UserSharingIcon,
-} from "hugeicons-react";
-import { Button } from "@/components/atoms/Button";
-import { Select } from "@/components/atoms/select";
-import { ComponentState, ComponentVariant } from "@/lib/enums";
+import { Avatar, AvatarImage } from "@/components/atoms/avatar";
+import { Button } from "@/components/atoms/button";
 import { Checkbox } from "@/components/atoms/checkbox";
+import { Input } from "@/components/atoms/input";
+import { Logo } from "@/components/atoms/logo";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectLabel,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/atoms/select";
 import { Switch } from "@/components/atoms/switch";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/molecules/card";
+import { ComponentVariant } from "@/lib/enums";
+import { Home01Icon } from "hugeicons-react";
+import { PageComponent } from "rasengan";
+import getPalette from "tailwindcss-palette-generator";
+import { useEffect, useState } from "react";
+import theme from "../../../../../theme.json";
 
 const Atoms: PageComponent = () => {
+  const [palette, setpalette] = useState<
+    Record<string, Record<string, string>>
+  >({});
+  useEffect(() => {
+    // const theme = JSON.parse(themeJSON);
+    const palette = getPalette([
+      {
+        color: theme.primary || "#264653",
+        name: "primary",
+      },
+      {
+        color: theme.secondary || "#264653",
+        name: "secondary",
+      },
+      {
+        color: theme.green,
+        name: "green",
+      },
+      {
+        color: theme.yellow,
+        name: "yellow",
+      },
+      {
+        color: theme.red || "#FF2424",
+        name: "red",
+      },
+    ]);
+    setpalette(palette);
+  }, []);
+
   return (
-    <section className="pb-24">
-      {/* Inputs */}
-      <CardContainer title="Simple Inputs">
-        <section className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <Input placeholder="Input without label and icon" fullWidth />
-          <Input placeholder="Input with icon" fullWidth>
-            <UserSharingIcon size={20} />
-          </Input>
-          <Input
-            placeholder="Input with icon"
-            className="border-warning-400"
-            fullWidth
-          >
-            <CallIcon size={20} />
-          </Input>
-          <Input
-            placeholder="Input with icon"
-            className="border-success-400"
-            fullWidth
-          >
-            <CallIcon size={20} />
-          </Input>
-        </section>
-      </CardContainer>
+    <section className=" flex flex-col gap-6 w-full">
+      <Card>
+        <CardHeader>
+          <CardTitle>Buttons</CardTitle>
+          <CardDescription>Defalault and small</CardDescription>
+        </CardHeader>
+        <CardContent className="space-x-4 space-y-4">
+          {Object.entries(ComponentVariant).map(([key, value]) => {
+            const val = value as any;
+            return (
+              <Button variant={val} key={key}>
+                Label
+              </Button>
+            );
+          })}
+          {Object.entries(ComponentVariant).map(([key, value]) => {
+            const val = value as any;
+            return (
+              <Button variant={val} size={"small"} key={key}>
+                Label
+              </Button>
+            );
+          })}
+        </CardContent>
+      </Card>
+      <div className="flex gap-6">
+        <Card className="w-full">
+          <CardHeader>
+            <CardTitle>Inputs</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <Input lefticon={Home01Icon} placeholder="Enter a text" />
+            <Input
+              lefticon={Home01Icon}
+              placeholder="Enter a text"
+              state="valid"
+            />
+            <Input
+              lefticon={Home01Icon}
+              placeholder="Enter a text"
+              state="danger"
+            />
+            <Input
+              lefticon={Home01Icon}
+              placeholder="Enter a text"
+              state="warning"
+            />
+            <Input
+              lefticon={Home01Icon}
+              placeholder="Enter a text"
+              state="success"
+            />
+          </CardContent>
+        </Card>
 
-      <CardContainer title="Sidebar buttons">
-        <section className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          <NavItem title="Dashboard">
-            <Home02Icon size={20} />
-          </NavItem>
-          <NavItem title="Atoms">
-            <Atom01Icon size={20} />
-          </NavItem>
-          <NavItem title="Dashboard" active>
-            <Home02Icon size={20} />
-          </NavItem>
-          <NavItem title="Atoms" active>
-            <Atom01Icon size={20} />
-          </NavItem>
-        </section>
-      </CardContainer>
-
-      <CardContainer title="Buttons">
-        <section className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          <Button size={"lg"}>Large Button</Button>
-          <Button size={"lg"} variant={"red"}>
-            Danger #Button
-          </Button>
-          <Button size={"lg"} variant={"outline"}>
-            outline Button
-          </Button>
-          <Button size={"lg"} variant={"link"}>
-            Link
-          </Button>
-        </section>
-      </CardContainer>
-
-      <CardContainer title="Select">
-        <section className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          <Select
-            variant={ComponentVariant.PRIMARY}
-            label="Default Select"
-            icon={<UserSharingIcon size={20} color="#2A7FFF" />}
-          >
-            <option value="">Select an option</option>
-            <option value="1">Option 1</option>
-            <option value="2">Option 2</option>
-            <option value="3">Option 3</option>
-          </Select>
-          <Select
-            variant={ComponentVariant.RED}
-            label="Default Select"
-            icon={<UserSharingIcon size={20} color="#FF2424" />}
-          >
-            <option value="">Select an option</option>
-            <option value="1">Option 1</option>
-            <option value="2">Option 2</option>
-            <option value="3">Option 3</option>
-          </Select>
-        </section>
-      </CardContainer>
-
-      <CardContainer title="Checkbox">
-        <section className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <div className="flex items-center space-x-2">
-            <Checkbox id="terms" />
-            <label
-              htmlFor="terms"
-              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-            >
-              Accept terms and conditions
-            </label>
-          </div>
-
-          <div className="items-top flex space-x-2">
-            <Checkbox id="terms1" variant={ComponentVariant.RED} />
-            <div className="grid gap-1.5 leading-none">
-              <label
-                htmlFor="terms1"
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+        <Card className="w-full">
+          <CardHeader>
+            <CardTitle>Select</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <Select>
+              <SelectTrigger className="w-full" icon={Home01Icon}>
+                <SelectValue placeholder="Select a fruit" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectGroup>
+                  <SelectLabel>Fruits</SelectLabel>
+                  <SelectItem value="apple">Apple</SelectItem>
+                  <SelectItem value="banana">Banana</SelectItem>
+                  <SelectItem value="blueberry">Blueberry</SelectItem>
+                  <SelectItem value="grapes">Grapes</SelectItem>
+                  <SelectItem value="pineapple">Pineapple</SelectItem>
+                </SelectGroup>
+              </SelectContent>
+            </Select>
+            <Select>
+              <SelectTrigger state="valid" className="w-full" icon={Home01Icon}>
+                <SelectValue placeholder="Select a fruit" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectGroup>
+                  <SelectLabel>Fruits</SelectLabel>
+                  <SelectItem value="apple">Apple</SelectItem>
+                  <SelectItem value="banana">Banana</SelectItem>
+                  <SelectItem value="blueberry">Blueberry</SelectItem>
+                  <SelectItem value="grapes">Grapes</SelectItem>
+                  <SelectItem value="pineapple">Pineapple</SelectItem>
+                </SelectGroup>
+              </SelectContent>
+            </Select>
+            <Select>
+              <SelectTrigger
+                state="danger"
+                className="w-full"
+                icon={Home01Icon}
               >
-                Accept terms and conditions
-              </label>
-              <p className="text-sm text-muted-foreground">
-                You agree to our Terms of Service and Privacy Policy.
-              </p>
-            </div>
+                <SelectValue placeholder="Select a fruit" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectGroup>
+                  <SelectLabel>Fruits</SelectLabel>
+                  <SelectItem value="apple">Apple</SelectItem>
+                  <SelectItem value="banana">Banana</SelectItem>
+                  <SelectItem value="blueberry">Blueberry</SelectItem>
+                  <SelectItem value="grapes">Grapes</SelectItem>
+                  <SelectItem value="pineapple">Pineapple</SelectItem>
+                </SelectGroup>
+              </SelectContent>
+            </Select>
+            <Select>
+              <SelectTrigger
+                state="warning"
+                className="w-full"
+                icon={Home01Icon}
+              >
+                <SelectValue placeholder="Select a fruit" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectGroup>
+                  <SelectLabel>Fruits</SelectLabel>
+                  <SelectItem value="apple">Apple</SelectItem>
+                  <SelectItem value="banana">Banana</SelectItem>
+                  <SelectItem value="blueberry">Blueberry</SelectItem>
+                  <SelectItem value="grapes">Grapes</SelectItem>
+                  <SelectItem value="pineapple">Pineapple</SelectItem>
+                </SelectGroup>
+              </SelectContent>
+            </Select>
+            <Select>
+              <SelectTrigger
+                state="success"
+                className="w-full"
+                icon={Home01Icon}
+              >
+                <SelectValue placeholder="Select a fruit" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectGroup>
+                  <SelectLabel>Fruits</SelectLabel>
+                  <SelectItem value="apple">Apple</SelectItem>
+                  <SelectItem value="banana">Banana</SelectItem>
+                  <SelectItem value="blueberry">Blueberry</SelectItem>
+                  <SelectItem value="grapes">Grapes</SelectItem>
+                  <SelectItem value="pineapple">Pineapple</SelectItem>
+                </SelectGroup>
+              </SelectContent>
+            </Select>
+          </CardContent>
+        </Card>
+      </div>
+      <Card>
+        <CardHeader>
+          <CardTitle>Checkbox and switchs</CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <div className="space-x-4">
+            <Checkbox checked />
+            <Checkbox />
           </div>
-        </section>
-      </CardContainer>
-
-      <CardContainer title="Switch">
-        <section className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          <div className="flex items-center space-x-2">
-            <Switch
-              id="airplane-mode"
-              variant={ComponentVariant.PRIMARY}
-            
-            />
-            <label htmlFor="airplane-mode">Primary Enable</label>
+          <div className="space-x-4">
+            <Switch checked />
+            <Switch />
           </div>
-          <div className="flex items-center space-x-2">
-            <Switch
-              id="airplane-mode"
-              variant={ComponentVariant.RED}
-            
-            />
-            <label htmlFor="airplane-mode">RED Enable</label>
-          </div>
-          <div className="flex items-center space-x-2">
-            <Switch
-              id="airplane-mode"
-              variant={ComponentVariant.PRIMARY}
-              state={ComponentState.DISABLED}
-            />
-            <label htmlFor="airplane-mode">Disable</label>
-          </div>
-        </section>
-      </CardContainer>
+        </CardContent>
+      </Card>
+      <div className="flex gap-6">
+        <Card className="w-1/2">
+          <CardHeader>
+            <CardTitle>Logo</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <Logo className="max-w-[600px]" width={"100%"} height={"auto"} />
+          </CardContent>
+        </Card>
+        <Card className="w-1/2">
+          <CardHeader>
+            <CardTitle>Avatar</CardTitle>
+            <CardDescription>Here is the default avatar</CardDescription>
+          </CardHeader>
+          <CardContent className="flex gap-4">
+            <Avatar className="w-40 h-40">
+              <AvatarImage />
+            </Avatar>
+          </CardContent>
+        </Card>
+      </div>
+      <Card className="w-full">
+        <CardHeader>
+          <CardTitle>Colors</CardTitle>
+        </CardHeader>
+        <CardContent className="flex flex-col gap-4">
+          {Object.entries(palette).map(([key, value]) => {
+            return (
+              <div key={key} className="w-full flex justify-between">
+                {Object.entries(value).map(([key_, value]) => {
+                  return (
+                    <div className="flex flex-col items-start gap-1 text-[10px] text-center">
+                      <div
+                        className={`w-10 h-10 rounded-sm`}
+                        style={{ backgroundColor: value }}
+                        key={key_}
+                      ></div>
+                      <div className="text-title font-semibold">{key}</div>
+                      <div className="text-foreground font-medium">{key_}</div>
+                      <div className="text-muted">{value}</div>
+                    </div>
+                  );
+                })}
+              </div>
+            );
+          })}
+        </CardContent>
+      </Card>
+      <Card className="w-full">
+        <CardHeader>
+          <CardTitle>Icons</CardTitle>
+        </CardHeader>
+        <CardContent>
+          We use{" "}
+          <a href="https://hugeicons.com" className="underline text-primary">
+            Hugeicons
+          </a>{" "}
+          icons
+        </CardContent>
+      </Card>
     </section>
   );
 };
