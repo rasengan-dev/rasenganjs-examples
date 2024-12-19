@@ -1,38 +1,13 @@
-import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRightIcon } from "lucide-react";
 
-export default function CustomCursor() {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-
-  const [isVisible, setIsVisible] = useState(false); // Cursor visibility state
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setPosition({ x: e.clientX, y: e.clientY });
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
-
-  // Add hovered state (optional: class changes on hover)
-  useEffect(() => {
-    const links = document.querySelectorAll(".custom-cursor");
-
-    links.forEach((link) => {
-      link.addEventListener("mouseenter", () => setIsVisible(true));
-      link.addEventListener("mouseleave", () => setIsVisible(false));
-    });
-
-    return () => {
-      links.forEach((link) => {
-        link.removeEventListener("mouseenter", () => setIsVisible(true));
-        link.removeEventListener("mouseleave", () => setIsVisible(false));
-      });
-    };
-  }, []);
-
+export default function CustomCursor({
+  position,
+  isVisible,
+}: {
+  position: { x: number; y: number };
+  isVisible: boolean;
+}) {
   return (
     <motion.div
       key={"custom-cursor"}

@@ -4,6 +4,7 @@ import BlogCard from "../molecule/cards/BlogCard";
 
 const BlogSection = () => {
   const { articles } = useArticles();
+
   return (
     <section id="blog" className="w-full bg-[#111204] sm:pt-16 pb-16 sm:pb-24">
       <div className="max-w-[1140px] mx-auto">
@@ -18,8 +19,8 @@ const BlogSection = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 px-6 gap-8 mb-24 2xl:max-w-[calc(100vw-304px)]">
-          {articles.map((article) => (
-            <BlogCard key={article.title} article={article} />
+          {articles.map((article, index) => (
+            <BlogCard key={article.title + index} article={article} />
           ))}
         </div>
 

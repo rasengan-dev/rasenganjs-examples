@@ -2,51 +2,12 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useMenuContext } from "@/hooks/guards/useMenuContext";
 import { MenuIcon } from "lucide-react";
-
-const firstTextVariant = {
-  initial: {
-    y: 0,
-  },
-  hover: {
-    y: -20,
-    transition: {
-      duration: 1.125,
-      ease: [0.19, 1, 0.22, 1],
-    },
-  },
-  animate: {
-    y: 0,
-    transition: {
-      duration: 1.125,
-      ease: [0.19, 1, 0.22, 1],
-    },
-  },
-};
-
-const secondTextVariant = {
-  initial: {
-    y: 50,
-  },
-  hover: {
-    y: 0,
-    transition: {
-      duration: 1.125,
-      ease: [0.19, 1, 0.22, 1],
-    },
-  },
-  animate: {
-    y: 20,
-    transition: {
-      duration: 1.125,
-      ease: [0.19, 1, 0.22, 1],
-    },
-  },
-};
+import { firstTextVariant, secondTextVariant } from "../animations/constants";
 
 const Navigation = () => {
   const [elementFocused, setElementFocused] = useState<number | null>(null);
-  const { navlinks } = useMenuContext();
 
+  const { navlinks } = useMenuContext();
   const { isOpened, setIsOpened } = useMenuContext();
 
   const handleHoverButton = (index: number | null) => {
@@ -54,7 +15,7 @@ const Navigation = () => {
   };
 
   return (
-    <ul className="hidden lg:flex w-fit rounded-full border-2 p-1 border-[#B9FD50] items-center gap-2 text-white">
+    <ul className="hidden z-40 lg:flex w-fit rounded-full border-2 p-1 border-[#B9FD50] items-center gap-2 text-white">
       {navlinks.map((elmt, index) => (
         <motion.li
           key={elmt.label}
@@ -72,7 +33,7 @@ const Navigation = () => {
             <motion.a
               variants={firstTextVariant}
               href={elmt.href}
-              className="text-[#B9FD50] z-20"
+              className="text-[#B9FD50] z-20 block"
             >
               {elmt.label}
             </motion.a>

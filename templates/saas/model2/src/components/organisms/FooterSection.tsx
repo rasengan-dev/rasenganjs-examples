@@ -9,6 +9,11 @@ import {
 import { Separator } from "../atom/separator";
 import { Link } from "rasengan";
 import { useMenuContext } from "@/hooks/guards/useMenuContext";
+import { motion } from "framer-motion";
+import {
+  firstTextVariant,
+  secondTextVariant,
+} from "../molecule/animations/constants";
 
 const FooterSection = () => {
   return (
@@ -81,9 +86,28 @@ const FooterNav = () => {
   return (
     <ul className="flex flex-wrap items-center gap-8">
       {navlinks.map((elmt, index) => (
-        <li key={index + elmt.label} className="hover:text-[#B9FD50]">
-          <Link to={elmt.href}>{elmt.label}</Link>
-        </li>
+        <motion.li
+          key={index + elmt.label}
+          className="relative overflow-hidden"
+          initial="initial"
+          animate="animate"
+          whileHover="hover"
+        >
+          {/* First Text */}
+          <motion.a variants={firstTextVariant} href={elmt.href} className="block">
+            {elmt.label}
+          </motion.a>
+
+          {/* Second Text */}
+          <motion.a
+            variants={secondTextVariant}
+            aria-hidden
+            href={elmt.href}
+            className="absolute top-0 left-0 text-[#B9FD50]"
+          >
+            {elmt.label}
+          </motion.a>
+        </motion.li>
       ))}
     </ul>
   );

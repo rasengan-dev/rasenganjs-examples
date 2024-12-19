@@ -112,7 +112,8 @@ const CapabilitiesSection = () => {
         {capabilitiesTags.map((tag, index) => (
           <Badge
             key={index + 3}
-            className={`bg-[#B9FD50] hover:bg-[#B9FD50] text-[#111204] rounded-[8px] px-5 font-light text-lg h-[38px]`}
+            variant={"outline"}
+            className={` hover:bg-[#B9FD50] text-[#B9FD50] border-[#B9FD50] hover:text-[#111204] w-max rounded-[8px] px-5 font-light sm:text-lg py-1.5`}
           >
             {tag}
           </Badge>
@@ -161,7 +162,7 @@ const CapabilitiesSection = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 px-6 md:px-0 md:max-w-[calc(100vw-104px)] lg:max-w-[calc(100vw-304px)] xl:max-w-[calc(100vw-404px)] mx-auto">
         {Benefits.map((benefit, index) => (
           <Reveal
-            key={index + 3}
+            key={index + 60}
             delay={index * 0.2}
             variant="zoom-out"
             className={cn(
