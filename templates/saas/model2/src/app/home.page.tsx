@@ -13,14 +13,12 @@ import FooterSection from "@/components/organisms/FooterSection";
 import BlogSection from "@/components/organisms/BlogSection";
 import MobileNavigation from "@/components/molecule/navigation/MobileNavigation";
 import MenuProvider from "@/providers/MenuProvider";
-import CustomCursor from "@/components/molecule/cursors/CustomCursor";
 
 const Home: PageComponent = () => {
   return (
     <React.Fragment>
       <MenuProvider>
         <main className="relative">
-          <CustomCursor />
           <MobileNavigation />
           <Navbar />
           <HeroSection />
