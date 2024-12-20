@@ -73,7 +73,7 @@ const FAQsection = () => {
           className="w-full resize-none border-[1.5px] border-[#111204] rounded-xl"
         />
 
-        <div className="flex justify-between gap-28 items-center">
+        <div className="flex justify-between gap-12 sm:gap-28 items-center">
           <span className="text-[#11120499]">
             We will answer your questions via email within 48 hours.
           </span>

@@ -1,20 +1,15 @@
-import React, { createContext } from "react";
+import MenuContext from "@/contexts/MenuContext";
+import React from "react";
 
 const navlinks: { label: string; href: string }[] = [
   { label: "Process", href: "#process" },
   { label: "Benefits", href: "#capabilities" },
   { label: "Services", href: "#pricing" },
-  { label: "Porfolio", href: "#works" },
+  { label: "Portfolio", href: "#works" },
   { label: "FAQ", href: "#faq" },
 ];
 
-export const MenuContext = createContext<{
-  isOpened: boolean;
-  setIsOpened: React.Dispatch<React.SetStateAction<boolean>>;
-  navlinks: { label: string; href: string }[];
-} | null>(null);
-
-const MenuProvider = ({ children }: { children: React.ReactNode }) => {
+export default function MenuProvider({ children }: { children: React.ReactNode }) {
   const [isOpened, setIsOpened] = React.useState(false);
 
   return (
@@ -22,6 +17,4 @@ const MenuProvider = ({ children }: { children: React.ReactNode }) => {
       {children}
     </MenuContext.Provider>
   );
-};
-
-export default MenuProvider;
+}

@@ -30,14 +30,10 @@ const Actions: { title: string; description: string; icon: string }[] = [
 
 const HeroSection = () => {
   return (
-    <div className="relative group/hero bg-[#111204] pb-24 md:pb-44 pt-16 md:pt-24 px-6">
-      <h1 className="reflection capitalize relative font-bold text-center text-6xl md:text-7xl lg:text-8xl max-w-[863px] mx-auto text-white mb-1">
-        <StarsIcon className="absolute right-0 size-20 lg:size-28 inline fill-[#1112040E] text-[#B9FD500E]" />
-        <span
-          style={{
-            textShadow: "0px 0px 10px #B9FD50, 0px 0px 20px #B9FD50",
-          }}
-        >
+    <div className="relative group/hero bg-[#111204] pb-24 md:pb-44 pt-36 md:pt-52 px-6">
+      <h1 className="reflection capitalize relative font-bold text-center text-5xl sm:text-6xl md:text-7xl lg:text-8xl max-w-[463px] sm:max-w-[563px] md:max-w-[763px] lg:max-w-[863px] mx-auto text-white mb-1">
+        <StarsIcon className="absolute hidden sm:inline right-0 md:right-24 lg:right-0 md:bottom-0 lg:top-0 size-20 lg:size-28 fill-[#111204OE] text-[#B9FD500F]" />
+        <span className="[text-shadow:0px_0px_5px_#B9FD50,0px_0px_10px_#B9FD50] sm:[text-shadow:0px_0px_10px_#B9FD50,0px_0px_20px_#B9FD50]">
           Bringing your dream into
         </span>{" "}
         <span className="text-[#B9FD50] font-extrabold font-plusJakartaSans italic">
@@ -45,7 +41,7 @@ const HeroSection = () => {
         </span>
       </h1>
 
-      <p className="text-center max-w-[522px] md:text-lg text-white/80 mx-auto mb-10">
+      <p className="text-center max-w-[322px] sm:max-w-[422px] md:max-w-[522px] text-sm sm:text-base md:text-lg text-white/80 mx-auto mb-6 sm:mb-10">
         We increase revenue and ensure sustainable long-term growth for your business
         through powerful Webflow websites.
       </p>
@@ -53,7 +49,6 @@ const HeroSection = () => {
       <div className="flex justify-center mb-16">
         <MotionButton>Book A Meeting</MotionButton>
       </div>
-
       <Reveal
         delay={0.1}
         className="lg:max-w-[calc(100vw-204px)] space-y-9 mx-auto mb-16 md:mb-32"
