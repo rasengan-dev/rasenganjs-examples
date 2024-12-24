@@ -19,7 +19,7 @@ const MotionButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
         variants={backgroundVariant}
         ref={ref}
         className={cn(
-          "px-4 py-2 sm:px-8 sm:py-3 bg-[#B9FD50] rounded-[8px]",
+          "px-4 py-2 sm:px-8 sm:py-3 bg-[#B9FD50] border border-[#B9FD50] rounded-[8px]",
           className
         )}
       >
