@@ -2,18 +2,25 @@
   "compilerOptions": {
     "baseUrl": ".",
     "target": "ES2020",
-
+    "types": [
+      "jest",
+      "@testing-library/jest-dom",
+      "node"
+    ],
     /* Bundler mode */
     "moduleResolution": "bundler",
     "module": "ESNext",
     "jsx": "react-jsx",
-
     /* Aliases for intellisence */
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": [
+        "src/*"
+      ]
     }
   },
-  "include": ["src", "rasengan-env.d.ts"],
-
+  "include": [
+    "src",
+    "rasengan-env.d.ts"
+  ],
   "extends": "./node_modules/rasengan/tsconfig.base.json"
 }

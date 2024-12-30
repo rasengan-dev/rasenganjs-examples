@@ -1,7 +1,7 @@
 import { Variants, motion, useAnimation, useInView } from "framer-motion";
 import * as React from "react";
 
-export interface RevealProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface RevealProps extends React.ComponentPropsWithoutRef<"div"> {
   variant?: "to-top" | "to-bottom" | "to-left" | "to-right" | "zoom-out";
   once?: boolean;
   duration?: number;
@@ -18,11 +18,9 @@ const Reveal = React.forwardRef<HTMLDivElement, RevealProps>(
       duration = 0.5,
       delay = 0.25,
     },
-    ref
+    _
   ) => {
-    const compRef = ref
-      ? (ref as { current: HTMLDivElement | null })
-      : React.createRef<HTMLDivElement>();
+    const compRef = React.useRef<HTMLDivElement | null>(null);
 
     const isInView = useInView(compRef, { once: once });
 

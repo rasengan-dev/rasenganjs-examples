@@ -9,7 +9,6 @@ const backgroundVariant = {
       duration: 0.5,
       ease: [0.19, 1, 0.22, 1],
     },
-    border: "1px solid #B9FD50",
   },
   animate: {
     backgroundColor: "#B9FD50",
@@ -26,7 +25,7 @@ const firstTextVariant = {
     y: 0,
   },
   hover: {
-    y: -20,
+    y: "-100%",
     transition: {
       duration: 1.125,
       ease: [0.19, 1, 0.22, 1],
@@ -53,7 +52,7 @@ const secondTextVariant = {
     },
   },
   animate: {
-    y: 20,
+    y: "100%",
     transition: {
       duration: 1.125,
       ease: [0.19, 1, 0.22, 1],

@@ -52,7 +52,7 @@ const MobileNavigation = () => {
               </div>
             </div>
             <nav className="flex-1 place-content-center">
-              <ul className="text-2xl space-y-6">
+              <ul className="space-y-6">
                 {navlinks.map((link, index) => (
                   <motion.li
                     key={link.href + index}
@@ -65,12 +65,10 @@ const MobileNavigation = () => {
                       },
                     }}
                     onClick={() => setIsOpened(false)} // Close menu on click
-                    initial="hidden"
-                    animate="visible"
                     whileHover={"hover"}
-                    className="font-plusJakartaSans text-3xl md:text-5xl xl:text-7xl font-bold"
+                    className="font-plusJakartaSans font-bold"
                   >
-                    <div className="relative overflow-hidden">
+                    <div className="relative overflow-hidden text-5xl sm:text-6xl md:text-8xl">
                       <motion.a
                         href={link.href}
                         variants={firstTextVariant}
@@ -80,10 +78,9 @@ const MobileNavigation = () => {
                       </motion.a>
                       <motion.a
                         href={link.href}
-                        whileHover="hover"
                         variants={secondTextVariant}
                         aria-hidden
-                        className="absolute top-0 left-0 text-[#B9FD50]"
+                        className="absolute bottom-0 -left-0 text-[#B9FD50]"
                       >
                         {link.label}
                       </motion.a>
