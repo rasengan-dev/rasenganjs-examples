@@ -7,9 +7,9 @@ import Main from "./components/Main";
 const AppLayout: LayoutComponent = () => {
   return (
     <React.Fragment>
-      <Navbar />
-
+  
       <Main>
+        <Navbar />
         <Outlet />
       </Main>
 
