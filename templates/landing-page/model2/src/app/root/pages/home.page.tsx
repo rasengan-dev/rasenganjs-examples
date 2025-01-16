@@ -23,20 +23,20 @@ import Typography from "@/components/atoms/Typography";
 const Home: PageComponent = () => {
   return (
     <section className="w-full h-full flex flex-col">
-      <div className="max-lg:flex-col flex flex-grow px-8 lg:px-[130px] pt-4 lg:pt-14 bg-custom-gradient">
+      <div className="max-lg:flex-col flex flex-grow px-8 lg:px-[130px] pt-4 lg:pt-14 bg-custom-gradient gap-4">
         <div className="flex flex-1 flex-col">
           <Typography
             className="max-xl:text-5xl text-7xl pb-6"
             weight="bold"
             text="We’re here to Increase your Productivity"
           />
-          {/* <Image src={curve} alt="curve" /> */}
+          <img src={curve} alt="curve" className="py-8" />
           <p className="text-lg py-8">
             Let's make your work more organize and easily using the Taskio
             Dashboard with many of the latest featuresin managing work every
             day.
           </p>
-          <div className="flex gap-6 mt-4">
+          <div className="flex gap-6 mt-8">
             <Button
               text="Try free trial"
               className="text-lg bg-primary text-white"
@@ -63,38 +63,6 @@ const Home: PageComponent = () => {
           <div className="absolute bg-[#FFAA94] top-[510px] right-[50px] rotate-[15deg] h-10 w-10 rounded-[10px] flex items-center justify-center">
             <Image src={message} alt="message" />
           </div>
-          {/* <div className="absolute bg-[#4535AF] max-lg:right-[350px] right-[430px] top-[160px] rotate-[-15deg] h-10 w-10 rounded-[10px] flex items-center justify-center"><Image src={vector} alt="vector"/></div>
-          <div className="absolute max-lg:right-[350px] left-[270px] gap-14 top-[25px] rounded-[10px] flex justify-between items-center p-4 bg-white">
-              <div className="flex flex-col gap-2">
-                <p className="text-[#A9A7B6] text-xs">Enter amount</p>
-                <span className="text-base">$450..00</span>
-              </div>
-              <Button
-              text="Send"
-              className="text-xs bg-primary text-white"
-            /> 
-          </div>
-          <div className="absolute left-[340px] gap-2 top-[410px] rounded-[10px] flex flex-col justify-between p-4 bg-white">
-             <p className="text-[#A9A7B6] text-xs">Total Income</p>  
-              <div className="flex gap-8">
-                <span className="text-base">$245.00</span>
-                <Image src={bar} alt="Bar" className="h-full"/>
-              </div> 
-          </div>
-          <div className="absolute -right-20 top-[300px] rotate-[15deg] rounded-[10px] flex flex-col justify-between p-4 bg-[#161C28] overflow-hidden">
-             <span className="absolute bg-white rounded-full w-[100px] h-[100px] -right-10 -top-10 p-2 opacity-20"></span>
-              <div className="flex">
-              <p className="bg-white rounded-full w-7 h-7 p-2 opacity-20"> </p>
-              <p className="bg-white rounded-full w-7 h-7 p-2 opacity-20"> </p>
-              </div>
-              <p className="text-[#E6E6E6] text-xs mt-6">Creadit Crad</p>
-              <p className="text-[#E6E6E6] text-xs mb-6 mt-2">....1234</p>
-              <div className="flex justify-between items-center gap-10">
-                <span className="p-3 w-10 bg-[#FFFFFF] rounded-[4px] opacity-20"></span>
-                <p className="text-[#E6E6E6] text-xs">09/25</p>
-              </div>
-              <span className="absolute bg-white rounded-full w-[150px] h-[150px] top-[100px] -left-10 p-2 opacity-20"></span>
-          </div> */}
         </div>
       </div>
 
