@@ -30,22 +30,18 @@ const Actions: { title: string; description: string; icon: string }[] = [
 
 const HeroSection = () => {
   return (
-    <div className="relative group/hero bg-[#111204] pb-24 md:pb-44 pt-16 md:pt-24 px-6">
-      <h1 className="reflection capitalize relative font-bold text-center text-6xl md:text-7xl lg:text-8xl max-w-[863px] mx-auto text-white mb-1">
-        <StarsIcon className="absolute right-0 size-20 lg:size-28 inline fill-[#1112040E] text-[#B9FD500E]" />
-        <span
-          style={{
-            textShadow: "0px 0px 10px #B9FD50, 0px 0px 20px #B9FD50",
-          }}
-        >
+    <div className="relative group/hero bg-[#111204] pb-24 md:pb-44 pt-36 md:pt-52">
+      <h1 className="reflection px-2 z-30 capitalize relative font-bold text-center text-5xl sm:text-6xl md:text-7xl lg:text-8xl max-w-[463px] sm:max-w-[563px] md:max-w-[763px] lg:max-w-[863px] mx-auto text-white mb-1">
+        <StarsIcon className="absolute hidden sm:inline right-0 md:right-24 lg:right-0 md:bottom-0 lg:top-0 size-20 lg:size-28 fill-[#111204OE] text-[#B9FD500F]" />
+        <span className="[text-shadow:0px_0px_5px_#B9FD50,0px_0px_10px_#B9FD50] sm:[text-shadow:0px_0px_10px_#B9FD50,0px_0px_20px_#B9FD50]">
           Bringing your dream into
         </span>{" "}
-        <span className="text-[#B9FD50] font-extrabold font-plusJakartaSans italic">
+        <span className="text-[#B9FD50] z-10 font-extrabold font-plusJakartaSans italic">
           reality
         </span>
       </h1>
 
-      <p className="text-center max-w-[522px] md:text-lg text-white/80 mx-auto mb-10">
+      <p className="text-center px-6 max-w-[322px] sm:max-w-[422px] md:max-w-[522px] text-sm sm:text-base md:text-lg text-white/80 mx-auto mb-6 sm:mb-10">
         We increase revenue and ensure sustainable long-term growth for your business
         through powerful Webflow websites.
       </p>
@@ -56,19 +52,21 @@ const HeroSection = () => {
 
       <Reveal
         delay={0.1}
-        className="lg:max-w-[calc(100vw-204px)] space-y-9 mx-auto mb-16 md:mb-32"
+        className="lg:max-w-[calc(100vw-204px)] space-y-9 mx-auto mb-8 px-6"
       >
         <div className="text-center text-sm text-white flex justify-center items-center font-bold mb-10 gap-7">
           <Separator className="bg-[#B9FD50] w-12" />
           <p className="w-max">TRUSTED BY AMAZING BRANDS</p>
           <Separator className="bg-[#B9FD50] w-12" />
         </div>
-
-        <BrandsCarousel />
       </Reveal>
 
+      <div className="mb-16 md:mb-32">
+        <BrandsCarousel variant={"neutral"} />
+      </div>
+
       <section
-        className="flex flex-col sm:flex-row gap-4 md:gap-12 md:max-w-[calc(100vw-104px)] lg:max-w-[calc(100vw-304px)] xl:max-w-[calc(100vw-404px)] mx-auto mb-32"
+        className="flex flex-col px-6 sm:flex-row gap-4 md:gap-12 md:max-w-[calc(100vw-104px)] lg:max-w-[calc(100vw-304px)] xl:max-w-[calc(100vw-404px)] mx-auto mb-32"
         id="process"
       >
         <Reveal variant="to-left" className="w-full sm:w-1/2 md:w-[60%] space-y-4">
@@ -97,7 +95,7 @@ const HeroSection = () => {
         </Reveal>
       </section>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 sm:gap-8 md:gap-12 md:max-w-[calc(100vw-104px)] lg:max-w-[calc(100vw-304px)] xl:max-w-[calc(100vw-404px)] mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 sm:gap-8 md:gap-12 md:max-w-[calc(100vw-104px)] lg:max-w-[calc(100vw-304px)] xl:max-w-[calc(100vw-404px)] mx-auto px-6">
         {Actions.map((action, index) => (
           <Reveal
             delay={index * 0.2}

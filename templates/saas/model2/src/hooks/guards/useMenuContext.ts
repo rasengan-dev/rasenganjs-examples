@@ -1,4 +1,4 @@
-import { MenuContext } from "@/providers/MenuProvider";
+import MenuContext from "@/contexts/MenuContext";
 import React from "react";
 
 export const useMenuContext = () => {

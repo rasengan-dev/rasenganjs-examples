@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../node_modules/@rasenganjs/image/src/components/index.tsx", "../../node_modules/@rasenganjs/image/src/index.ts"],
-  "sourcesContent": ["import React from \"react\";\nimport { ImageProps } from \"../types/index.js\";\nimport { LoadingFallback } from \"./image.js\";\n\n// Lazy load the actual image component\nconst LazyLoadedImage = React.lazy(() => import(\"./image.js\"));\n\nexport const LazyImage = ({\n  src,\n  alt,\n  loading = \"lazy\",\n  mode = \"wave\",\n  ...props\n}: ImageProps) => {\n  return (\n    <React.Suspense\n      fallback={\n        <LoadingFallback\n          width={props.width || 200}\n          height={props.height || 200}\n        />\n      }\n      \n    >\n      {/* Use lazy-loaded image component */}\n      <LazyLoadedImage\n        src={typeof src === \"string\" ? src : src.uri}\n        alt={alt}\n        loading={loading}\n        mode={mode}\n        {...props}\n      />\n    </React.Suspense>\n  );\n};\n", "import { LazyImage as Image } from \"./components/index.js\";\n\n// Path: src/components/index.ts\n\nexport default Image;\n"],
-  "mappings": ";;;;;;;;;;;;;;;AAAA,mBAAkB;AAKlB,IAAM,kBAAkB,aAAAA,QAAM,KAAK,MAAM,OAAO,qBAAY,CAAC;AAEtD,IAAM,YAAY,CAAC,EACxB,KACA,KACA,UAAU,QACV,OAAO,QACP,GAAG,MAAK,MACO;AACf,aACE,mBAAAC,KAAC,aAAAD,QAAM,UAAQ,EACb,cACE,mBAAAC,KAAC,iBAAe,EACd,OAAO,MAAM,SAAS,KACtB,QAAQ,MAAM,UAAU,IAAG,CAAA,GAC3B,cAKJ,mBAAAA,KAAC,iBAAe,EACd,KAAK,OAAO,QAAQ,WAAW,MAAM,IAAI,KACzC,KACA,SACA,MAAU,GACN,MAAK,CAAA,EACT,CAAA;AAGR;;;AC9BA,IAAA,cAAe;",
-  "names": ["React", "_jsx"]
-}

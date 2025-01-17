@@ -1,0 +1,16 @@
+{
+  "routes": [
+    {
+      "src": "/(.+\\.(png|ico|svg|jpg|jpeg|gif|webp))",
+      "dest": "/client/$1"
+    },
+		{
+			"src": "/assets/(.*)",
+			"dest": "/client/assets/$1"
+		},
+		{
+			"src": "/(.*)",
+			"dest": "api/index.js"
+		}
+  ]
+}
