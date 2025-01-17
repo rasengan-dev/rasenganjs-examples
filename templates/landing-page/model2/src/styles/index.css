@@ -87,3 +87,14 @@
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
