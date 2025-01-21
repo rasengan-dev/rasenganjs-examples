@@ -15,49 +15,29 @@ import descript from "@/assets/descript.svg";
 import ellipse from "@/assets/ellipse.svg";
 import database from "@/assets/database.svg";
 import message from "@/assets/message.svg";
+import { motion } from "framer-motion";
+import ButtonWithLogo from "@/components/atoms/ButtonWithLogo";
 import vector from "@/assets/vector.svg";
 import bar from "@/assets/bar.svg";
-import ButtonWithLogo from "@/components/atoms/ButtonWithLogo";
 import Typography from "@/components/atoms/Typography";
-import { useEffect, useState } from 'react';
 
 const Home: PageComponent = () => {
-
-  const [inView, setInView] = useState({
-    section1: false,
-    section2: false,
-    section3: false,
-    section4: false,
-    section5: false,
-    section6: false,
-  });
-
-  const handleScroll = () => {
-    const sections = ['section1', 'section2', 'section3', 'section4', 'section5', 'section6'];
-    sections.forEach((section) => {
-      const element = document.getElementById(section);
-      if (element) {
-        const rect = element.getBoundingClientRect();
-        setInView((prev) => ({
-          ...prev,
-          [section]: rect.top <= window.innerHeight * 0.8 && rect.bottom >= 0,
-        }));
-      }
-    });
+  const sectionVariants = {
+    hidden: { opacity: 0, translateY: 20 },
+    visible: { opacity: 1, translateY: 0 },
   };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
     <section className="w-full h-full flex flex-col">
-      <div         id="section1"
-        className={`max-lg:flex-col flex flex-grow px-8 lg:px-[130px] pt-4 lg:pt-14 bg-custom-gradient gap-4 transition-all duration-700 ease-in-out ${
-          inView.section1 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-        }`}>
+      <motion.div
+        id="section1"
+        className="max-lg:flex-col flex flex-grow px-8 lg:px-[130px] pt-4 lg:pt-14 bg-custom-gradient gap-4"
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.7, ease: "easeInOut" }}
+      >
         <div className="flex flex-1 flex-col">
           <Typography
             className="max-xl:text-5xl text-7xl pb-6"
@@ -67,7 +47,7 @@ const Home: PageComponent = () => {
           <img src={curve} alt="curve" className="py-8" />
           <p className="text-lg py-8">
             Let's make your work more organize and easily using the Taskio
-            Dashboard with many of the latest featuresin managing work every
+            Dashboard with many of the latest features in managing work every
             day.
           </p>
           <div className="flex gap-6 mt-8">
@@ -97,7 +77,7 @@ const Home: PageComponent = () => {
           <div className="absolute bg-[#FFAA94] top-[510px] right-[50px] rotate-[15deg] h-10 w-10 rounded-[10px] flex items-center justify-center">
             <Image src={message} alt="message" />
           </div>
-            {/* <div className="absolute bg-[#4535AF] max-lg:right-[350px] right-[430px] top-[160px] rotate-[-15deg] h-10 w-10 rounded-[10px] flex items-center justify-center"><Image src={vector} alt="vector"/></div>
+          {/* <div className="absolute bg-[#4535AF] max-lg:right-[350px] right-[430px] top-[160px] rotate-[-15deg] h-10 w-10 rounded-[10px] flex items-center justify-center"><Image src={vector} alt="vector"/></div>
           <div className="absolute max-lg:right-[350px] left-[270px] gap-14 top-[25px] rounded-[10px] flex justify-between items-center p-4 bg-white">
               <div className="flex flex-col gap-2">
                 <p className="text-[#A9A7B6] text-xs">Enter amount</p>
@@ -130,18 +110,22 @@ const Home: PageComponent = () => {
               <span className="absolute bg-white rounded-full w-[150px] h-[150px] top-[100px] -left-10 p-2 opacity-20"></span>
           </div> */}
         </div>
-      </div>
+      </motion.div>
 
-      <div   id="section2"
-        className={`flex flex-col flex bg-custom-gradient items-center pt-14 px-8 lg:px-[130px] pb-14 lg:py-28 transition-all duration-700 ease-in-out ${
-          inView.section2 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-        }`}>
+      <motion.div
+        id="section2"
+        className="flex flex-col bg-custom-gradient items-center pt-14 px-8 lg:px-[130px] pb-14 lg:py-28"
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.7, ease: "easeInOut" }}
+      >
         <Typography
           className="text-4xl text-center"
           weight="bold"
           text="More than 25,000 teams use Collabs"
         />
-
         <div className="flex flex-wrap justify-center items-center gap-12 mt-14 text-[#A6A6A6] text-xl md:text-2xl lg:text-3xl">
           <p className="flex items-center gap-2">
             <Image src={unspash} alt="unsplash" />
@@ -166,35 +150,51 @@ const Home: PageComponent = () => {
             <span>Grammarly</span>
           </p>
         </div>
-      </div>
+      </motion.div>
 
-      <div id="section3"
-        className={`flex-grow transition-all duration-700 ease-in-out ${
-          inView.section3 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-        }`}>
+      <motion.div
+        id="section3"
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.7, ease: "easeInOut" }}
+      >
         <Products />
-      </div>
+      </motion.div>
 
-      <div  id="section4"
-        className={`flex-grow transition-all duration-700 ease-in-out ${
-          inView.section4 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-        }`}>
+      <motion.div
+        id="section4"
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.7, ease: "easeInOut" }}
+      >
         <Faq />
-      </div>
+      </motion.div>
 
-      <div  id="section5"
-        className={`flex-grow transition-all duration-700 ease-in-out ${
-          inView.section5 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-        }`}>
+      <motion.div
+        id="section5"
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.7, ease: "easeInOut" }}
+      >
         <Blog />
-      </div>
+      </motion.div>
 
-      <div  id="section6"
-        className={`flex-grow transition-all duration-700 ease-in-out ${
-          inView.section6 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-        }`}>
+      <motion.div
+        id="section6"
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.7, ease: "easeInOut" }}
+      >
         <AboutUs />
-      </div>
+      </motion.div>
     </section>
   );
 };
