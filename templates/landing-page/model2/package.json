@@ -13,9 +13,11 @@
     "@rasenganjs/image": "^1.0.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "framer-motion": "^12.0.0",
     "rasengan": "1.0.0-beta.46",
     "react": "^18.3.0",
     "react-dom": "^18.3.0",
+    "react-intersection-observer": "^9.15.1",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7"
   },
