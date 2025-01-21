@@ -1,4 +1,3 @@
-import { PageComponent } from "rasengan";
 import fullStar from "@/assets/full-star.svg";
 import emptyStar from "@/assets/empty-star.svg";
 import activity from "@/assets/activity.svg";
@@ -6,7 +5,7 @@ import pieChart from "@/assets/activity.svg";
 import command from "@/assets/command.svg";
 import Image from "@rasenganjs/image";
 
-const Products: PageComponent = () => {
+const Products = () => {
   const starCount = 5;
   const starCount_ = 4;
 
@@ -85,12 +84,6 @@ const Products: PageComponent = () => {
       </div>
     </section>
   );
-};
-
-Products.path = "/products";
-Products.metadata = {
-  title: "Products",
-  description: "Products page",
 };
 
 export default Products;

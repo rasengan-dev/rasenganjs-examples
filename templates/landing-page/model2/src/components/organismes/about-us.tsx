@@ -1,10 +1,9 @@
 import Button from "@/components/atoms/Button";
 import ToggleSwitch from "@/components/atoms/ToggleButton";
 import Typography from "@/components/atoms/Typography";
-import { PageComponent } from "rasengan";
 import { useState } from "react";
 
-const AboutUs: PageComponent = () => {
+const AboutUs = () => {
   const [selectedOption, setSelectedOption] = useState("Bill Monthly");
 
   const handleToggle = (option: string) => {
@@ -105,7 +104,7 @@ const AboutUs: PageComponent = () => {
         {plans.map((plan, index) => (
           <div
             key={index}
-            className={`relative flex flex-col justify-between p-6 rounded-xl shadow-lg ${
+            className={`relative max-w-[500px] mx-auto lg:max-w-full flex flex-col justify-between p-6 rounded-xl shadow-lg ${
               plan.highlight ? "scale-105 overflow-hidden" : ""
             } ${plan.bgColor}`}
           >
@@ -168,12 +167,6 @@ const AboutUs: PageComponent = () => {
       </div>
     </section>
   );
-};
-
-AboutUs.path = "/aboutUs";
-AboutUs.metadata = {
-  title: "AboutUs",
-  description: "AboutUs page",
 };
 
 export default AboutUs;

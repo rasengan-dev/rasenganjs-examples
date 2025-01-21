@@ -1,14 +1,8 @@
-import { PageComponent } from "rasengan";
 import Image from "@rasenganjs/image";
 import computer from "@/assets/images/computer.png";
 import Typography from "@/components/atoms/Typography";
-import bar from "@/assets/bar.svg";
-import sms from "@/assets/sms.svg";
-import photo from "@/assets/photo.svg";
-import amanda from "@/assets/amanda.png";
-import green_tick from "@/assets/green-tick.svg";
 
-const Blog: PageComponent = () => {
+const Blog = () => {
   return (
     <section
       id="blog"
@@ -72,12 +66,6 @@ const Blog: PageComponent = () => {
       </div>
     </section>
   );
-};
-
-Blog.path = "/blog";
-Blog.metadata = {
-  title: "Blog",
-  description: "Blog page",
 };
 
 export default Blog;

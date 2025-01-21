@@ -7,7 +7,6 @@ import profil_4 from "@/assets/images/profil_4.png";
 import play from "@/assets/play_white.svg";
 import money from "@/assets/money.svg";
 import Input from "@/components/atoms/input";
-import Button from "@/components/atoms/Button";
 
 export default function Footer() {
   return (
@@ -117,7 +116,7 @@ export default function Footer() {
 
       <div className="max-lg:flex-col flex  justify-between items-center mt-16">
         <Typography
-          text="© 2022 Biccas Inc. Copyright and rights reserved"
+          text="© 2025 Rasengan Labs. all rights reserved"
           className="text-center"
         />
         <Typography

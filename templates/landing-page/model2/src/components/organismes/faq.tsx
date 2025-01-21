@@ -1,11 +1,10 @@
 import Button from "@/components/atoms/Button";
-import { PageComponent } from "rasengan";
 import teams from "@/assets/images/teams.png";
 import cloud from "@/assets/images/cloud.png";
 import analytics from "@/assets/images/analytics.png";
 import { motion } from "framer-motion";
 
-const Faq: PageComponent = () => {
+const Faq = () => {
   const sectionVariants = {
     hidden: { opacity: 0, translateY: 20 },
     visible: { opacity: 1, translateY: 0 },
@@ -102,12 +101,6 @@ const Faq: PageComponent = () => {
       </div>
     </section>
   );
-};
-
-Faq.path = "/faq";
-Faq.metadata = {
-  title: "Faq",
-  description: "Faq page",
 };
 
 export default Faq;
