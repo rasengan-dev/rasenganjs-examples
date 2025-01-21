@@ -77,8 +77,8 @@ const Home: PageComponent = () => {
           <div className="absolute bg-[#FFAA94] top-[510px] right-[50px] rotate-[15deg] h-10 w-10 rounded-[10px] flex items-center justify-center">
             <Image src={message} alt="message" />
           </div>
-          {/* <div className="absolute bg-[#4535AF] max-lg:right-[350px] right-[430px] top-[160px] rotate-[-15deg] h-10 w-10 rounded-[10px] flex items-center justify-center"><Image src={vector} alt="vector"/></div>
-          <div className="absolute max-lg:right-[350px] left-[270px] gap-14 top-[25px] rounded-[10px] flex justify-between items-center p-4 bg-white">
+          {/* <div className="absolute bg-[#4535AF] max-lg:right-[350px] right-[430px] top-[160px] rotate-[-15deg] h-10 w-10 rounded-[10px] flex items-center justify-center"><Image src={vector} alt="vector"/></div> */}
+          {/* <div className="absolute max-lg:right-[350px] left-[270px] gap-14 top-[25px] rounded-[10px] flex justify-between items-center p-4 bg-white">
               <div className="flex flex-col gap-2">
                 <p className="text-[#A9A7B6] text-xs">Enter amount</p>
                 <span className="text-base">$450..00</span>
