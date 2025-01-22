@@ -45,11 +45,11 @@ export default function Skills() {
   ];
 
   const tools = [
-    { name: "Notion", icon: tool4 },
-    { name: "Figma", icon: tool5 },
+    { name: "Notion", icon: tool1 },
+    { name: "Figma", icon: tool2 },
     { name: "GitHub", icon: tool3 },
-    { name: "Slack", icon: tool1 },
-    { name: "Ps", icon: tool2 },
+    { name: "Slack", icon: tool4 },
+    { name: "Ps", icon: tool5 },
   ];
 
   return (

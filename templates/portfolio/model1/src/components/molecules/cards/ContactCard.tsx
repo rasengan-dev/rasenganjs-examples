@@ -45,75 +45,75 @@ function ContactCard() {
   ];
 
   return (
-      <div className="flex md:flex-nowrap flex-wrap-reverse justify-center md:space-x-6 mx-auto px-6 rounded-xl shadow-2xl lg:w-auto md:max-w-4xl sm:border sm:max-w-xl max-w-md lg:max-w-7xl bg-white p-6">
-        <div className="lg:w-2/5 w-full">
-          <CardDemo notifications={notifications} />
-        </div>
-        <div className="lg:w-3/5 w-full md:border-l md:px-4">
-          <Card className="w-full border-none shadow-none">
-            <CardHeader>
-              <CardTitle className="text-2xl">Just say 👋 Hi</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <form>
-                <div className="grid w-full items-center gap-4 mt-2">
-                  <div className="flex lg:flex-nowrap flex-wrap justify-start gap-6">
-                    <div className="lg:w-1/2 w-full">
-                      <Input id="name" placeholder="Full Name" />
-                    </div>
-                    <div className="lg:w-1/2 w-full">
-                      <Input id="name" placeholder="Email Adress" />
-                    </div>
-                  </div>
-
-                  <div className="flex flex-col space-y-2 w-full">
-                    <Input id="name" placeholder="Name of your project" />
-                  </div>
-
-                  <div className="flex lg:flex-nowrap flex-wrap justify-start gap-6">
-                  <div className="lg:w-1/2 w-full">
-                  <Select>
-                        <SelectTrigger id="framework">
-                          <SelectValue placeholder="Services" />
-                        </SelectTrigger>
-                        <SelectContent position="popper">
-                          <SelectItem value="next">One</SelectItem>
-                          <SelectItem value="sveltekit">Two</SelectItem>
-                          <SelectItem value="astro">Three</SelectItem>
-                          <SelectItem value="nuxt">Four</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-                    <div className="lg:w-1/2 w-full">
-                      <Select>
-                        <SelectTrigger id="framework">
-                          <SelectValue placeholder="Budgets" />
-                        </SelectTrigger>
-                        <SelectContent position="popper">
-                          <SelectItem value="next">One</SelectItem>
-                          <SelectItem value="sveltekit">Two</SelectItem>
-                          <SelectItem value="astro">Three</SelectItem>
-                          <SelectItem value="nuxt">Four</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-                  </div>
-                  <Textarea placeholder="Message" className="h-[150px]" />
-                </div>
-              </form>
-            </CardContent>
-            <CardFooter className="">
-              <Button
-                size="lg"
-                className="bg-purple-600 hover:bg-purple-700 p-9 rounded-2xl text-lg shadow-none"
-              >
-                Send Message
-                <MoveRightIcon className="mr-2 h-6 w-10" />
-              </Button>
-            </CardFooter>
-          </Card>
-        </div>
+    <div className="flex md:flex-nowrap flex-wrap-reverse justify-center md:space-x-6 mx-auto px-6 rounded-xl shadow-2xl lg:w-auto md:max-w-4xl sm:border sm:max-w-xl max-w-md lg:max-w-7xl bg-white p-6">
+      <div className="lg:w-2/5 w-full">
+        <CardDemo notifications={notifications} />
       </div>
+      <div className="lg:w-3/5 w-full md:border-l md:px-4">
+        <Card className="w-full border-none shadow-none">
+          <CardHeader>
+            <CardTitle className="text-2xl">Just say 👋 Hi</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <form>
+              <div className="grid w-full items-center gap-4 mt-2">
+                <div className="flex lg:flex-nowrap flex-wrap justify-start gap-6">
+                  <div className="lg:w-1/2 w-full">
+                    <Input id="name" placeholder="Full Name" />
+                  </div>
+                  <div className="lg:w-1/2 w-full">
+                    <Input id="name" placeholder="Email Adress" />
+                  </div>
+                </div>
+
+                <div className="flex flex-col space-y-2 w-full">
+                  <Input id="name" placeholder="Name of your project" />
+                </div>
+
+                <div className="flex lg:flex-nowrap flex-wrap justify-start gap-6">
+                  <div className="lg:w-1/2 w-full">
+                    <Select>
+                      <SelectTrigger id="framework">
+                        <SelectValue placeholder="Services" />
+                      </SelectTrigger>
+                      <SelectContent position="popper">
+                        <SelectItem value="next">One</SelectItem>
+                        <SelectItem value="sveltekit">Two</SelectItem>
+                        <SelectItem value="astro">Three</SelectItem>
+                        <SelectItem value="nuxt">Four</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  <div className="lg:w-1/2 w-full">
+                    <Select>
+                      <SelectTrigger id="framework">
+                        <SelectValue placeholder="Budgets" />
+                      </SelectTrigger>
+                      <SelectContent position="popper">
+                        <SelectItem value="next">One</SelectItem>
+                        <SelectItem value="sveltekit">Two</SelectItem>
+                        <SelectItem value="astro">Three</SelectItem>
+                        <SelectItem value="nuxt">Four</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                </div>
+                <Textarea placeholder="Message" className="h-[150px]" />
+              </div>
+            </form>
+          </CardContent>
+          <CardFooter className="">
+            <Button
+              size="lg"
+              className="bg-purple-600 hover:bg-purple-700 p-9 rounded-2xl text-lg shadow-none"
+            >
+              Send Message
+              <MoveRightIcon className="mr-2 h-6 w-10" />
+            </Button>
+          </CardFooter>
+        </Card>
+      </div>
+    </div>
   );
 }
 
@@ -166,7 +166,7 @@ export function CardDemo({ className, notifications, ...props }: CardProps) {
         <Card className="bg-purple-100 border-none shadow-none p-4 mt-3 w-full">
           <CardContent className="lg:p-6 md:p-4 p-0">
             <h3 className="font-normal mb-4">Follow me on social media</h3>
-            <div className="flex flex-wrap gap-4 text-purple-500">
+            <div className="flex flex-wrap gap-3 text-purple-500">
               <hr className="md:w-9 w-4 h-1 bg-purple-400 my-auto" />
               <a
                 href="#"
@@ -220,18 +220,19 @@ export function CardDemo({ className, notifications, ...props }: CardProps) {
                   <path d="M16.98 0a6.9 6.9 0 0 1 5.08 1.98A6.94 6.94 0 0 1 24 7.02v9.96c0 2.08-.68 3.87-1.98 5.13A7.14 7.14 0 0 1 16.94 24H7.06a7.06 7.06 0 0 1-5.03-1.89A6.96 6.96 0 0 1 0 16.94V7.02C0 2.8 2.8 0 7.02 0h9.96zm.05 2.23H7.06c-1.45 0-2.7.43-3.53 1.25a4.82 4.82 0 0 0-1.3 3.54v9.92c0 1.5.43 2.7 1.3 3.58a5 5 0 0 0 3.53 1.25h9.88a5 5 0 0 0 3.53-1.25 4.73 4.73 0 0 0 1.4-3.54V7.02c0-1.5-.47-2.7-1.3-3.54a4.82 4.82 0 0 0-3.54-1.25zM12 5.76c3.39 0 6.2 2.8 6.2 6.2a6.2 6.2 0 0 1-12.4 0 6.2 6.2 0 0 1 6.2-6.2zm0 2.22a3.99 3.99 0 0 0-3.97 3.97A3.99 3.99 0 0 0 12 15.92a3.99 3.99 0 0 0 3.97-3.97A3.99 3.99 0 0 0 12 7.98z" />
                 </svg>
               </a>
+
               <a
                 href="#"
                 className="bg-white p-3 rounded-full hover:bg-purple-600 hover:text-white transition-colors"
               >
-                <svg
-                  className="md:w-6 md:h-6 w-4 h-4"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.95 17.657h-3.46c-.792 0-1.425-.634-1.425-1.426v-3.42h4.885v-3.42H12.06V6.976h3.46c.792 0 1.425.634 1.425 1.426v3.42h-4.885v3.42h4.885v2.415z" />
-                </svg>
+              <svg
+                className="md:w-6 md:h-6 w-4 h-4"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="20 21 96 96"
+              >
+                  <path d="M50 21h36v27H50zM20 63h30.087v27.24h36.079V63H116v54H20z" />
+              </svg>
               </a>
             </div>
           </CardContent>
