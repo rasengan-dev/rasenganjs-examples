@@ -59,7 +59,7 @@ module.exports = {
 				sm: "calc(var(--radius) - 4px)",
 			},
 			fontFamily: {
-				sans: ["var(--font-sans)", ...fontFamily.sans],
+				 sans: ["var(--font-sans)", ...fontFamily.sans],
 			},
 			keyframes: {
 				"accordion-down": {
@@ -75,6 +75,12 @@ module.exports = {
 				"accordion-down": "accordion-down 0.2s ease-out",
 				"accordion-up": "accordion-up 0.2s ease-out",
 			},
+			backgroundImage: {
+				'custom-gradient': 'linear-gradient(to right, #d9efeb, #f2f1ef, #e6f1eb)',
+				'custom-gradient-2': 'linear-gradient(to bottom right, #fff7f6, #feffff, #fff5f6, #fdfffd)',
+				'custom-gradient-3': 'linear-gradient(to bottom right, #fff7f6, #fff7f6, #ffffff, #d7f0e7)',
+				'custom-gradient-4': 'linear-gradient(to right, #fffbfb, #fefdfd, #f8fdfc, #f0f9f7, #e3f5ee, #d7f0e7)',
+			  },
 		},
 	},
 	plugins: [require("tailwindcss-animate")],

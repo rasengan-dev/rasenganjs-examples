@@ -21,7 +21,7 @@ export default function Button({
 }: ButtonProps): JSX.Element {
 	return (
 		<button
-			className={`${className} rounded-lg px-4 py-2`}
+			className={`${className} rounded-[40px] px-4 py-2`}
 		>
 			<div>{children}</div>
 			<p className='font-urbanist-medium'>{text}</p>

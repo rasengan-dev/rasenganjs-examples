@@ -5,7 +5,7 @@ import AppLayout from "@/app/root/app.layout";
 class AppRouter extends RouterComponent {}
 
 export default defineRouter({
-  imports: [],
-  layout: AppLayout,
-  pages: [Home],
+	imports: [],
+	layout: AppLayout,
+	pages: [Home],
 })(AppRouter);
