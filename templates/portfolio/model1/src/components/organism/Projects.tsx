@@ -35,7 +35,7 @@ const Projects = () => {
           <div className="relative flex justify-end w-screen -mr-2 bg-gradient-to-t from-[#132238]/5 to-transparent lg:pb-32 md:pb-20 pb-12">
             <Carousel
               setApi={setApi}
-              className="w-full w-10/12"
+              className="w-full"
               opts={{
                 align: "start",
                 loop: true,
@@ -58,7 +58,7 @@ const Projects = () => {
                 ))}
               </CarouselContent>
 
-              <div className="flex items-center justify-center lg:-translate-x-52 md:-translate-x-44 gap-4 lg:mt-16">
+              <div className="flex items-center justify-center gap-4 lg:mt-16">
                 <CarouselPrevious
                   className="relative inset-0 translate-y-0 h-16 w-16 rounded-full bg-white duration-300 ease-in hover:bg-purple-600 hover:border-purple-600" />
                 <CarouselNext className="relative inset-0 translate-y-0 h-16 w-16 rounded-full bg-white duration-300 ease-in hover:bg-purple-600 hover:border-purple-600" />

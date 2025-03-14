@@ -54,8 +54,8 @@ export default function Skills() {
 
   return (
     <div className="bg-gradient-to-b from-orange-100/20 to-white h-auto border-t-2 border-orange-100/50">
-      <div className="lg:max-w-7xl max-w-5xl max-w-md mx-auto px-4">
-        <div className="flex md:flex-nowrap flex-wrap-reverse gap-y-12 lg:gap-x-52 items-center">
+      <div className="lg:max-w-7xl max-w-5xl mx-auto px-4">
+        <div className="flex md:flex-nowrap flex-wrap-reverse px-8 gap-y-12 gap-x-16 lg:gap-x-52 items-center">
           <div className="lg:w-1/2 md:w-1/2 w-full">
             <Title
               children="My skill is my power."
@@ -89,7 +89,7 @@ export default function Skills() {
           </div>
 
           <div className="relative">
-            <div className="absolute bottom-5 lg:-left-28 rounded-xl shadow-lg z-20 pt-6 border-[3px] border-white w-auto p-8 rounded-xl bg-white/80 backdrop-blur-2xl">
+            <div className="absolute bottom-5 lg:-left-28 rounded-xl shadow-lg z-20 pt-6 border-[3px] border-white w-auto p-8 bg-white/80 backdrop-blur-2xl">
               <p className="text-md font-medium mb-4">🚀 Tools I Use</p>
               <div className="flex gap-3">
                 {tools.map((tool, index) => (

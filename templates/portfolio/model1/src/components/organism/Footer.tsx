@@ -39,7 +39,7 @@ export default function Footer() {
           </div>
           <FooterNavigation />
           <div className="gap-4 flex items-center text-sm text-slate-300">
-               © 2024 <i>Rainsong NGOUTSOP</i>
+               © {new Date(Date.now()).getFullYear()} <i>Rasengan Labs</i>
           </div>
         </nav>
       </div>

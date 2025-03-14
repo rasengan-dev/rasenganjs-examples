@@ -25,7 +25,7 @@ export function PojectCard({
   link,
 }: Project) {
   return (
-    <Card className="w-full h-auto my-4 rounded-2xl bg-white shadow-sm hover:shadow-2xl transition-shadow ease-in-out duration-300">
+    <Card className="w-[90%] md:w-full mx-auto h-auto my-4 rounded-2xl bg-white shadow-sm hover:shadow-2xl transition-shadow ease-in-out duration-300">
       <CardHeader className="">
         <img
           src={image}

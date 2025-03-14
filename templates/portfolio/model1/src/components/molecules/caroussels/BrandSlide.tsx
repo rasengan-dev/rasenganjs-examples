@@ -39,7 +39,7 @@ const BrandSlide = () => {
         {Br.map((elmt) => (
           <div
             key={Number(elmt.alt) + 10}
-            className="group p-6 bg-white rounded-lg px-12 relative duration-200 ease-in-out hover:grayscale-0 grayscale hover:drop-shadow-xl rounded-lg content-none"
+            className="group p-6 bg-white rounded-lg px-12 relative duration-200 ease-in-out hover:grayscale-0 grayscale hover:drop-shadow-xl content-none"
           >
             <div className="absolute top-0 left-0 w-full h-full duration-200 ease-in-out hover:bg-gray-100/0 rounded-lg content-none"></div>
             <img

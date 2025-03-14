@@ -8,13 +8,13 @@ import { Button } from "../atom/Button";
 const HeroSection = () => {
   return (
       <div className="mx-auto xl:h-[1056px] lg:h-[920px] md:h-[750px] h-[1160px] bg-hero-bg relative bg-no-repeat bg-center overflow-hidden">
-        <div className="container mx-auto lg:flex md:flex justify-evenly items-center h-full">
+        <div className="container mx-auto md:flex justify-evenly items-center h-full">
           <div className="lg:w-1/2 w-full px-6 ">
-            <p className="lg:text-6xl lg:text-5xl text-[40px] font-semibold lg:-mt-52 md:-mt-52 mt-6">
+            <p className="lg:text-6xl md:text-5xl text-[40px] font-semibold md:-mt-52 mt-6">
               👋 Hey There, I’m <br />
               <span className="text-primary underline">Hano kurōu</span>
             </p>
-            <p className="text-lg mt-8 font-light lg:w-2/3 md:w-2/3">
+            <p className="text-lg mt-8 font-light">
               Product Designer and UI/UX in Tokyo. I’m specialize in User
               Experience Design, User Research, Product Design, and User
               Interface Design.
@@ -37,13 +37,13 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="lg:w-1/2 w-full flex m-0 items-center justify-center lg:h-screen ">
-            <div className="content-none h-full w-[780px] h-[800px] absolute top-32 right-52 items-center"></div>
+            <div className="content-none h-full w-[780px] max-h-[800px] absolute top-32 right-52 items-center"></div>
             <img src={hero} alt="Hero" height="full" className="w-[652px] mt-32" />
           </div>
         </div>
         <div className="h-64 bg-white/30 backdrop-blur-2xl border-[3px] border-t-white/80 absolute bottom-0 content-none w-screen">
           <div className="container mx-auto">
-            <p className="lg:w-1/3 md:w-1/2 font-bold text-2xl text-start mt-4">
+            <p className="lg:w-1/3 md:w-1/2 font-bold text-2xl text-start mt-4 px-4">
               I work with over 279+ happy <br /> clients all over the world.
             </p>
             <BrandSlide />

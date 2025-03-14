@@ -13,7 +13,7 @@ const Testimonials: Testimonial[] = [
        image: Testimony1Img
      },
      {
-       quote: "Kevin Did a wonderful job animating set of static stickers. Work was done very quickly and the quality is outstanding. she managed to create great looking, flawless animation even with very limited number of frames allowed per stickers",
+       quote: "Kevin Did a wonderful job animating set of static stickers. Work was done very quickly and the quality is outstanding. she managed to create great looking",
        author: "Cameron Williamson",
        position: "Chief Executive Officer",
        company: "GIGL",
@@ -27,14 +27,14 @@ const Testimonials: Testimonial[] = [
        image: Testimony3Img
      },
      {
-      quote: "Kevin is very hard and great worker. He thinks about prolem, find solution and has a awesome working morale",
+      quote: "Kevin is very hard and great worker. He thinks about prolem, find solution and has a awesome working morale and I really love her work, they are impressive",
       author: "Esther Howard",
       position: "Chief Executive Officer",
       company: "GIGL",
       image: Testimony1Img
     },
     {
-      quote: "Kevin Did a wonderful job animating set of static stickers. Work was done very quickly and the quality is outstanding. she managed to create great looking, flawless animation even with very limited number of frames allowed per stickers",
+      quote: "Kevin Did a wonderful job animating set of static stickers. Work was done very quickly and the quality is outstanding. she managed to create great looking",
       author: "Cameron Williamson",
       position: "Chief Executive Officer",
       company: "GIGL",

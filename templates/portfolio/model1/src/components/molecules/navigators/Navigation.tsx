@@ -72,7 +72,7 @@ const Navigation = () => {
               {elementFocused === index && (
                 <>
                   <motion.div
-                    className="absolute bottom-0 right-0 bottom-0 left-0 rounded-full mx-auto w-10/12 h-1 bg-gradient-to-l from-purple-500 to-slate-800 -z-10 content-none text-red-600 font-bold text-black"
+                    className="absolute bottom-0 right-0 left-0 rounded-full mx-auto w-10/12 h-1 bg-gradient-to-l from-purple-500 to-slate-800 -z-10 content-none text-red-600 font-bold text-blackf"
                     animate={{ scale: 1 }}
                     exit={{ scale: 0.9 }}
                     initial={{ scale: 0.95 }}
