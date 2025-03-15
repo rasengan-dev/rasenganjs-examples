@@ -4,6 +4,8 @@ import avatar_junior from '@/assets/junior-profile.jpg';
 import avatar_raphael from '@/assets/raphael-profile.jpg';
 import avatar_rainsong from '@/assets/rainsong-profile.jpg';
 import avatar_valere from '@/assets/valere-profile.jpg';
+import avatar_ephraime from '@/assets/ephraime-profile.jpg';
+import avatar_nick from '@/assets/nick-profile.jpg';
 export const steps = [
   {
     id: 1,
@@ -49,8 +51,8 @@ export const contributors = [
     avatar: avatar_dilane,
     name: 'Dilane Kombou',
     description: 'Founder Rasengan.js',
-    portfolio: 'https://dilane3.com',
-    linkedin: ' https://dilane3.com',
+    portfolio: '',
+    linkedin: 'https://www.linkedin.com/in/dilane3',
     github: 'https://github.com/dilane3',
   },
   {
@@ -65,7 +67,7 @@ export const contributors = [
     avatar: avatar_beral,
     name: 'Beral Assonfack',
     description: 'Frontend Developer',
-    portfolio: 'assaf-portfolio.vercel.app',
+    portfolio: 'https://assaf-portfolio.vercel.app',
     linkedin: '',
     github: '',
   },
@@ -93,6 +95,20 @@ export const contributors = [
     linkedin: 'https://www.linkedin.com/in/valere-tamwo-748896229/ ',
     github: 'https://github.com/ValereTamwo ',
   },
-  
-  
+  {
+    avatar: avatar_ephraime,
+    name: 'Ephraim Baha',
+    description: 'Frontend developer | UI Designer',
+    portfolio: '',
+    linkedin: 'https://linkedin.com/in/jeansamist/',
+    github: 'https://github.com/jeansamist/',
+  },
+  {
+    avatar: avatar_nick,
+    name: 'Nick Kengne',
+    description: 'Software Developer',
+    portfolio: '',
+    linkedin: 'https://www.linkedin.com/in/nick-kengne-b7752924b',
+    github: 'https://github.com/NickKengne',
+  },
 ];

@@ -7,7 +7,7 @@ import { Mail } from "lucide-react";
 export default function Footer() {
 	return (
 		<footer
-			className={`bg-[#F3F1FF] border-border border-t-[1px] w-full font-poppins-regular`}
+			className={`bg-footer border-border border-t-[1px] w-full font-poppins-regular`}
 		>
 			<div
 				className={`relative lg:h-[200px] lg:mb-0 mb-10`}
