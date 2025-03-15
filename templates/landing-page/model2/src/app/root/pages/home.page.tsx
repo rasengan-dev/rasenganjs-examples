@@ -15,7 +15,8 @@ import descript from "@/assets/descript.svg";
 import ellipse from "@/assets/ellipse.svg";
 import database from "@/assets/database.svg";
 import message from "@/assets/message.svg";
-import { motion } from "framer-motion";
+import bar from "@/assets/bar.svg";
+import vector from "@/assets/vector.svg";
 import ButtonWithLogo from "@/components/atoms/ButtonWithLogo";
 import Typography from "@/components/atoms/Typography";
 import { MoveIn } from "@/components/molecules/move-in";
@@ -68,8 +69,8 @@ const Home: PageComponent = () => {
 							<Image src={message} alt='message' />
 						</div>
 					</div>
-					{/* <div className="absolute bg-[#4535AF] max-lg:right-[350px] right-[430px] top-[160px] rotate-[-15deg] h-10 w-10 rounded-[10px] flex items-center justify-center"><Image src={vector} alt="vector"/></div> */}
-					{/* <div className="absolute max-lg:right-[350px] left-[270px] gap-14 top-[25px] rounded-[10px] flex justify-between items-center p-4 bg-white">
+					<div className="absolute bg-[#4535AF] max-lg:right-[350px] right-[430px] top-[160px] rotate-[-15deg] h-10 w-10 rounded-[10px] max-2xl:hidden flex items-center justify-center"><Image src={vector} alt="vector"/></div>
+					<div className="absolute max-lg:right-[350px] left-[270px] gap-14 top-[25px] rounded-[10px] max-2xl:hidden flex justify-between items-center p-4 bg-white">
               <div className="flex flex-col gap-2">
                 <p className="text-[#A9A7B6] text-xs">Enter amount</p>
                 <span className="text-base">$450..00</span>
@@ -79,14 +80,14 @@ const Home: PageComponent = () => {
               className="text-xs bg-primary text-white"
             /> 
           </div>
-          <div className="absolute left-[340px] gap-2 top-[410px] rounded-[10px] flex flex-col justify-between p-4 bg-white">
+          <div className="absolute left-[340px] gap-2 top-[410px] rounded-[10px] max-2xl:hidden flex flex-col justify-between p-4 bg-white">
              <p className="text-[#A9A7B6] text-xs">Total Income</p>  
               <div className="flex gap-8">
                 <span className="text-base">$245.00</span>
                 <Image src={bar} alt="Bar" className="h-full"/>
               </div> 
           </div>
-          <div className="absolute -right-20 top-[300px] rotate-[15deg] rounded-[10px] flex flex-col justify-between p-4 bg-[#161C28] overflow-hidden">
+          <div className="absolute -right-20 top-[300px] rotate-[15deg] rounded-[10px] max-2xl:hidden flex flex-col justify-between p-4 bg-[#161C28] overflow-hidden">
              <span className="absolute bg-white rounded-full w-[100px] h-[100px] -right-10 -top-10 p-2 opacity-20"></span>
               <div className="flex">
               <p className="bg-white rounded-full w-7 h-7 p-2 opacity-20"> </p>
@@ -99,7 +100,7 @@ const Home: PageComponent = () => {
                 <p className="text-[#E6E6E6] text-xs">09/25</p>
               </div>
               <span className="absolute bg-white rounded-full w-[150px] h-[150px] top-[100px] -left-10 p-2 opacity-20"></span>
-          </div> */}
+          </div>
 				</div>
 			</MoveIn>
 

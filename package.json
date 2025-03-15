@@ -1,0 +1,27 @@
+{
+  "name": "rasengan-examples",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=18.19.0"
+  },
+  "packageManager": "pnpm@9.14.2",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "build": "tsx scripts/build.ts",
+    "format": "prettier --write .",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css,scss,md,mdx,json}": "prettier --write"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.7",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
+    "picocolors": "^1.1.1",
+    "prettier": "^3.5.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

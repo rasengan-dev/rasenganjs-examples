@@ -5,15 +5,15 @@ import {
   LinkedinIcon,
   MailIcon,
   PhoneIcon,
-} from "lucide-react";
-import { Separator } from "../atom/separator";
-import { Link } from "rasengan";
-import { useMenuContext } from "@/hooks/guards/useMenuContext";
-import { motion } from "framer-motion";
+} from 'lucide-react';
+import { Separator } from '../atom/separator';
+import { Link } from 'rasengan';
+import { useMenuContext } from '@/hooks/guards/useMenuContext';
+import { motion } from 'framer-motion';
 import {
   firstTextVariant,
   secondTextVariant,
-} from "../molecule/animations/constants";
+} from '../molecule/animations/constants';
 
 const FooterSection = () => {
   return (
@@ -70,7 +70,10 @@ const FooterSection = () => {
             <FooterNav />
           </div>
           <div>
-            <span>© 2024 Rasengan Labs - All Right Reserved</span>
+            <span>
+              © {new Date(Date.now()).getFullYear()} Rasengan Labs - All Right
+              Reserved
+            </span>
           </div>
         </div>
       </div>
@@ -94,7 +97,11 @@ const FooterNav = () => {
           whileHover="hover"
         >
           {/* First Text */}
-          <motion.a variants={firstTextVariant} href={elmt.href} className="block">
+          <motion.a
+            variants={firstTextVariant}
+            href={elmt.href}
+            className="block"
+          >
             {elmt.label}
           </motion.a>
 

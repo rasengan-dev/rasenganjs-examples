@@ -1,4 +1,4 @@
-import "@rasenganjs/image/lib/styles/index.css";
+import "@rasenganjs/image/css";
 import "@/styles/index.css";
 import { type AppProps } from "rasengan";
 import AppRouter from "@/app/app.router";

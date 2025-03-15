@@ -26,16 +26,12 @@ export default function Input({
   containerClassName,
   className,
   ...props
-}: InputProps): JSX.Element {
-
-
+}: InputProps): React.ReactNode {
   return (
     <div className={`w-full mb-5 space-y-4 ${containerClassName}`}>
       {label && (
         <label
-          className={`text-md font-semibold px-1 ${
-           'text-rasengan-light-text'
-          }`}
+          className={`text-md font-semibold px-1 ${'text-rasengan-light-text'}`}
         >
           {label}
         </label>
@@ -49,9 +45,7 @@ export default function Input({
             cols={50}
             className={`w-full ${icon ? 'pl-10' : 'pl-3'} ${
               rightIcon ? 'pr-10' : 'pr-3'
-            } py-2 rounded-lg border-[1px] ${
-               'bg-rasengan-light-background text-rasengan-light-text border-rasengan-light-border outline-none focus:border-rasengan-light-primary'
-            } ${className}`}
+            } py-2 rounded-lg border-[1px] ${'bg-rasengan-light-background text-black/70 border-rasengan-light-border outline-none focus:border-rasengan-light-primary'} ${className}`}
             placeholder={props.placeholder}
           ></textarea>
         ) : (
@@ -59,9 +53,7 @@ export default function Input({
             {...props}
             className={`w-full ${icon ? 'pl-10' : 'pl-3'} ${
               rightIcon ? 'pr-10' : 'pr-3'
-            } py-2 rounded-lg border-[1px] outline-none focus:border-rasengan-primary ${
-               'bg-rasengan-light-background text-rasengan-light-text border-rasengan-light-border outline-none focus:border-rasengan-light-primary'
-            } ${className}`}
+            } py-2 rounded-lg border-[1px] outline-none focus:border-rasengan-primary ${'bg-rasengan-light-background text-black/70 border-rasengan-light-border outline-none focus:border-rasengan-light-primary'} ${className}`}
           />
         )}
       </div>

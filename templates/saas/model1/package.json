@@ -6,28 +6,28 @@
   "scripts": {
     "dev": "rasengan dev",
     "build": "rasengan build",
-    "build:prepare": "rasengan prepare",
-    "start": "rasengan start",
+    "serve": "rasengan-serve ./dist",
     "format": "prettier --write ."
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",
     "@rasenganjs/image": "^1.0.0",
     "@rasenganjs/theme": "^1.0.0",
+    "@rasenganjs/serve": "1.0.0-beta.54",
     "gsap": "^3.12.5",
     "hugeicons-react": "^0.2.0",
-    "rasengan": "^1.0.0-beta.50",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "rasengan": "^1.0.0-beta.58",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@types/react": "^18.2.9",
-    "@types/react-dom": "^18.2.4",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
     "autoprefixer": "^10.4.16",
     "cross-env": "^7.0.3",
     "postcss": "^8.4.31",
     "prettier": "^3.3.3",
     "tailwindcss": "^3.3.5",
-    "vite": "^5.2.0"
+    "vite": "^6.0.0"
   }
 }
