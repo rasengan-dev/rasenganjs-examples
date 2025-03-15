@@ -15,7 +15,6 @@ import descript from "@/assets/descript.svg";
 import ellipse from "@/assets/ellipse.svg";
 import database from "@/assets/database.svg";
 import message from "@/assets/message.svg";
-import { motion } from "framer-motion";
 import ButtonWithLogo from "@/components/atoms/ButtonWithLogo";
 import Typography from "@/components/atoms/Typography";
 import { MoveIn } from "@/components/molecules/move-in";
