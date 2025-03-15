@@ -1,12 +1,12 @@
-import Typography from "@/components/atoms/Typography";
-import Image from "@rasenganjs/image";
-import profil_1 from "@/assets/images/profil_1.png";
-import profil_2 from "@/assets/images/profil_2.png";
-import profil_3 from "@/assets/images/profil_3.png";
-import profil_4 from "@/assets/images/profil_4.png";
-import play from "@/assets/play_white.svg";
-import money from "@/assets/money.svg";
-import Input from "@/components/atoms/input";
+import Typography from '@/components/atoms/Typography';
+import Image from '@rasenganjs/image';
+import profil_1 from '@/assets/images/profil_1.png';
+import profil_2 from '@/assets/images/profil_2.png';
+import profil_3 from '@/assets/images/profil_3.png';
+import profil_4 from '@/assets/images/profil_4.png';
+import play from '@/assets/play_white.svg';
+import money from '@/assets/money.svg';
+import Input from '@/components/atoms/input';
 
 export default function Footer() {
   return (
@@ -84,7 +84,7 @@ export default function Footer() {
               placeholder="Enter your email here"
             />
             <div className="bg-primary rounded-full w-10 h-10 p-2 text-center">
-              -{">"}
+              -{'>'}
             </div>
           </div>
         </div>
@@ -116,12 +116,10 @@ export default function Footer() {
 
       <div className="max-lg:flex-col flex  justify-between items-center mt-16">
         <Typography
-          text="© 2025 Rasengan Labs. all rights reserved"
+          text={`© ${new Date(Date.now()).getFullYear()} Rasengan Labs. all rights reserved`}
           className="text-center"
         />
-        <Typography
-          text="Terms and Condtions - Privacy Policy"
-        />
+        <Typography text="Terms and Condtions - Privacy Policy" />
       </div>
     </footer>
   );
