@@ -30,5 +30,8 @@ dist-ssr
 # Local Netlify folder
 .netlify
 
+# Local Vercel folder
+.vercel
+
 package-lock.json
 yarn.lock
