@@ -1,21 +1,21 @@
 {
-  "hub_001": {
+  "rh_landing-enver": {
     "path": "templates/landing-page/model1",
     "type": "landing page"
   },
-  "hub_002": {
+  "rh_landing-biccas": {
     "path": "templates/landing-page/model2",
     "type": "landing page"
   },
-  "hub_003": {
+  "rh_saas-rasengan": {
     "path": "templates/saas/model1",
     "type": "saas"
   },
-  "hub_004": {
+  "rh_saas-kronix": {
     "path": "templates/saas/model2",
     "type": "saas"
   },
-  "hub_005": {
+  "rh_saas-hano": {
     "path": "templates/portfolio/model1",
     "type": "portfolio"
   }
